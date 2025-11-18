@@ -20,9 +20,27 @@ interface BeroepResultProps {
   beroep: Beroep
 }
 
+function Section({ icon, title, children }: { 
+  icon: React.ReactNode
+  title: string
+  children: React.ReactNode 
+}) {
+  return (
+    <div className="space-y-3">
+      <div className="flex items-center gap-3">
+        {icon}
+        <h2 className="text-xl font-bold text-gray-900">{title}</h2>
+      </div>
+      <div className="ml-9">
+        {children}
+      </div>
+    </div>
+  )
+}
+
 export function BeroepResult({ beroep }: BeroepResultProps) {
   return (
-    <div className="w-full max-w-4xl mx-auto bg-white border-2 border-gray-200 rounded-xl shadow-lg p-8 space-y-6 print:shadow-none print:border">
+    <div className="w-full max-w-4xl mx-auto bg-white border-2 border-gray-200 rounded-xl shadow-lg p-8 space-y-6">
       <div className="border-b-2 border-gray-200 pb-6">
         <div className="flex items-center gap-3 mb-3">
           <FileText className="w-8 h-8 text-red-900 flex-shrink-0" />
@@ -35,7 +53,7 @@ export function BeroepResult({ beroep }: BeroepResultProps) {
           </span>
           {beroep.gereglementeerd && (
             <span className="inline-block px-4 py-1.5 bg-yellow-50 text-yellow-900 rounded-full text-sm font-medium">
-              ⚖️ Gereglementeerd
+              Gereglementeerd
             </span>
           )}
         </div>
@@ -46,14 +64,14 @@ export function BeroepResult({ beroep }: BeroepResultProps) {
           <AlertCircle className="w-6 h-6 text-yellow-600 flex-shrink-0 mt-0.5" />
           <div>
             <p className="font-bold text-yellow-900 text-lg">Gereglementeerd Beroep</p>
-            <p className="text-yellow-800 mt-1">Dit beroep vereist specifieke diploma's of kwalificaties om uit te mogen oefenen in Frankrijk.</p>
+            <p className="text-yellow-800 mt-1">Dit beroep vereist specifieke diploma's of kwalificaties.</p>
           </div>
         </div>
       )}
 
       <Section 
         icon={<GraduationCap className="w-6 h-6 text-red-900" />}
-        title="Diploma-eisen & Erkenning"
+        title="Diploma-eisen en Erkenning"
       >
         <div className="space-y-4">
           {beroep.diploma_eisen.length > 0 && (
@@ -97,7 +115,7 @@ export function BeroepResult({ beroep }: BeroepResultProps) {
 
       <Section 
         icon={<Building className="w-6 h-6 text-red-900" />}
-        title="Registratie & Certificering"
+        title="Registratie en Certificering"
       >
         <div className="space-y-4">
           <div className="p-4 bg-blue-50 rounded-lg">
@@ -149,9 +167,6 @@ export function BeroepResult({ beroep }: BeroepResultProps) {
               </li>
             ))}
           </ul>
-          <p className="text-sm text-gray-500 mt-3 italic">
-            Let op: Zonder de juiste verzekeringen kun je vaak geen facturen indienen bij Franse opdrachtgevers.
-          </p>
         </Section>
       )}
 
@@ -161,7 +176,7 @@ export function BeroepResult({ beroep }: BeroepResultProps) {
           title="Kosten"
         >
           <p className="text-3xl font-bold text-gray-900">€{beroep.kosten_euro}</p>
-          <p className="text-sm text-gray-600 mt-1">Geschatte totale kosten voor erkenning en registratie</p>
+          <p className="text-sm text-gray-600 mt-1">Geschatte totale kosten</p>
         </Section>
 
         <Section 
@@ -169,7 +184,7 @@ export function BeroepResult({ beroep }: BeroepResultProps) {
           title="Tijdlijn"
         >
           <p className="text-3xl font-bold text-gray-900">{beroep.tijdlijn_maanden} maanden</p>
-          <p className="text-sm text-gray-600 mt-1">Gemiddelde doorlooptijd proces</p>
+          <p className="text-sm text-gray-600 mt-1">Gemiddelde doorlooptijd</p>
         </Section>
       </div>
 
@@ -182,7 +197,7 @@ export function BeroepResult({ beroep }: BeroepResultProps) {
             <span className="text-4xl font-bold text-red-900">{beroep.taalvereiste}</span>
             <div>
               <p className="font-semibold text-gray-900">Frans niveau vereist</p>
-              <p className="text-sm text-gray-600">Volgens de Europese referentiekader (CEFR)</p>
+              <p className="text-sm text-gray-600">Volgens CEFR</p>
             </div>
           </div>
         </Section>
@@ -190,7 +205,7 @@ export function BeroepResult({ beroep }: BeroepResultProps) {
 
       <Section 
         icon={<TrendingUp className="w-6 h-6 text-red-900" />}
-        title="Inkomen & Fiscale Regimes"
+        title="Inkomen en Fiscale Regimes"
       >
         <div className="space-y-4">
           <div className="p-4 bg-green-50 rounded-lg">
@@ -248,24 +263,6 @@ export function BeroepResult({ beroep }: BeroepResultProps) {
 
       <div className="pt-4 border-t border-gray-200 text-center text-sm text-gray-500">
         Laatst bijgewerkt: {new Date(beroep.laatste_update).toLocaleDateString('nl-NL')}
-      </div>
-    </div>
-  )
-}
-
-function Section({ icon, title, children }: { 
-  icon: React.ReactNode
-  title: string
-  children: React.ReactNode 
-}) {
-  return (
-    <div className="space-y-3">
-      <div className="flex items-center gap-3">
-        {icon}
-        <h2 className="text-xl font-bold text-gray-900">{title}</h2>
-      </div>
-      <div className="ml-9">
-        {children}
       </div>
     </div>
   )
