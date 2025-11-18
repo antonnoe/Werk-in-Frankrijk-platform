@@ -1,0 +1,117 @@
+[
+  {
+    "id": "verpleegkundige",
+    "naam_nl": "Verpleegkundige",
+    "naam_fr": "Infirmier / Infirmière",
+    "categorie": "medisch",
+    "gereglementeerd": true,
+    "diploma_eisen": [
+      "Bachelor verpleegkunde",
+      "Registratie in BIG register (NL)"
+    ],
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Aanvraag bij DREETS via guichet-qualifications. Documenten: diploma, stage-bewijzen, BIG registratie.",
+    "erkenning_url": "https://www.guichet-qualifications.fr",
+    "certificering_nodig": true,
+    "certificering_waar": "Ordre National des Infirmiers",
+    "certificering_url": "https://www.ordre-infirmiers.fr",
+    "chambre": "Ordre",
+    "chambre_naam": "Ordre National des Infirmiers",
+    "chambre_url": "https://www.ordre-infirmiers.fr",
+    "taalvereiste": "B1",
+    "verzekeringen": ["RC Professionnelle"],
+    "kosten_euro": 150,
+    "tijdlijn_maanden": "3-6",
+    "fiscaal_regimes": ["Micro-BNC", "SELARL"],
+    "gemiddeld_inkomen": 32000,
+    "regionale_vraag": "hoog",
+    "links": [
+      {
+        "titel": "DREETS procedure",
+        "url": "https://www.guichet-qualifications.fr"
+      },
+      {
+        "titel": "Ordre registratie",
+        "url": "https://www.ordre-infirmiers.fr"
+      },
+      {
+        "titel": "ENIC-NARIC info",
+        "url": "https://www.ciep.fr/enic-naric-france"
+      }
+    ],
+    "laatste_update": "2025-01-15"
+  },
+  {
+    "id": "timmerman",
+    "naam_nl": "Timmerman",
+    "naam_fr": "Charpentier / Menuisier",
+    "categorie": "bouw",
+    "gereglementeerd": true,
+    "diploma_eisen": [
+      "CAP Charpentier of gelijkwaardig",
+      "Minimaal 3 jaar aantoonbare ervaring"
+    ],
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Validatie via CMA (Chambre de Métiers). Portfolio + referenties vereist.",
+    "erkenning_url": "https://www.artisanat.fr",
+    "certificering_nodig": false,
+    "certificering_waar": "",
+    "certificering_url": "",
+    "chambre": "CMA",
+    "chambre_naam": "Chambre de Métiers et de l'Artisanat",
+    "chambre_url": "https://www.artisanat.fr",
+    "taalvereiste": "A2",
+    "verzekeringen": ["RC Professionnelle", "Assurance Décennale"],
+    "kosten_euro": 800,
+    "tijdlijn_maanden": "4-8",
+    "fiscaal_regimes": ["Micro-BIC", "EI", "EURL"],
+    "gemiddeld_inkomen": 28000,
+    "regionale_vraag": "hoog",
+    "links": [
+      {
+        "titel": "CMA Frankrijk",
+        "url": "https://www.artisanat.fr"
+      },
+      {
+        "titel": "Décennale info",
+        "url": "https://www.economie.gouv.fr"
+      }
+    ],
+    "laatste_update": "2025-01-15"
+  },
+  {
+    "id": "webdesigner",
+    "naam_nl": "Webdesigner / Grafisch Ontwerper",
+    "naam_fr": "Designer Web / Graphiste",
+    "categorie": "creatief",
+    "gereglementeerd": false,
+    "diploma_eisen": [],
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Geen verplichte procedure, portfolio voldoet",
+    "erkenning_url": "",
+    "certificering_nodig": false,
+    "certificering_waar": "",
+    "certificering_url": "",
+    "chambre": "URSSAF",
+    "chambre_naam": "URSSAF (geen specifieke kamer)",
+    "chambre_url": "https://www.autoentrepreneur.urssaf.fr",
+    "taalvereiste": null,
+    "verzekeringen": ["RC Professionnelle (aanbevolen)"],
+    "kosten_euro": 0,
+    "tijdlijn_maanden": "0-1",
+    "fiscaal_regimes": ["Micro-BNC", "EI", "SASU"],
+    "gemiddeld_inkomen": 30000,
+    "regionale_vraag": "gemiddeld",
+    "links": [
+      {
+        "titel": "URSSAF aanmelden",
+        "url": "https://www.autoentrepreneur.urssaf.fr"
+      },
+      {
+        "titel": "INPI Guichet Unique",
+        "url": "https://formalites.entreprises.gouv.fr"
+      }
+    ],
+    "laatste_update": "2025-01-15"
+  }
+]
