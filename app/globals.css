@@ -24,6 +24,10 @@
   body {
     background: white;
   }
+  /* Custom heading colors */
+h1 {
+  color: #800000;
+}
   
   button {
     display: none;
