@@ -15,7 +15,7 @@ export default function HomePage() {
         {/* Header */}
         <div className="text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
-            🇫🇷 Werk in Frankrijk
+            Werk in Frankrijk
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Ontdek wat je nodig hebt om jouw beroep in Frankrijk uit te oefenen
@@ -67,7 +67,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="text-red-900 hover:underline font-medium"
             >
-              InfoFrankrijk.com
+              Infofrankrijk.com
             </a>
           </p>
           <p className="mt-2">
