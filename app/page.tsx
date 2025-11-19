@@ -1,3 +1,5 @@
+"use client";
+
 // /app/page.tsx
 import { useState } from "react";
 import SearchBar from "../components/SearchBar";
