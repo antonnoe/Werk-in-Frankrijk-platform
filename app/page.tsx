@@ -1,86 +1,34 @@
-'use client'
+// /app/page.tsx
+import { useState } from "react";
+import SearchBar from "../components/SearchBar";
+import BeroepResult from "../components/BeroepResult";
+import { Beroep } from "../lib/types";
 
-import { useState } from 'react'
-import { SearchBar } from '@/components/SearchBar'
-import { BeroepResult } from '@/components/BeroepResult'
-import type { Beroep } from '@/lib/types'
-import beroepen from '@/data/beroepen.json'
-
-export default function HomePage() {
-  const [selectedBeroep, setSelectedBeroep] = useState<Beroep | null>(null)
+export default function Page() {
+  const [selectedBeroep, setSelectedBeroep] = useState<Beroep | null>(null);
 
   return (
-    <main className="min-h-screen bg-gray-50 py-8 px-4">
-      <div className="max-w-6xl mx-auto space-y-8">
-        <div className="text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold" style={{color: '#800000'}}>
-            Werk in Frankrijk
+    <main className="min-h-screen bg-gray-50 pb-20 px-4 pt-10">
+      <div className="max-w-5xl mx-auto">
+
+        {/* Titelblok */}
+        <header className="text-center mb-10">
+          <h1 className="text-4xl font-bold text-red-900 mb-3">
+            Werk in Frankrijk – Beroepenchecker
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Ontdek wat je nodig hebt om jouw beroep in Frankrijk uit te oefenen
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Vind alle officiële informatie over beroepen, diploma’s,
+            ondernemingsvormen, regels en erkenningen in Frankrijk — speciaal
+            voor Nederlandstaligen die hier wonen of willen werken.
           </p>
-        </div>
+        </header>
 
-      const beroepen = getBeroepen();
+        {/* Zoekbalk */}
+        <SearchBar onSelect={setSelectedBeroep} />
 
-<SearchBar 
-  beroepen={beroepen}
-  onSelect={setSelectedBeroep}
-/>
-
-        />
-
-        {!selectedBeroep && (
-          <div className="text-center text-gray-600 max-w-2xl mx-auto space-y-3">
-            <p>
-              Zoek je beroep om te zien welke diploma's, verzekeringen en procedures nodig zijn.
-            </p>
-            <p className="text-sm">
-              💡 Tip: Type minimaal 2 letters om resultaten te zien
-            </p>
-          </div>
-        )}
-
-        {selectedBeroep && (
-          <div className="animate-fadeIn">
-            <BeroepResult beroep={selectedBeroep} />
-            
-            <div className="text-center mt-8">
-              <button
-                onClick={() => setSelectedBeroep(null)}
-                className="px-6 py-3 bg-red-900 text-white font-semibold rounded-lg hover:bg-red-800 transition-colors"
-              >
-                Zoek een ander beroep
-              </button>
-            </div>
-          </div>
-        )}
-
-        <footer className="text-center text-sm text-gray-500 pt-12 border-t border-gray-200">
-          <p>
-            Een project van{' '}
-            <a 
-              href="https://www.infofrankrijk.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-red-900 hover:underline font-medium"
-            >
-              Infofrankrijk.com
-            </a>
-          </p>
-          <p className="mt-2">
-            Voor vragen en community:{' '}
-            <a 
-              href="https://www.nederlanders.fr" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-red-900 hover:underline font-medium"
-            >
-              Nederlanders.fr
-            </a>
-          </p>
-        </footer>
+        {/* Resultaat */}
+        <BeroepResult beroep={selectedBeroep} />
       </div>
     </main>
-  )
+  );
 }
