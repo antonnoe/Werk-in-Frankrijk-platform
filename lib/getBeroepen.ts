@@ -1,53 +1,37 @@
-// lib/getBeroepen.ts
+// /lib/getBeroepen.ts
+// PRO-release: converteert JSON automatisch naar camelCase + veilig typen
+
 import { Beroep } from "./types";
-import data from "../data/beroepen.json";
+import beroepenJson from "../data/beroepen.json";
 
-export function mapJsonToBeroep(j: any): Beroep {
-  return {
-    id: j.id,
-
-    naamNl: j.naam_nl,
-    naamFr: j.naam_fr,
-    categorie: j.categorie,
-    omschrijving: j.omschrijving,
-
-    diplomaVereist: j.diploma_vereist,
-    diplomaDetails: j.diploma_details,
-    erkenning: j.erkenning,
-    erkenningProcedure: j.erkenning_procedure,
-    erkenningUrl: j.erkenning_url,
-    nlDiplomaErkend: j.nl_diploma_erkend,
-
-    certificeringNodig: j.certificering_nodig,
-    certificeringWaar: j.certificering_waar,
-    certificeringUrl: j.certificering_url,
-
-    verzekeringVerplicht: j.verzekering_verplicht,
-    verzekeringType: j.verzekering_type,
-    verzekeringen: j.verzekeringen,
-
-    taalvereiste: j.taalvereiste,
-    salarisIndicatie: j.salaris_indicatie,
-
-    autoentrepreneurMogelijk: j.autoentrepreneur_mogelijk,
-    gereglementeerd: j.gereglementeerd,
-
-    chambre: j.chambre,
-    chambreNaam: j.chambre_naam,
-    chambreUrl: j.chambre_url,
-
-    kostenEuro: j.kosten_euro,
-    tijdlijnMaanden: j.tijdlijn_maanden,
-    fiscaalRegimes: j.fiscaal_regimes,
-    gemiddeldInkomen: j.gemiddeld_inkomen,
-
-    regionaleVraag: j.regionale_vraag,
-    links: j.links,
-    laatsteUpdate: j.laatste_update,
-    keywords: j.keywords
-  };
+// Utility: snake_case -> camelCase
+function toCamelCase(key: string): string {
+  return key.replace(/_([a-z])/g, (match, letter) => letter.toUpperCase());
 }
 
+// Utility: normalise een beroep-object
+function normalizeBeroep(raw: any): Beroep {
+  const normalized: any = {};
+
+  for (const key of Object.keys(raw)) {
+    const camelKey = toCamelCase(key);
+    normalized[camelKey] = raw[key];
+  }
+
+  return normalized as Beroep;
+}
+
+// Publieke functie om alle beroepen op te halen
 export function getBeroepen(): Beroep[] {
-  return data.map(mapJsonToBeroep);
+  try {
+    if (!Array.isArray(beroepenJson)) {
+      console.error("❌ DATA FOUT: beroepen.json is geen array.");
+      return [];
+    }
+
+    return beroepenJson.map((b: any) => normalizeBeroep(b));
+  } catch (err) {
+    console.error("❌ FOUT bij laden van beroepen:", err);
+    return [];
+  }
 }
