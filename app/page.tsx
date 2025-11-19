@@ -12,22 +12,20 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-gray-50 py-8 px-4">
       <div className="max-w-6xl mx-auto space-y-8">
-        {/* Header */}
         <div className="text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold" style={{color: '#800000'}}>
+            Werk in Frankrijk
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Ontdek wat je nodig hebt om jouw beroep in Frankrijk uit te oefenen
           </p>
         </div>
 
-        {/* Search Bar */}
         <SearchBar 
           beroepen={beroepen as Beroep[]} 
           onSelect={setSelectedBeroep}
         />
 
-        {/* Info Text */}
         {!selectedBeroep && (
           <div className="text-center text-gray-600 max-w-2xl mx-auto space-y-3">
             <p>
@@ -39,12 +37,10 @@ export default function HomePage() {
           </div>
         )}
 
-        {/* Result */}
         {selectedBeroep && (
           <div className="animate-fadeIn">
             <BeroepResult beroep={selectedBeroep} />
             
-            {/* New Search Button */}
             <div className="text-center mt-8">
               <button
                 onClick={() => setSelectedBeroep(null)}
@@ -56,7 +52,6 @@ export default function HomePage() {
           </div>
         )}
 
-        {/* Footer */}
         <footer className="text-center text-sm text-gray-500 pt-12 border-t border-gray-200">
           <p>
             Een project van{' '}
