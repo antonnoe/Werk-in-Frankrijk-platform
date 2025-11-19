@@ -1,117 +1,1318 @@
 [
   {
-    "id": "verpleegkundige",
-    "naam_nl": "Verpleegkundige",
-    "naam_fr": "Infirmier / Infirmière",
-    "categorie": "medisch",
-    "gereglementeerd": true,
-    "diploma_eisen": [
-      "Bachelor verpleegkunde",
-      "Registratie in BIG register (NL)"
-    ],
-    "nl_diploma_erkend": true,
-    "erkenning_procedure": "Aanvraag bij DREETS via guichet-qualifications. Documenten: diploma, stage-bewijzen, BIG registratie.",
-    "erkenning_url": "https://www.guichet-qualifications.fr",
-    "certificering_nodig": true,
-    "certificering_waar": "Ordre National des Infirmiers",
-    "certificering_url": "https://www.ordre-infirmiers.fr",
-    "chambre": "Ordre",
-    "chambre_naam": "Ordre National des Infirmiers",
-    "chambre_url": "https://www.ordre-infirmiers.fr",
+    "id": "exploitant-gite",
+    "naam_nl": "Exploitant gîte",
+    "naam_fr": "Exploitant de gîte",
+    "categorie": "Toerisme & Verblijf",
+    "omschrijving": "Verhuur van vakantiewoningen aan toeristen, zonder maaltijden. Verantwoordelijk voor ontvangst gasten, schoonmaak en onderhoud.",
+    "diploma_vereist": false,
+    "diploma_details": "Geen verplicht diploma. Wel aan te raden: stage accueil of formation tourisme.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": true,
+    "verzekering_type": "RC Pro Tourisme, Assurance Multirisque Habitation professionnelle",
     "taalvereiste": "B1",
-    "verzekeringen": ["RC Professionnelle"],
-    "kosten_euro": 150,
-    "tijdlijn_maanden": "3-6",
-    "fiscaal_regimes": ["Micro-BNC", "SELARL"],
-    "gemiddeld_inkomen": 32000,
+    "salaris_indicatie": "€15.000-40.000/jaar (afhankelijk van bezettingsgraad)",
+    "autoentrepreneur_mogelijk": true,
+    "gereglementeerd": false,
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Melding bij gemeente (Mairie) verplicht. Geen erkenning Nederlandse diploma's nodig.",
+    "erkenning_url": "https://www.service-public.fr/particuliers/vosdroits/F2724",
+    "certificering_nodig": false,
+    "certificering_waar": "Niet van toepassing",
+    "certificering_url": "",
+    "chambre": "Geen",
+    "chambre_naam": "Geen beroepskamer vereist (behalve bij >5 kamers)",
+    "chambre_url": "",
+    "verzekeringen": [
+      "RC Pro Tourisme",
+      "Assurance Multirisque Habitation",
+      "Assurance annulation (optioneel)"
+    ],
+    "kosten_euro": 500,
+    "tijdlijn_maanden": "1-2",
+    "fiscaal_regimes": [
+      "Micro-BIC",
+      "Location meublée non professionnelle (LMNP)",
+      "Régime réel"
+    ],
+    "gemiddeld_inkomen": 25000,
     "regionale_vraag": "hoog",
     "links": [
       {
-        "titel": "DREETS procedure",
-        "url": "https://www.guichet-qualifications.fr"
+        "titel": "Gîtes de France",
+        "url": "https://www.gites-de-france.com"
       },
       {
-        "titel": "Ordre registratie",
-        "url": "https://www.ordre-infirmiers.fr"
-      },
-      {
-        "titel": "ENIC-NARIC info",
-        "url": "https://www.ciep.fr/enic-naric-france"
+        "titel": "Service-Public: Meublé de tourisme",
+        "url": "https://www.service-public.fr/particuliers/vosdroits/F2724"
       }
     ],
-    "laatste_update": "2025-01-15"
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "gite",
+      "vakantiewoning",
+      "toerisme",
+      "verhuur",
+      "tourisme rural"
+    ]
   },
   {
-    "id": "timmerman",
-    "naam_nl": "Timmerman",
-    "naam_fr": "Charpentier / Menuisier",
-    "categorie": "bouw",
-    "gereglementeerd": true,
-    "diploma_eisen": [
-      "CAP Charpentier of gelijkwaardig",
-      "Minimaal 3 jaar aantoonbare ervaring"
-    ],
+    "id": "exploitant-chambre-hote",
+    "naam_nl": "Exploitant chambre d'hôte",
+    "naam_fr": "Exploitant de chambres d'hôtes",
+    "categorie": "Toerisme & Verblijf",
+    "omschrijving": "Verhuur van max 5 kamers in eigen woning met ontbijt. Persoonlijke ontvangst en gastvrij contact met gasten.",
+    "diploma_vereist": false,
+    "diploma_details": "Geen verplicht diploma. Formation accueil & hygiène alimentaire aanbevolen.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": true,
+    "verzekering_type": "RC Pro Tourisme, Assurance Habitation professionnelle",
+    "taalvereiste": "B2",
+    "salaris_indicatie": "€18.000-35.000/jaar",
+    "autoentrepreneur_mogelijk": true,
+    "gereglementeerd": false,
     "nl_diploma_erkend": true,
-    "erkenning_procedure": "Validatie via CMA (Chambre de Métiers). Portfolio + referenties vereist.",
-    "erkenning_url": "https://www.artisanat.fr",
+    "erkenning_procedure": "Aanmelding bij Mairie verplicht. Vanaf table d'hôtes: formation hygiène HACCP vereist.",
+    "erkenning_url": "https://www.service-public.fr/particuliers/vosdroits/F2221",
     "certificering_nodig": false,
-    "certificering_waar": "",
+    "certificering_waar": "Optioneel: label Gîtes de France of Clévacances",
+    "certificering_url": "https://www.gites-de-france.com",
+    "chambre": "Geen",
+    "chambre_naam": "Geen beroepskamer (max 5 kamers, max 15 personen)",
+    "chambre_url": "",
+    "verzekeringen": [
+      "RC Pro Tourisme",
+      "Assurance Habitation professionnelle",
+      "Assurance décennale (indien verbouwingen)"
+    ],
+    "kosten_euro": 600,
+    "tijdlijn_maanden": "1-2",
+    "fiscaal_regimes": [
+      "Micro-BIC",
+      "Régime réel BIC"
+    ],
+    "gemiddeld_inkomen": 24000,
+    "regionale_vraag": "hoog",
+    "links": [
+      {
+        "titel": "Service-Public: Chambres d'hôtes",
+        "url": "https://www.service-public.fr/particuliers/vosdroits/F2221"
+      },
+      {
+        "titel": "Formation HACCP",
+        "url": "https://www.formation-haccp.fr"
+      }
+    ],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "chambre d'hote",
+      "bed and breakfast",
+      "B&B",
+      "ontbijt",
+      "toerisme"
+    ]
+  },
+  {
+    "id": "exploitant-meuble-tourisme",
+    "naam_nl": "Exploitant meublé de tourisme",
+    "naam_fr": "Exploitant de meublé de tourisme",
+    "categorie": "Toerisme & Verblijf",
+    "omschrijving": "Korte verhuur gemeubileerd appartement of huis aan toeristen. Via platforms (Airbnb, Booking.com) of direct.",
+    "diploma_vereist": false,
+    "diploma_details": "Geen diploma vereist.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": true,
+    "verzekering_type": "RC Pro, Assurance Habitation location saisonnière",
+    "taalvereiste": "B1",
+    "salaris_indicatie": "€10.000-30.000/jaar",
+    "autoentrepreneur_mogelijk": true,
+    "gereglementeerd": false,
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Aanmelding bij Mairie + nummer meublé de tourisme. In steden vaak vergunning nodig.",
+    "erkenning_url": "https://www.service-public.fr/particuliers/vosdroits/F2724",
+    "certificering_nodig": false,
+    "certificering_waar": "Optioneel: classement étoiles (sterren)",
+    "certificering_url": "https://www.atout-france.fr",
+    "chambre": "Geen",
+    "chambre_naam": "Geen beroepskamer vereist",
+    "chambre_url": "",
+    "verzekeringen": [
+      "RC Pro",
+      "Assurance Habitation location courte durée"
+    ],
+    "kosten_euro": 300,
+    "tijdlijn_maanden": "1",
+    "fiscaal_regimes": [
+      "Micro-BIC",
+      "LMNP",
+      "Loueur en Meublé Professionnel (LMP)"
+    ],
+    "gemiddeld_inkomen": 18000,
+    "regionale_vraag": "hoog",
+    "links": [
+      {
+        "titel": "Service-Public: Location meublée",
+        "url": "https://www.service-public.fr/particuliers/vosdroits/F2724"
+      },
+      {
+        "titel": "Taxe de séjour",
+        "url": "https://www.impots.gouv.fr"
+      }
+    ],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "airbnb",
+      "meublé",
+      "location saisonnière",
+      "vakantieverhuur",
+      "toerisme"
+    ]
+  },
+  {
+    "id": "camping-beheerder",
+    "naam_nl": "Camping beheerder",
+    "naam_fr": "Gestionnaire de camping",
+    "categorie": "Toerisme & Verblijf",
+    "omschrijving": "Beheer van camping: ontvangst gasten, onderhoud terrein, sanitair, reserveringen, animatie.",
+    "diploma_vereist": false,
+    "diploma_details": "Geen verplicht diploma, maar ervaring in hotellerie/toerisme sterk aanbevolen.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": true,
+    "verzekering_type": "RC Pro Hôtellerie-Tourisme, Assurance exploitation",
+    "taalvereiste": "B2",
+    "salaris_indicatie": "€24.000-40.000/jaar (afhankelijk van grootte)",
+    "autoentrepreneur_mogelijk": false,
+    "gereglementeerd": false,
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Vergunning bij Préfecture. Veiligheids- en hygiënenormen vereist.",
+    "erkenning_url": "https://www.service-public.fr/professionnels-entreprises/vosdroits/F31678",
+    "certificering_nodig": false,
+    "certificering_waar": "Optioneel: label FFCC of Camping Qualité",
+    "certificering_url": "https://www.ffcc.fr",
+    "chambre": "CCI",
+    "chambre_naam": "Chambre de Commerce et d'Industrie",
+    "chambre_url": "https://www.cci.fr",
+    "verzekeringen": [
+      "RC Pro exploitation",
+      "Assurance incendie",
+      "Assurance piscine (indien aanwezig)"
+    ],
+    "kosten_euro": 2000,
+    "tijdlijn_maanden": "3-6",
+    "fiscaal_regimes": [
+      "BIC - Régime réel",
+      "EURL",
+      "SARL"
+    ],
+    "gemiddeld_inkomen": 32000,
+    "regionale_vraag": "gemiddeld",
+    "links": [
+      {
+        "titel": "FFCC - Fédération Française de Camping",
+        "url": "https://www.ffcc.fr"
+      },
+      {
+        "titel": "Réglementation campings",
+        "url": "https://www.service-public.fr/professionnels-entreprises/vosdroits/F31678"
+      }
+    ],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "camping",
+      "beheer",
+      "toerisme",
+      "receptie",
+      "sanitair"
+    ]
+  },
+  {
+    "id": "schoonmaker-toerisme",
+    "naam_nl": "Schoonmaker toeristische accommodaties",
+    "naam_fr": "Agent d'entretien hébergements touristiques",
+    "categorie": "Toerisme & Verblijf",
+    "omschrijving": "Schoonmaak van vakantiewoningen, hotels, gîtes tussen huurperiodes. Vaak zelfstandig of via schoonmaakbedrijf.",
+    "diploma_vereist": false,
+    "diploma_details": "Geen diploma vereist. CQP Agent de propreté is een plus.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": true,
+    "verzekering_type": "RC Pro",
+    "taalvereiste": "A2",
+    "salaris_indicatie": "€1.800-2.500/maand (loondienst) of €15-25/uur (zelfstandig)",
+    "autoentrepreneur_mogelijk": true,
+    "gereglementeerd": false,
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Geen specifieke procedure. Micro-entreprise direct mogelijk.",
+    "erkenning_url": "",
+    "certificering_nodig": false,
+    "certificering_waar": "Optioneel: CQP propreté",
+    "certificering_url": "",
+    "chambre": "CMA",
+    "chambre_naam": "Chambre de Métiers et de l'Artisanat (indien zelfstandig)",
+    "chambre_url": "https://www.artisanat.fr",
+    "verzekeringen": [
+      "RC Pro",
+      "Assurance décennale (NIET vereist voor schoonmaak)"
+    ],
+    "kosten_euro": 150,
+    "tijdlijn_maanden": "0-1",
+    "fiscaal_regimes": [
+      "Micro-BIC",
+      "Régime réel"
+    ],
+    "gemiddeld_inkomen": 22000,
+    "regionale_vraag": "hoog",
+    "links": [
+      {
+        "titel": "CQP Propreté",
+        "url": "https://www.inhni.com"
+      }
+    ],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "schoonmaak",
+      "ménage",
+      "gîte",
+      "vakantiewoning",
+      "entretien"
+    ]
+  },
+  {
+    "id": "tuinman-vakantiewoningen",
+    "naam_nl": "Tuinman vakantiewoningen",
+    "naam_fr": "Jardinier hébergements touristiques",
+    "categorie": "Toerisme & Verblijf",
+    "omschrijving": "Onderhoud tuinen en buitenruimtes van gîtes, chambres d'hôtes, campings. Maaien, snoeien, aanleg.",
+    "diploma_vereist": false,
+    "diploma_details": "Geen verplicht diploma. CAP/BEP Paysagiste is een voordeel.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": true,
+    "verzekering_type": "RC Pro",
+    "taalvereiste": "A2",
+    "salaris_indicatie": "€1.900-2.800/maand of €20-35/uur",
+    "autoentrepreneur_mogelijk": true,
+    "gereglementeerd": false,
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Inschrijving CMA. Geen erkenning NL-diploma nodig voor basis tuinonderhoud.",
+    "erkenning_url": "",
+    "certificering_nodig": false,
+    "certificering_waar": "Optioneel: CAP Jardinier paysagiste",
     "certificering_url": "",
     "chambre": "CMA",
     "chambre_naam": "Chambre de Métiers et de l'Artisanat",
     "chambre_url": "https://www.artisanat.fr",
-    "taalvereiste": "A2",
-    "verzekeringen": ["RC Professionnelle", "Assurance Décennale"],
+    "verzekeringen": [
+      "RC Pro",
+      "Assurance engins (indien machines)"
+    ],
+    "kosten_euro": 200,
+    "tijdlijn_maanden": "1",
+    "fiscaal_regimes": [
+      "Micro-BIC",
+      "Régime réel BIC"
+    ],
+    "gemiddeld_inkomen": 24000,
+    "regionale_vraag": "hoog",
+    "links": [
+      {
+        "titel": "UNEP - Union Nationale des Entreprises du Paysage",
+        "url": "https://www.lesentreprisesdupaysage.fr"
+      }
+    ],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "tuin",
+      "jardin",
+      "paysagiste",
+      "onderhoud",
+      "espaces verts"
+    ]
+  },
+  {
+    "id": "concierge-huisbewaarder",
+    "naam_nl": "Conciërge / Huisbewaarder",
+    "naam_fr": "Conciergerie / Gardien",
+    "categorie": "Toerisme & Verblijf",
+    "omschrijving": "Sleutelbeheer, gastenontvangst, kleine reparaties, toezicht op vakantiewoningen voor eigenaren.",
+    "diploma_vereist": false,
+    "diploma_details": "Geen diploma vereist. Ervaring in hotellerie is voordeel.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": true,
+    "verzekering_type": "RC Pro, Assurance clés et valeurs",
+    "taalvereiste": "B1",
+    "salaris_indicatie": "€1.800-2.600/maand of per opdracht",
+    "autoentrepreneur_mogelijk": true,
+    "gereglementeerd": false,
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Geen specifieke procedure. Vertrouwensrol - referenties belangrijk.",
+    "erkenning_url": "",
+    "certificering_nodig": false,
+    "certificering_waar": "Niet van toepassing",
+    "certificering_url": "",
+    "chambre": "Geen",
+    "chambre_naam": "Geen beroepskamer vereist",
+    "chambre_url": "",
+    "verzekeringen": [
+      "RC Pro",
+      "Assurance responsabilité clés"
+    ],
+    "kosten_euro": 250,
+    "tijdlijn_maanden": "0-1",
+    "fiscaal_regimes": [
+      "Micro-BNC",
+      "Régime réel BNC"
+    ],
+    "gemiddeld_inkomen": 23000,
+    "regionale_vraag": "hoog",
+    "links": [
+      {
+        "titel": "Conciergerie Airbnb",
+        "url": "https://www.airbnb.fr/d/conciergerie"
+      }
+    ],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "conciergerie",
+      "gardiennage",
+      "sleutels",
+      "beheer",
+      "vakantiewoning"
+    ]
+  },
+  {
+    "id": "zwembadonderhoud",
+    "naam_nl": "Zwembadonderhoud specialist",
+    "naam_fr": "Pisciniste / Technicien piscine",
+    "categorie": "Toerisme & Verblijf",
+    "omschrijving": "Onderhoud en behandeling zwembaden voor gîtes, campings, hotels. Chemisch evenwicht, filters, pompen.",
+    "diploma_vereist": false,
+    "diploma_details": "Geen verplicht diploma. BP Métiers de la piscine aanbevolen voor aanleg.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": true,
+    "verzekering_type": "RC Pro, Décennale (bij aanleg/renovatie)",
+    "taalvereiste": "B1",
+    "salaris_indicatie": "€2.200-3.500/maand of €40-70/uur",
+    "autoentrepreneur_mogelijk": true,
+    "gereglementeerd": false,
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Inschrijving CMA. Voor aanleg: décennale verplicht.",
+    "erkenning_url": "",
+    "certificering_nodig": false,
+    "certificering_waar": "Optioneel: BP Métiers de la piscine",
+    "certificering_url": "",
+    "chambre": "CMA",
+    "chambre_naam": "Chambre de Métiers et de l'Artisanat",
+    "chambre_url": "https://www.artisanat.fr",
+    "verzekeringen": [
+      "RC Pro",
+      "Assurance décennale (bij aanleg)",
+      "Assurance professionnelle piscine"
+    ],
     "kosten_euro": 800,
-    "tijdlijn_maanden": "4-8",
-    "fiscaal_regimes": ["Micro-BIC", "EI", "EURL"],
+    "tijdlijn_maanden": "2-3",
+    "fiscaal_regimes": [
+      "Micro-BIC",
+      "EI",
+      "EURL"
+    ],
+    "gemiddeld_inkomen": 30000,
+    "regionale_vraag": "hoog",
+    "links": [
+      {
+        "titre": "FPP - Fédération des Professionnels de la Piscine",
+        "url": "https://www.propiscines.fr"
+      }
+    ],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "zwembad",
+      "piscine",
+      "onderhoud",
+      "traitement eau",
+      "filtration"
+    ]
+  },
+  {
+    "id": "receptionist-camping-hotel",
+    "naam_nl": "Receptionist camping/hotel",
+    "naam_fr": "Réceptionniste camping/hôtellerie",
+    "categorie": "Toerisme & Verblijf",
+    "omschrijving": "Ontvangst gasten, reserveringen, administratie, informatie, klachtenafhandeling in toeristische accommodaties.",
+    "diploma_vereist": false,
+    "diploma_details": "Geen verplicht diploma. BTS Tourisme of CAP Agent d'accueil is voordeel.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": false,
+    "verzekering_type": "Niet vereist (werkgever verzekert)",
+    "taalvereiste": "B2",
+    "salaris_indicatie": "€1.800-2.400/maand",
+    "autoentrepreneur_mogelijk": false,
+    "gereglementeerd": false,
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Loondienst - geen procedure nodig. Zelfstandig niet gebruikelijk.",
+    "erkenning_url": "",
+    "certificering_nodig": false,
+    "certificering_waar": "Niet van toepassing",
+    "certificering_url": "",
+    "chambre": "Geen",
+    "chambre_naam": "Niet van toepassing (loondienst)",
+    "chambre_url": "",
+    "verzekeringen": [],
+    "kosten_euro": 0,
+    "tijdlijn_maanden": "0",
+    "fiscaal_regimes": [
+      "Salaire (loondienst)"
+    ],
+    "gemiddeld_inkomen": 24000,
+    "regionale_vraag": "hoog",
+    "links": [
+      {
+        "titel": "BTS Tourisme",
+        "url": "https://www.onisep.fr"
+      }
+    ],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "receptie",
+      "accueil",
+      "reserveringen",
+      "hotel",
+      "camping"
+    ]
+  },
+  {
+    "id": "activiteiten-coordinator",
+    "naam_nl": "Activiteitencoördinator toerisme",
+    "naam_fr": "Animateur / Coordinateur d'activités touristiques",
+    "categorie": "Toerisme & Verblijf",
+    "omschrijving": "Organisatie en begeleiding vrijetijdsactiviteiten voor gasten: sport, cultuur, kinderanimatie, excursies.",
+    "diploma_vereist": false,
+    "diploma_details": "BAFA (Brevet d'Aptitude aux Fonctions d'Animateur) aanbevolen voor kinderanimatie.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": true,
+    "verzekering_type": "RC Pro Animation",
+    "taalvereiste": "B2",
+    "salaris_indicatie": "€1.700-2.600/maand (seizoenswerk)",
+    "autoentrepreneur_mogelijk": true,
+    "gereglementeerd": false,
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Voor kinderanimatie: BAFA of équivalence buitenlands diploma bij DREETS.",
+    "erkenning_url": "https://www.bafa-bafd.fr",
+    "certificering_nodig": false,
+    "certificering_waar": "BAFA (kinderen), BPJEPS (sport)",
+    "certificering_url": "https://www.bafa-bafd.fr",
+    "chambre": "Geen",
+    "chambre_naam": "Geen beroepskamer vereist",
+    "chambre_url": "",
+    "verzekeringen": [
+      "RC Pro Animation",
+      "Assurance accidents (sport)"
+    ],
+    "kosten_euro": 400,
+    "tijdlijn_maanden": "1-3",
+    "fiscaal_regimes": [
+      "Micro-BNC",
+      "Salaire (seizoenscontract)"
+    ],
+    "gemiddeld_inkomen": 22000,
+    "regionale_vraag": "gemiddeld",
+    "links": [
+      {
+        "titel": "BAFA - Formation animation",
+        "url": "https://www.bafa-bafd.fr"
+      },
+      {
+        "titel": "BPJEPS Sport",
+        "url": "https://www.sports.gouv.fr"
+      }
+    ],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "animatie",
+      "activiteiten",
+      "toerisme",
+      "kinderen",
+      "sport"
+    ]
+  },
+  {
+    "id": "verhuur-watersport",
+    "naam_nl": "Verhuur watersportmateriaal",
+    "naam_fr": "Location de matériel nautique",
+    "categorie": "Toerisme & Verblijf",
+    "omschrijving": "Verhuur kano's, paddleboards, boten, duikmateriaal aan toeristen. Vaak aan meren, rivieren, kust.",
+    "diploma_vereist": false,
+    "diploma_details": "Geen diploma voor verhuur. Voor begeleiding: BPJEPS Activités Nautiques vereist.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": true,
+    "verzekering_type": "RC Pro Location, Assurance matériel",
+    "taalvereiste": "B1",
+    "salaris_indicatie": "€20.000-40.000/jaar (seizoensgebonden)",
+    "autoentrepreneur_mogelijk": true,
+    "gereglementeerd": false,
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Vergunning bij Mairie of Préfecture (afhankelijk van locatie). Veiligheidsnormen materiaal.",
+    "erkenning_url": "",
+    "certificering_nodig": false,
+    "certificering_waar": "BPJEPS (alleen voor begeleiding)",
+    "certificering_url": "https://www.sports.gouv.fr",
+    "chambre": "CCI",
+    "chambre_naam": "Chambre de Commerce et d'Industrie",
+    "chambre_url": "https://www.cci.fr",
+    "verzekeringen": [
+      "RC Pro Location",
+      "Assurance matériel et équipement",
+      "Assurance responsabilité nautique"
+    ],
+    "kosten_euro": 1200,
+    "tijdlijn_maanden": "2-3",
+    "fiscaal_regimes": [
+      "Micro-BIC",
+      "Régime réel BIC"
+    ],
+    "gemiddeld_inkomen": 28000,
+    "regionale_vraag": "gemiddeld",
+    "links": [
+      {
+        "titel": "FFCK - Canoë-Kayak",
+        "url": "https://www.ffck.org"
+      }
+    ],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "watersport",
+      "kano",
+      "paddle",
+      "verhuur",
+      "nautique"
+    ]
+  },
+  {
+    "id": "gids-excursies",
+    "naam_nl": "Gids lokale excursies",
+    "naam_fr": "Guide accompagnateur",
+    "categorie": "Toerisme & Verblijf",
+    "omschrijving": "Begeleiding toeristen bij excursies, wandelingen, stadstours. Uitleg over cultuur, geschiedenis, natuur.",
+    "diploma_vereist": true,
+    "diploma_details": "Carte professionnelle guide-conférencier vereist voor monumenten/musea. Accompagnateur: geen verplichting.",
+    "erkenning": "procedure",
+    "verzekering_verplicht": true,
+    "verzekering_type": "RC Pro Guide touristique",
+    "taalvereiste": "C1",
+    "salaris_indicatie": "€1.900-3.200/maand of €120-250/dag",
+    "autoentrepreneur_mogelijk": true,
+    "gereglementeerd": true,
+    "nl_diploma_erkend": false,
+    "erkenning_procedure": "Voor guide-conférencier: Licence tourisme vereist of équivalence bij DREETS. Accompagnateur: vrij beroep.",
+    "erkenning_url": "https://www.guichet-qualifications.fr",
+    "certificering_nodig": true,
+    "certificering_waar": "Préfecture - Carte professionnelle",
+    "certificering_url": "https://www.guichet-qualifications.fr",
+    "chambre": "Geen",
+    "chambre_naam": "Geen beroepskamer (carte pro via Préfecture)",
+    "chambre_url": "",
+    "verzekeringen": [
+      "RC Pro Guide touristique",
+      "Assurance groupe (bij groepsreizen)"
+    ],
+    "kosten_euro": 350,
+    "tijdlijn_maanden": "3-6",
+    "fiscaal_regimes": [
+      "Micro-BNC",
+      "Régime réel BNC"
+    ],
+    "gemiddeld_inkomen": 26000,
+    "regionale_vraag": "gemiddeld",
+    "links": [
+      {
+        "titel": "Guichet Qualifications - Guide",
+        "url": "https://www.guichet-qualifications.fr"
+      },
+      {
+        "titel": "SNGIC - Syndicat National des Guides",
+        "url": "https://www.sngic.com"
+      }
+    ],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "gids",
+      "guide",
+      "excursie",
+      "toerisme",
+      "rondleiding"
+    ]
+  },
+  {
+    "id": "hotelier",
+    "naam_nl": "Hotelier / Hotelbeheerder",
+    "naam_fr": "Hôtelier / Directeur d'hôtel",
+    "categorie": "Toerisme & Verblijf",
+    "omschrijving": "Beheer hotel: personeel, administratie, ontvangst, marketing, financiën. Verantwoordelijk voor dagelijkse gang van zaken.",
+    "diploma_vereist": false,
+    "diploma_details": "Geen verplicht diploma. BTS Hôtellerie-Restauration sterk aanbevolen.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": true,
+    "verzekering_type": "RC Pro Hôtellerie, Assurance exploitation multirisque",
+    "taalvereiste": "C1",
+    "salaris_indicatie": "€30.000-60.000/jaar (afhankelijk van grootte)",
+    "autoentrepreneur_mogelijk": false,
+    "gereglementeerd": false,
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Inschrijving CCI. Hygiëne- en veiligheidsnormen ERP (Établissement Recevant du Public).",
+    "erkenning_url": "",
+    "certificering_nodig": false,
+    "certificering_waar": "Optioneel: BTS Hôtellerie",
+    "certificering_url": "",
+    "chambre": "CCI",
+    "chambre_naam": "Chambre de Commerce et d'Industrie",
+    "chambre_url": "https://www.cci.fr",
+    "verzekeringen": [
+      "RC Pro Hôtellerie",
+      "Assurance exploitation",
+      "Assurance incendie ERP",
+      "Protection juridique"
+    ],
+    "kosten_euro": 3000,
+    "tijdlijn_maanden": "3-6",
+    "fiscaal_regimes": [
+      "BIC - Régime réel",
+      "SARL",
+      "SAS"
+    ],
+    "gemiddeld_inkomen": 42000,
+    "regionale_vraag": "gemiddeld",
+    "links": [
+      {
+        "titel": "UMIH - Union des Métiers Hôtellerie",
+        "url": "https://www.umih.fr"
+      }
+    ],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "hotel",
+      "beheer",
+      "hôtellerie",
+      "directeur",
+      "management"
+    ]
+  },
+  {
+    "id": "reisleider",
+    "naam_nl": "Reisleider",
+    "naam_fr": "Accompagnateur de voyage",
+    "categorie": "Toerisme & Verblijf",
+    "omschrijving": "Begeleiding groepsreizen, rondreis-coördinatie, contactpersoon voor reizigers onderweg.",
+    "diploma_vereist": false,
+    "diploma_details": "Geen verplicht diploma. Ervaring en talenkennis cruciaal.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": true,
+    "verzekering_type": "RC Pro Accompagnement, Assurance rapatriement",
+    "taalvereiste": "C1",
+    "salaris_indicatie": "€2.000-3.500/maand (vaak freelance/per reis)",
+    "autoentrepreneur_mogelijk": true,
+    "gereglementeerd": false,
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Geen specifieke procedure. Contract met reisorganisatie of zelfstandig.",
+    "erkenning_url": "",
+    "certificering_nodig": false,
+    "certificering_waar": "Niet van toepassing",
+    "certificering_url": "",
+    "chambre": "Geen",
+    "chambre_naam": "Geen beroepskamer vereist",
+    "chambre_url": "",
+    "verzekeringen": [
+      "RC Pro Accompagnement",
+      "Assurance voyage professionnelle"
+    ],
+    "kosten_euro": 300,
+    "tijdlijn_maanden": "1",
+    "fiscaal_regimes": [
+      "Micro-BNC",
+      "Régime réel BNC"
+    ],
+    "gemiddeld_inkomen": 28000,
+    "regionale_vraag": "laag",
+    "links": [
+      {
+        "titel": "SETO - Syndicat Tour Opérateurs",
+        "url": "https://www.seto.fr"
+      }
+    ],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "reisleider",
+      "accompagnateur",
+      "groepsreis",
+      "toerisme",
+      "voyage"
+    ]
+  },
+  {
+    "id": "kok",
+    "naam_nl": "Kok",
+    "naam_fr": "Cuisinier / Chef de cuisine",
+    "categorie": "Horeca",
+    "omschrijving": "Bereiding gerechten in restaurant, hotel, collectiviteit. Verantwoordelijk voor keuken, menu, voorraad.",
+    "diploma_vereist": false,
+    "diploma_details": "Geen wettelijk verplicht diploma. CAP Cuisine sterk aanbevolen voor geloofwaardigheid.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": true,
+    "verzekering_type": "RC Pro, Assurance locaux professionnels",
+    "taalvereiste": "B1",
+    "salaris_indicatie": "€1.900-3.500/maand (loondienst) of €25.000-50.000/jaar (eigen zaak)",
+    "autoentrepreneur_mogelijk": false,
+    "gereglementeerd": false,
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Erkenning NL-koksdiploma bij CMA. Formation hygiène HACCP verplicht (14 uur).",
+    "erkenning_url": "https://www.artisanat.fr",
+    "certificering_nodig": true,
+    "certificering_waar": "HACCP - Hygiène alimentaire (verplicht)",
+    "certificering_url": "https://www.formation-haccp.fr",
+    "chambre": "CMA",
+    "chambre_naam": "Chambre de Métiers et de l'Artisanat",
+    "chambre_url": "https://www.artisanat.fr",
+    "verzekeringen": [
+      "RC Pro Restauration",
+      "Assurance locaux",
+      "Assurance denrées alimentaires"
+    ],
+    "kosten_euro": 800,
+    "tijdlijn_maanden": "2-3",
+    "fiscaal_regimes": [
+      "BIC - Régime réel",
+      "EURL",
+      "SARL"
+    ],
     "gemiddeld_inkomen": 28000,
     "regionale_vraag": "hoog",
     "links": [
       {
-        "titel": "CMA Frankrijk",
-        "url": "https://www.artisanat.fr"
+        "titel": "CAP Cuisine",
+        "url": "https://www.education.gouv.fr"
       },
       {
-        "titel": "Décennale info",
-        "url": "https://www.economie.gouv.fr"
+        "titel": "Formation HACCP",
+        "url": "https://www.formation-haccp.fr"
       }
     ],
-    "laatste_update": "2025-01-15"
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "kok",
+      "cuisinier",
+      "chef",
+      "cuisine",
+      "restaurant"
+    ]
   },
   {
-    "id": "webdesigner",
-    "naam_nl": "Webdesigner / Grafisch Ontwerper",
-    "naam_fr": "Designer Web / Graphiste",
-    "categorie": "creatief",
+    "id": "serveur",
+    "naam_nl": "Bediening / Ober",
+    "naam_fr": "Serveur / Serveuse",
+    "categorie": "Horeca",
+    "omschrijving": "Bediening gasten in restaurant, café, brasserie. Opnemen bestellingen, serveren, kassawerkzaamheden.",
+    "diploma_vereist": false,
+    "diploma_details": "Geen diploma vereist. CAP Commercialisation et Services is een voordeel.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": false,
+    "verzekering_type": "Werkgever verzekert (loondienst)",
+    "taalvereiste": "B2",
+    "salaris_indicatie": "€1.800-2.400/maand + fooien",
+    "autoentrepreneur_mogelijk": false,
     "gereglementeerd": false,
-    "diploma_eisen": [],
     "nl_diploma_erkend": true,
-    "erkenning_procedure": "Geen verplichte procedure, portfolio voldoet",
+    "erkenning_procedure": "Loondienst - geen procedure. Zelfstandig zeer ongebruikelijk.",
     "erkenning_url": "",
     "certificering_nodig": false,
-    "certificering_waar": "",
+    "certificering_waar": "Niet van toepassing",
     "certificering_url": "",
-    "chambre": "URSSAF",
-    "chambre_naam": "URSSAF (geen specifieke kamer)",
-    "chambre_url": "https://www.autoentrepreneur.urssaf.fr",
-    "taalvereiste": null,
-    "verzekeringen": ["RC Professionnelle (aanbevolen)"],
+    "chambre": "Geen",
+    "chambre_naam": "Niet van toepassing (loondienst)",
+    "chambre_url": "",
+    "verzekeringen": [],
     "kosten_euro": 0,
-    "tijdlijn_maanden": "0-1",
-    "fiscaal_regimes": ["Micro-BNC", "EI", "SASU"],
-    "gemiddeld_inkomen": 30000,
+    "tijdlijn_maanden": "0",
+    "fiscaal_regimes": [
+      "Salaire (loondienst)"
+    ],
+    "gemiddeld_inkomen": 24000,
+    "regionale_vraag": "hoog",
+    "links": [
+      {
+        "titel": "UMIH - Syndicat Hôtellerie Restauration",
+        "url": "https://www.umih.fr"
+      }
+    ],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "serveur",
+      "bediening",
+      "ober",
+      "restaurant",
+      "horeca"
+    ]
+  },
+  {
+    "id": "patissier",
+    "naam_nl": "Banketbakker",
+    "naam_fr": "Pâtissier",
+    "categorie": "Horeca",
+    "omschrijving": "Vervaardiging patisserie, taarten, desserts. Eigen zaak of in hotel/restaurant.",
+    "diploma_vereist": true,
+    "diploma_details": "CAP Pâtissier of gelijkwaardig buitenlands diploma. Erkenning via CMA verplicht.",
+    "erkenning": "procedure",
+    "verzekering_verplicht": true,
+    "verzekering_type": "RC Pro Alimentaire, Assurance locaux",
+    "taalvereiste": "B1",
+    "salaris_indicatie": "€2.000-3.800/maand (loondienst) of €30.000-60.000/jaar (eigen zaak)",
+    "autoentrepreneur_mogelijk": false,
+    "gereglementeerd": true,
+    "nl_diploma_erkend": false,
+    "erkenning_procedure": "Erkenning NL-diploma bij CMA. HACCP verplicht. Vaak VAE (Validation des Acquis) nodig.",
+    "erkenning_url": "https://www.artisanat.fr",
+    "certificering_nodig": true,
+    "certificering_waar": "CMA - Reconnaissance qualification",
+    "certificering_url": "https://www.artisanat.fr",
+    "chambre": "CMA",
+    "chambre_naam": "Chambre de Métiers et de l'Artisanat",
+    "chambre_url": "https://www.artisanat.fr",
+    "verzekeringen": [
+      "RC Pro Alimentaire",
+      "Assurance locaux professionnels",
+      "Assurance produits"
+    ],
+    "kosten_euro": 1500,
+    "tijdlijn_maanden": "3-6",
+    "fiscaal_regimes": [
+      "BIC - Régime réel",
+      "EURL",
+      "SARL"
+    ],
+    "gemiddeld_inkomen": 32000,
     "regionale_vraag": "gemiddeld",
     "links": [
       {
-        "titel": "URSSAF aanmelden",
-        "url": "https://www.autoentrepreneur.urssaf.fr"
+        "titel": "CAP Pâtissier",
+        "url": "https://www.education.gouv.fr"
       },
       {
-        "titel": "INPI Guichet Unique",
-        "url": "https://formalites.entreprises.gouv.fr"
+        "titel": "Confédération Nationale de la Pâtisserie",
+        "url": "https://www.cnp-france.com"
       }
     ],
-    "laatste_update": "2025-01-15"
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "patissier",
+      "banketbakker",
+      "taart",
+      "dessert",
+      "pâtisserie"
+    ]
+  },
+  {
+    "id": "barman",
+    "naam_nl": "Barman / Bartender",
+    "naam_fr": "Barman / Barmaid",
+    "categorie": "Horeca",
+    "omschrijving": "Bereiding dranken, cocktails, bediening bar. In café, restaurant, hotel, evenement.",
+    "diploma_vereist": false,
+    "diploma_details": "Geen verplicht diploma. Permis d'exploitation (vergunning alcohol) vereist voor eigenaar.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": false,
+    "verzekering_type": "Werkgever verzekert (loondienst)",
+    "taalvereiste": "B2",
+    "salaris_indicatie": "€1.900-2.800/maand + fooien",
+    "autoentrepreneur_mogelijk": false,
+    "gereglementeerd": false,
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Loondienst - geen procedure. Voor eigen bar: Permis d'exploitation (formation 20 uur).",
+    "erkenning_url": "https://www.service-public.fr/professionnels-entreprises/vosdroits/F22379",
+    "certificering_nodig": false,
+    "certificering_waar": "Permis d'exploitation (alleen eigenaar)",
+    "certificering_url": "https://www.umih-formations.com",
+    "chambre": "CCI",
+    "chambre_naam": "CCI (alleen bij eigen zaak)",
+    "chambre_url": "https://www.cci.fr",
+    "verzekeringen": [],
+    "kosten_euro": 0,
+    "tijdlijn_maanden": "0",
+    "fiscaal_regimes": [
+      "Salaire (loondienst)"
+    ],
+    "gemiddeld_inkomen": 26000,
+    "regionale_vraag": "hoog",
+    "links": [
+      {
+        "titel": "Permis d'exploitation",
+        "url": "https://www.service-public.fr/professionnels-entreprises/vosdroits/F22379"
+      }
+    ],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "barman",
+      "bar",
+      "cocktail",
+      "dranken",
+      "café"
+    ]
+  },
+  {
+    "id": "sommelier",
+    "naam_nl": "Sommelier",
+    "naam_fr": "Sommelier / Caviste",
+    "categorie": "Horeca",
+    "omschrijving": "Wijnspecialist in restaurant of wijnwinkel. Advisering, inkoop, kaartsamenstelling.",
+    "diploma_vereist": false,
+    "diploma_details": "Geen verplicht diploma. BP Sommelier of formation caviste sterk aanbevolen.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": false,
+    "verzekering_type": "RC Pro (indien zelfstandig)",
+    "taalvereiste": "C1",
+    "salaris_indicatie": "€2.200-3.800/maand (restaurant) of €25.000-45.000/jaar (eigen winkel)",
+    "autoentrepreneur_mogelijk": false,
+    "gereglementeerd": false,
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Voor verkoop alcohol: Permis d'exploitation. Voor advies: geen procedure.",
+    "erkenning_url": "",
+    "certificering_nodig": false,
+    "certificering_waar": "BP Sommelier (optioneel)",
+    "certificering_url": "",
+    "chambre": "CCI",
+    "chambre_naam": "CCI (bij wijnhandel)",
+    "chambre_url": "https://www.cci.fr",
+    "verzekeringen": [
+      "RC Pro (indien eigen zaak)"
+    ],
+    "kosten_euro": 500,
+    "tijdlijn_maanden": "1-2",
+    "fiscaal_regimes": [
+      "Salaire (loondienst)",
+      "BIC (handel)"
+    ],
+    "gemiddeld_inkomen": 32000,
+    "regionale_vraag": "gemiddeld",
+    "links": [
+      {
+        "titel": "Union de la Sommellerie Française",
+        "url": "https://www.sommellerie-francaise.org"
+      }
+    ],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "sommelier",
+      "wijn",
+      "vin",
+      "caviste",
+      "restaurant"
+    ]
+  },
+  {
+    "id": "traiteur",
+    "naam_nl": "Traiteur / Cateraar",
+    "naam_fr": "Traiteur",
+    "categorie": "Horeca",
+    "omschrijving": "Bereiding en levering maaltijden voor evenementen, feesten, bedrijven. Vaak op locatie.",
+    "diploma_vereist": false,
+    "diploma_details": "Geen verplicht diploma. CAP Cuisine of équivalent sterk aanbevolen. HACCP verplicht.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": true,
+    "verzekering_type": "RC Pro Alimentaire, Assurance transport denrées",
+    "taalvereiste": "B1",
+    "salaris_indicatie": "€25.000-55.000/jaar (afhankelijk van volume)",
+    "autoentrepreneur_mogelijk": false,
+    "gereglementeerd": false,
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Erkenning diploma bij CMA. HACCP formation verplicht. Voertuig voor transport.",
+    "erkenning_url": "https://www.artisanat.fr",
+    "certificering_nodig": true,
+    "certificering_waar": "HACCP Hygiène alimentaire",
+    "certificering_url": "https://www.formation-haccp.fr",
+    "chambre": "CMA",
+    "chambre_naam": "Chambre de Métiers et de l'Artisanat",
+    "chambre_url": "https://www.artisanat.fr",
+    "verzekeringen": [
+      "RC Pro Alimentaire",
+      "Assurance transport denrées périssables",
+      "Assurance véhicule professionnel"
+    ],
+    "kosten_euro": 1200,
+    "tijdlijn_maanden": "2-4",
+    "fiscaal_regimes": [
+      "BIC - Régime réel",
+      "EURL",
+      "SARL"
+    ],
+    "gemiddeld_inkomen": 35000,
+    "regionale_vraag": "hoog",
+    "links": [
+      {
+        "titel": "SNRTC - Syndicat National Restauration Traiteur",
+        "url": "https://www.snrtc.fr"
+      },
+      {
+        "titel": "Formation HACCP",
+        "url": "https://www.formation-haccp.fr"
+      }
+    ],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "traiteur",
+      "catering",
+      "evenementen",
+      "buffet",
+      "receptie"
+    ]
+  },
+  {
+    "id": "chef-de-rang",
+    "naam_nl": "Chef de rang",
+    "naam_fr": "Chef de rang",
+    "categorie": "Horeca",
+    "omschrijving": "Coördineert bediening in gastronomisch restaurant. Leiding over team serveurs, tafels, wijnadvisering.",
+    "diploma_vereist": false,
+    "diploma_details": "Geen verplicht diploma. Ervaring in haute gastronomie vereist.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": false,
+    "verzekering_type": "Werkgever verzekert",
+    "taalvereiste": "C1",
+    "salaris_indicatie": "€2.400-3.800/maand",
+    "autoentrepreneur_mogelijk": false,
+    "gereglementeerd": false,
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Loondienst - geen procedure nodig.",
+    "erkenning_url": "",
+    "certificering_nodig": false,
+    "certificering_waar": "Niet van toepassing",
+    "certificering_url": "",
+    "chambre": "Geen",
+    "chambre_naam": "Niet van toepassing",
+    "chambre_url": "",
+    "verzekeringen": [],
+    "kosten_euro": 0,
+    "tijdlijn_maanden": "0",
+    "fiscaal_regimes": [
+      "Salaire (loondienst)"
+    ],
+    "gemiddeld_inkomen": 32000,
+    "regionale_vraag": "gemiddeld",
+    "links": [
+      {
+        "titel": "UMIH Formation",
+        "url": "https://www.umih-formations.com"
+      }
+    ],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "chef de rang",
+      "gastronomie",
+      "haute cuisine",
+      "bediening",
+      "maître d'hôtel"
+    ]
+  },
+  {
+    "id": "plongeur",
+    "naam_nl": "Afwasser keuken",
+    "naam_fr": "Plongeur / Aide de cuisine",
+    "categorie": "Horeca",
+    "omschrijving": "Afwas, schoonmaak keuken, ondersteuning keukenpersoneel in restaurant of hotel.",
+    "diploma_vereist": false,
+    "diploma_details": "Geen diploma vereist.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": false,
+    "verzekering_type": "Werkgever verzekert",
+    "taalvereiste": "A2",
+    "salaris_indicatie": "€1.750-2.100/maand",
+    "autoentrepreneur_mogelijk": false,
+    "gereglementeerd": false,
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Loondienst - geen procedure.",
+    "erkenning_url": "",
+    "certificering_nodig": false,
+    "certificering_waar": "Niet van toepassing",
+    "certificering_url": "",
+    "chambre": "Geen",
+    "chambre_naam": "Niet van toepassing",
+    "chambre_url": "",
+    "verzekeringen": [],
+    "kosten_euro": 0,
+    "tijdlijn_maanden": "0",
+    "fiscaal_regimes": [
+      "Salaire (loondienst)"
+    ],
+    "gemiddeld_inkomen": 21000,
+    "regionale_vraag": "hoog",
+    "links": [],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "plongeur",
+      "afwas",
+      "keuken",
+      "schoonmaak",
+      "horeca"
+    ]
+  },
+  {
+    "id": "boulanger",
+    "naam_nl": "Bakker",
+    "naam_fr": "Boulanger",
+    "categorie": "Horeca",
+    "omschrijving": "Vervaardiging brood, croissants, viennoiserie. Eigen boulangerie of in supermarkt.",
+    "diploma_vereist": true,
+    "diploma_details": "CAP Boulanger verplicht. Buitenlands diploma moet erkend worden via CMA.",
+    "erkenning": "procedure",
+    "verzekering_verplicht": true,
+    "verzekering_type": "RC Pro Alimentaire, Assurance locaux",
+    "taalvereiste": "B1",
+    "salaris_indicatie": "€2.000-3.500/maand (loondienst) of €30.000-60.000/jaar (eigen zaak)",
+    "autoentrepreneur_mogelijk": false,
+    "gereglementeerd": true,
+    "nl_diploma_erkend": false,
+    "erkenning_procedure": "Erkenning NL-diploma bij CMA via VAE of équivalence. HACCP verplicht.",
+    "erkenning_url": "https://www.artisanat.fr",
+    "certificering_nodig": true,
+    "certificering_waar": "CMA - Qualification professionnelle",
+    "certificering_url": "https://www.artisanat.fr",
+    "chambre": "CMA",
+    "chambre_naam": "Chambre de Métiers et de l'Artisanat",
+    "chambre_url": "https://www.artisanat.fr",
+    "verzekeringen": [
+      "RC Pro Alimentaire",
+      "Assurance locaux",
+      "Assurance matériel (fournil)"
+    ],
+    "kosten_euro": 2000,
+    "tijdlijn_maanden": "3-6",
+    "fiscaal_regimes": [
+      "BIC - Régime réel",
+      "EURL",
+      "SARL"
+    ],
+    "gemiddeld_inkomen": 32000,
+    "regionale_vraag": "hoog",
+    "links": [
+      {
+        "titel": "Confédération Nationale de la Boulangerie",
+        "url": "https://www.boulangerie.org"
+      },
+      {
+        "titel": "CAP Boulanger",
+        "url": "https://www.education.gouv.fr"
+      }
+    ],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "bakker",
+      "boulanger",
+      "brood",
+      "croissant",
+      "pain"
+    ]
+  },
+  {
+    "id": "chef-domicile",
+    "naam_nl": "Chef à domicile",
+    "naam_fr": "Chef à domicile",
+    "categorie": "Horeca",
+    "omschrijving": "Bereiding maaltijden bij particulieren thuis. Voor diners, feesten, meal prep.",
+    "diploma_vereist": false,
+    "diploma_details": "Geen verplicht diploma. CAP Cuisine of ervaring aanbevolen. HACCP verplicht.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": true,
+    "verzekering_type": "RC Pro Alimentaire, Assurance transport denrées",
+    "taalvereiste": "B2",
+    "salaris_indicatie": "€35-80/uur of €30.000-60.000/jaar",
+    "autoentrepreneur_mogelijk": true,
+    "gereglementeerd": false,
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Micro-entreprise mogelijk. HACCP formation verplicht.",
+    "erkenning_url": "",
+    "certificering_nodig": true,
+    "certificering_waar": "HACCP Hygiène alimentaire",
+    "certificering_url": "https://www.formation-haccp.fr",
+    "chambre": "CMA",
+    "chambre_naam": "Chambre de Métiers (indien structuur artisanale)",
+    "chambre_url": "https://www.artisanat.fr",
+    "verzekeringen": [
+      "RC Pro Alimentaire",
+      "Assurance transport",
+      "Protection juridique"
+    ],
+    "kosten_euro": 600,
+    "tijdlijn_maanden": "1-2",
+    "fiscaal_regimes": [
+      "Micro-BNC",
+      "BIC - Régime réel"
+    ],
+    "gemiddeld_inkomen": 38000,
+    "regionale_vraag": "gemiddeld",
+    "links": [
+      {
+        "titel": "SYCPA - Syndicat des Chefs à domicile",
+        "url": "https://www.sycpa.fr"
+      },
+      {
+        "titel": "Formation HACCP",
+        "url": "https://www.formation-haccp.fr"
+      }
+    ],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "chef domicile",
+      "particulier",
+      "traiteur",
+      "cuisine maison",
+      "meal prep"
+    ]
+  },
+  {
+    "id": "organisateur-evenements",
+    "naam_nl": "Organisator evenementen",
+    "naam_fr": "Organisateur d'événements",
+    "categorie": "Horeca",
+    "omschrijving": "Coördinatie bruiloften, bedrijfsfeesten, conferenties. Catering, locatie, logistiek.",
+    "diploma_vereist": false,
+    "diploma_details": "Geen verplicht diploma. BTS Événementiel of ervaring voordeel.",
+    "erkenning": "automatisch",
+    "verzekering_verplicht": true,
+    "verzekering_type": "RC Pro Événementiel, Assurance annulation",
+    "taalvereiste": "B2",
+    "salaris_indicatie": "€2.500-5.000/maand of per evenement",
+    "autoentrepreneur_mogelijk": true,
+    "gereglementeerd": false,
+    "nl_diploma_erkend": true,
+    "erkenning_procedure": "Geen specifieke procedure. Vaak zelfstandig of via agence événementielle.",
+    "erkenning_url": "",
+    "certificering_nodig": false,
+    "certificering_waar": "Niet van toepassing",
+    "certificering_url": "",
+    "chambre": "CCI",
+    "chambre_naam": "Chambre de Commerce (bij eigen agence)",
+    "chambre_url": "https://www.cci.fr",
+    "verzekeringen": [
+      "RC Pro Événementiel",
+      "Assurance annulation",
+      "Protection juridique"
+    ],
+    "kosten_euro": 800,
+    "tijdlijn_maanden": "1-2",
+    "fiscaal_regimes": [
+      "Micro-BNC",
+      "BIC - Régime réel",
+      "SARL"
+    ],
+    "gemiddeld_inkomen": 40000,
+    "regionale_vraag": "gemiddeld",
+    "links": [
+      {
+        "titel": "ANAé - Association Nationale Événementiel",
+        "url": "https://www.anae.org"
+      }
+    ],
+    "laatste_update": "2025-01-15",
+    "keywords": [
+      "evenementen",
+      "bruiloft",
+      "organisatie",
+      "événementiel",
+      "feest"
+    ]
   }
 ]
