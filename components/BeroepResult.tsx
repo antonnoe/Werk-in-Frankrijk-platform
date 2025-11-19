@@ -1,146 +1,206 @@
+// /components/BeroepResult.tsx
 "use client";
 
-import { FileText } from "lucide-react";
-import { Beroep } from "@/lib/types";
+import { Beroep } from "../lib/types";
 
 interface Props {
-  beroep: Beroep;
+  beroep: Beroep | null;
 }
 
+// Inline SVG info-icon
+const InfoIcon = () => (
+  <svg
+    className="w-4 h-4 inline-block ml-1 text-gray-600"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+  >
+    <circle cx="12" cy="12" r="9" />
+    <line x1="12" y1="8" x2="12" y2="12" />
+    <circle cx="12" cy="16" r="1" />
+  </svg>
+);
+
+// Tooltip wrapper
+const Tooltip = ({ text }: { text: string }) => (
+  <span className="relative group cursor-help">
+    <InfoIcon />
+    <span
+      className="
+        absolute left-1/2 top-full mt-1 w-max max-w-xs
+        -translate-x-1/2 px-3 py-2 rounded-md shadow-lg
+        bg-black text-white text-xs opacity-0
+        group-hover:opacity-100 group-focus-within:opacity-100
+        transition-opacity z-50
+      "
+    >
+      {text}
+    </span>
+  </span>
+);
+
 export default function BeroepResult({ beroep }: Props) {
-  if (!beroep) return null;
+  if (!beroep) {
+    return (
+      <p className="mt-10 text-center text-gray-700 text-lg">
+        Selecteer een beroep om de details te bekijken.
+      </p>
+    );
+  }
 
   return (
-    <div className="p-6 bg-white shadow rounded-lg border border-gray-200">
-      <div className="flex items-center gap-3 mb-3">
-        <FileText className="w-8 h-8 text-red-900 flex-shrink-0" />
-        <h1 className="text-3xl font-bold text-gray-900">
-          {beroep.naamNl ?? "Onbekende naam"}
+    <div className="mt-10 bg-white shadow-md rounded-lg p-8 max-w-4xl mx-auto border border-gray-200">
+      {/* Titelblok */}
+      <div className="flex items-center gap-3 mb-6">
+        <h1 className="text-3xl font-bold text-red-900">
+          {beroep.naamNl}
         </h1>
       </div>
 
-      <p className="text-xl text-gray-600 ml-11">
-        {beroep.naamFr ?? ""}
-      </p>
+      <p className="text-xl text-gray-600 ml-1">{beroep.naamFr}</p>
 
-      {/* Tags / categorieën */}
-      <div className="flex flex-wrap gap-2 mt-4 ml-11">
+      {/* Badges */}
+      <div className="flex flex-wrap gap-2 mt-4">
         {beroep.categorie && (
-          <span className="px-2 py-1 text-sm bg-gray-100 rounded border border-gray-300">
+          <span className="px-3 py-1 bg-red-900 text-white text-sm rounded">
             {beroep.categorie}
           </span>
         )}
 
         {beroep.taalvereiste && (
-          <span className="px-2 py-1 text-sm bg-gray-100 rounded border border-gray-300">
-            Taal: {beroep.taalvereiste}
+          <span className="px-3 py-1 bg-gray-200 text-gray-800 text-sm rounded">
+            Taalniveau: {beroep.taalvereiste}
           </span>
         )}
 
-        {beroep.autoentrepreneurMogelijk && (
-          <span className="px-2 py-1 text-sm bg-green-100 text-green-800 rounded border border-green-300">
-            Auto-Entrepreneur mogelijk
+        {beroep.diplomaVereist && (
+          <span className="px-3 py-1 bg-blue-100 text-blue-900 text-sm rounded">
+            Diploma verplicht
           </span>
         )}
 
-        {beroep.regelgeving && (
-          <span className="px-2 py-1 text-sm bg-gray-100 rounded border border-gray-300">
-            {beroep.regelgeving}
+        {beroep.gereglementeerd && (
+          <span className="px-3 py-1 bg-yellow-200 text-yellow-900 text-sm rounded">
+            Gereglementeerd beroep
           </span>
         )}
       </div>
 
       {/* Omschrijving */}
-      {beroep.omschrijving && (
-        <p className="mt-6 text-gray-800 leading-relaxed ml-11">
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold text-red-900 flex items-center">
+          Omschrijving
+        </h2>
+        <p className="mt-2 text-gray-800 leading-relaxed">
           {beroep.omschrijving}
         </p>
-      )}
+      </section>
 
-      {/* Diploma */}
-      {beroep.diplomaVereist !== undefined && (
-        <div className="mt-6 ml-11">
-          <h2 className="text-xl font-semibold text-gray-900">
-            Diploma
-          </h2>
-          <p className="text-gray-700 mt-1">
-            {beroep.diplomaVereist
-              ? "Diploma vereist."
-              : "Geen diploma vereist."}
-          </p>
+      {/* Diploma / Erkenning */}
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold text-red-900 flex items-center">
+          Diploma & Erkenning
+          <Tooltip text="Informatie over vereiste diploma's en eventuele erkenningsprocedures." />
+        </h2>
+
+        <ul className="mt-3 text-gray-800 leading-relaxed space-y-2">
+          <li>
+            <strong>Diploma vereist:</strong>{" "}
+            {beroep.diplomaVereist ? "Ja" : "Nee"}
+          </li>
 
           {beroep.diplomaDetails && (
-            <p className="text-gray-700 mt-1">
-              Details: {beroep.diplomaDetails}
-            </p>
+            <li>
+              <strong>Details:</strong> {beroep.diplomaDetails}
+            </li>
           )}
-        </div>
-      )}
 
-      {/* Erkenning */}
-      {beroep.erkenning && (
-        <div className="mt-6 ml-11">
-          <h2 className="text-xl font-semibold text-gray-900">
-            Erkenning & Procedures
-          </h2>
-          <p className="text-gray-700 mt-1">{beroep.erkenning}</p>
+          {beroep.erkenning && (
+            <li>
+              <strong>Erkenning:</strong> {beroep.erkenning}
+            </li>
+          )}
+
+          {beroep.erkenningProcedure && (
+            <li>
+              <strong>Procedure:</strong> {beroep.erkenningProcedure}
+            </li>
+          )}
 
           {beroep.erkenningUrl && (
-            <a
-              href={beroep.erkenningUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-red-800 underline mt-1 inline-block"
-            >
-              Meer uitleg
-            </a>
+            <li>
+              <a
+                href={beroep.erkenningUrl}
+                className="text-blue-700 underline"
+                target="_blank"
+              >
+                Officiële link (Service-Public)
+              </a>
+            </li>
           )}
-        </div>
-      )}
+        </ul>
+      </section>
 
       {/* Verzekeringen */}
-      {beroep.verzekeringVerplicht !== undefined && (
-        <div className="mt-6 ml-11">
-          <h2 className="text-xl font-semibold text-gray-900">
-            Verzekeringen
-          </h2>
-          <p className="text-gray-700 mt-1">
-            {beroep.verzekeringVerplicht
-              ? "Verzekering verplicht."
-              : "Verzekering niet verplicht."}
-          </p>
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold text-red-900 flex items-center">
+          Verzekeringen
+          <Tooltip text="Welke verzekeringen zijn verplicht of aanbevolen voor dit beroep?" />
+        </h2>
 
-          {beroep.verzekeringType && (
-            <p className="text-gray-700 mt-1">
-              Type: {beroep.verzekeringType}
-            </p>
-          )}
-        </div>
-      )}
+        <ul className="mt-3 text-gray-800 space-y-1">
+          {beroep.verzekeringen?.map((v, i) => (
+            <li key={i}>• {v}</li>
+          ))}
+        </ul>
+      </section>
+
+      {/* Kosten + Tijdslijn */}
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold text-red-900 flex items-center">
+          Kosten & Tijdlijn
+          <Tooltip text="Indicatie van de opstartkosten en benodigde tijd." />
+        </h2>
+
+        <p className="mt-2 text-gray-800">
+          <strong>Kosten:</strong>{" "}
+          {beroep.kostenEuro ? `€${beroep.kostenEuro}` : "—"}
+        </p>
+        <p className="text-gray-800 mt-1">
+          <strong>Tijdlijn:</strong> {beroep.tijdlijnMaanden || "—"} maanden
+        </p>
+      </section>
 
       {/* Links */}
-      {beroep.links && beroep.links.length > 0 && (
-        <div className="mt-6 ml-11">
-          <h2 className="text-xl font-semibold text-gray-900">Links</h2>
-          <ul className="list-disc list-inside mt-2 text-gray-800">
+      {beroep.links && (
+        <section className="mt-8">
+          <h2 className="text-xl font-semibold text-red-900 flex items-center">
+            Officiële Bronnen
+            <Tooltip text="Rechtstreekse links naar officiële instanties." />
+          </h2>
+
+          <ul className="mt-3 text-blue-800 space-y-2">
             {beroep.links.map((l, i) => (
               <li key={i}>
-                {l.url ? (
-                  <a
-                    href={l.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-red-800 underline"
-                  >
-                    {l.titel ?? l.url}
-                  </a>
-                ) : (
-                  l.titel
-                )}
+                <a
+                  href={l.url}
+                  target="_blank"
+                  className="underline"
+                >
+                  {l.titel}
+                </a>
               </li>
             ))}
           </ul>
-        </div>
+        </section>
+      )}
+
+      {/* Laatste update */}
+      {beroep.laatsteUpdate && (
+        <p className="mt-10 text-sm text-gray-500">
+          Laatste update: {beroep.laatsteUpdate}
+        </p>
       )}
     </div>
   );
