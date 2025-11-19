@@ -1,71 +1,65 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useMemo } from "react";
 import Fuse from "fuse.js";
 import { Beroep } from "../lib/types";
 
 interface SearchBarProps {
   beroepen: Beroep[];
   onSelect: (b: Beroep | null, q: string) => void;
+  searchQuery: string;
+  setSearchQuery: (q: string) => void;
 }
 
-export default function SearchBar({ beroepen, onSelect }: SearchBarProps) {
-  const [input, setInput] = useState("");
-  const [results, setResults] = useState<Beroep[]>([]);
-  const [isOpen, setIsOpen] = useState(false);
+export default function SearchBar({
+  beroepen,
+  onSelect,
+  searchQuery,
+  setSearchQuery,
+}: SearchBarProps) {
+  const [open, setOpen] = useState(false);
 
-  // Fuse.js options for fuzzy search
-  const fuse = new Fuse(beroepen, {
-    keys: ["naamNl", "naamFr", "categorie", "keywords"],
-    threshold: 0.35,
-  });
+  const fuse = useMemo(() => {
+    return new Fuse(beroepen, {
+      keys: ["naamNl", "naamFr", "categorie", "keywords"],
+      threshold: 0.3,
+    });
+  }, [beroepen]);
 
-  useEffect(() => {
-    if (!input.trim()) {
-      setResults([]);
-      onSelect(null, "");
-      return;
-    }
-
-    const search = fuse.search(input).map((r) => r.item);
-    setResults(search);
-  }, [input, beroepen]);
+  const results = useMemo(() => {
+    if (!searchQuery.trim()) return [];
+    return fuse.search(searchQuery).map((r) => r.item);
+  }, [searchQuery, fuse]);
 
   return (
-    <div className="relative w-full max-w-2xl mx-auto">
+    <div className="relative w-full">
       <input
         type="text"
-        value={input}
-        onChange={(e) => {
-          setInput(e.target.value);
-          setIsOpen(true);
-        }}
-        placeholder="Zoek een beroep…"
-        className="w-full border border-gray-400 rounded-lg px-4 py-3 text-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-700"
+        value={searchQuery}
+        placeholder="Zoek een beroep..."
+        className="w-full border rounded px-3 py-2"
+        onFocus={() => setOpen(true)}
+        onChange={(e) => setSearchQuery(e.target.value)}
       />
 
-      {isOpen && results.length > 0 && (
-        <div className="absolute w-full bg-white border border-gray-300 rounded-lg mt-2 shadow-lg max-h-72 overflow-y-auto z-50">
+      {open && results.length > 0 && (
+        <div
+          className="absolute mt-1 w-full bg-white border rounded shadow-lg overflow-y-auto z-20"
+          style={{ maxHeight: "400px" }}
+        >
           {results.map((b) => (
-            <button
+            <div
               key={b.id}
               onClick={() => {
-                setInput(b.naamNl);
-                setIsOpen(false);
-                onSelect(b, b.naamNl);
+                onSelect(b, searchQuery);
+                setOpen(false);
               }}
-              className="block w-full text-left px-4 py-3 hover:bg-gray-100 border-b last:border-b-0"
+              className="p-2 border-b cursor-pointer hover:bg-gray-100"
             >
-              <div className="font-semibold">{b.naamNl}</div>
-              <div className="text-sm text-gray-600">{b.naamFr}</div>
-            </button>
+              <strong>{b.naamNl}</strong>
+              <div className="text-xs text-gray-500">{b.categorie}</div>
+            </div>
           ))}
-        </div>
-      )}
-
-      {isOpen && input && results.length === 0 && (
-        <div className="absolute w-full bg-white border border-gray-300 rounded-lg mt-2 shadow px-4 py-3 text-gray-600 text-sm">
-          Geen resultaten gevonden…
         </div>
       )}
     </div>
