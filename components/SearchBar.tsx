@@ -1,65 +1,72 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Fuse from "fuse.js";
 import { Beroep } from "../lib/types";
 
 interface SearchBarProps {
   beroepen: Beroep[];
-  onSelect: (beroep: Beroep | null, query: string) => void;
+  onSelect: (b: Beroep | null, q: string) => void;
 }
 
 export default function SearchBar({ beroepen, onSelect }: SearchBarProps) {
   const [input, setInput] = useState("");
-  const [open, setOpen] = useState(false);
+  const [results, setResults] = useState<Beroep[]>([]);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const filtered =
-    input.length === 0
-      ? []
-      : beroepen.filter((b) =>
-          b.naam_nl.toLowerCase().includes(input.toLowerCase())
-        );
+  // Fuse.js options for fuzzy search
+  const fuse = new Fuse(beroepen, {
+    keys: ["naamNl", "naamFr", "categorie", "keywords"],
+    threshold: 0.35,
+  });
+
+  useEffect(() => {
+    if (!input.trim()) {
+      setResults([]);
+      onSelect(null, "");
+      return;
+    }
+
+    const search = fuse.search(input).map((r) => r.item);
+    setResults(search);
+  }, [input, beroepen]);
 
   return (
-    <div className="relative w-full max-w-xl mx-auto">
+    <div className="relative w-full max-w-2xl mx-auto">
       <input
-        className="w-full rounded border border-gray-300 p-3 shadow-sm text-lg"
-        placeholder="Zoek een beroep..."
+        type="text"
         value={input}
         onChange={(e) => {
           setInput(e.target.value);
-          setOpen(true);
+          setIsOpen(true);
         }}
+        placeholder="Zoek een beroep…"
+        className="w-full border border-gray-400 rounded-lg px-4 py-3 text-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-700"
       />
 
-      {open && filtered.length > 0 && (
-        <div className="absolute left-0 right-0 bg-white border border-gray-300 rounded shadow-lg max-h-72 overflow-auto z-20">
-          {filtered.map((b) => (
+      {isOpen && results.length > 0 && (
+        <div className="absolute w-full bg-white border border-gray-300 rounded-lg mt-2 shadow-lg max-h-72 overflow-y-auto z-50">
+          {results.map((b) => (
             <button
               key={b.id}
-              className="block w-full text-left px-4 py-2 hover:bg-gray-100"
               onClick={() => {
-                onSelect(b, b.naam_nl);
-                setInput(b.naam_nl);
-                setOpen(false);
+                setInput(b.naamNl);
+                setIsOpen(false);
+                onSelect(b, b.naamNl);
               }}
+              className="block w-full text-left px-4 py-3 hover:bg-gray-100 border-b last:border-b-0"
             >
-              {b.naam_nl} <span className="text-gray-500">({b.naam_fr})</span>
+              <div className="font-semibold">{b.naamNl}</div>
+              <div className="text-sm text-gray-600">{b.naamFr}</div>
             </button>
           ))}
         </div>
       )}
 
-      {input.length > 0 && (
-        <button
-          className="absolute right-3 top-3 text-gray-500"
-          onClick={() => {
-            setInput("");
-            onSelect(null, "");
-            setOpen(false);
-          }}
-        >
-          ✕
-        </button>
+      {isOpen && input && results.length === 0 && (
+        <div className="absolute w-full bg-white border border-gray-300 rounded-lg mt-2 shadow px-4 py-3 text-gray-600 text-sm">
+          Geen resultaten gevonden…
+        </div>
       )}
     </div>
   );
