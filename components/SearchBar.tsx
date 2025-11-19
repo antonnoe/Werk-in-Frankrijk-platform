@@ -1,161 +1,141 @@
-'use client'
+// /components/SearchBar.tsx
+"use client";
 
-import { useState, useEffect, useRef } from 'react'
-import { Search, X } from 'lucide-react'
-import type { Beroep } from '@/lib/types'
-import { searchBeroepen } from '@/lib/search'
+import { useState, useEffect } from "react";
+import { getBeroepen } from "../lib/getBeroepen";
+import { Beroep } from "../lib/types";
 
 interface SearchBarProps {
-  onSelect: (beroep: Beroep) => void
-  beroepen: Beroep[]
+  onSelect: (b: Beroep | null) => void;
 }
 
-export function SearchBar({ onSelect, beroepen }: SearchBarProps) {
-  const [query, setQuery] = useState('')
-  const [isOpen, setIsOpen] = useState(false)
-  const [results, setResults] = useState<Beroep[]>([])
-  const [selectedIndex, setSelectedIndex] = useState(-1)
-  const wrapperRef = useRef<HTMLDivElement>(null)
+export default function SearchBar({ onSelect }: SearchBarProps) {
+  const [query, setQuery] = useState("");
+  const [results, setResults] = useState<Beroep[]>([]);
+  const [allBeroepen, setAllBeroepen] = useState<Beroep[]>([]);
+  const [showDropdown, setShowDropdown] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      if (query.length >= 2) {
-        const searchResults = searchBeroepen(query, beroepen)
-        setResults(searchResults.map(r => r.beroep))
-        setIsOpen(true)
-      } else {
-        setResults([])
-        setIsOpen(false)
-      }
-    }, 300)
-    return () => clearTimeout(timer)
-  }, [query, beroepen])
+    setAllBeroepen(getBeroepen());
+  }, []);
 
   useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
-        setIsOpen(false)
-      }
+    if (!query.trim()) {
+      setResults([]);
+      onSelect(null);
+      return;
     }
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [])
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (!isOpen) return
-    switch (e.key) {
-      case 'ArrowDown':
-        e.preventDefault()
-        setSelectedIndex(prev => (prev < results.length - 1 ? prev + 1 : prev))
-        break
-      case 'ArrowUp':
-        e.preventDefault()
-        setSelectedIndex(prev => (prev > 0 ? prev - 1 : -1))
-        break
-      case 'Enter':
-        e.preventDefault()
-        if (selectedIndex >= 0 && results[selectedIndex]) {
-          handleSelect(results[selectedIndex])
-        }
-        break
-      case 'Escape':
-        setIsOpen(false)
-        break
-    }
-  }
+    const q = query.toLowerCase();
 
-  const handleSelect = (beroep: Beroep) => {
-    onSelect(beroep)
-    setQuery('')
-    setIsOpen(false)
-    setSelectedIndex(-1)
-  }
+    const filtered = allBeroepen.filter((b) => {
+      const naamNl = b.naamNl?.toLowerCase() || "";
+      const naamFr = b.naamFr?.toLowerCase() || "";
+      const keywords = b.keywords?.join(" ").toLowerCase() || "";
+      return (
+        naamNl.includes(q) ||
+        naamFr.includes(q) ||
+        keywords.includes(q)
+      );
+    });
 
-  const clearSearch = () => {
-    setQuery('')
-    setResults([])
-    setIsOpen(false)
-  }
+    setResults(filtered.slice(0, 12));
+    setShowDropdown(true);
+  }, [query, allBeroepen, onSelect]);
 
-  const highlightMatch = (text: string, query: string) => {
-    const lowerText = text.toLowerCase()
-    const lowerQuery = query.toLowerCase()
-    const index = lowerText.indexOf(lowerQuery)
-    if (index === -1) return text
-    return (
-      <>
-        {text.substring(0, index)}
-        <span className="bg-yellow-200 font-semibold">
-          {text.substring(index, index + query.length)}
-        </span>
-        {text.substring(index + query.length)}
-      </>
-    )
-  }
+  // Tooltip SVG
+  const InfoIcon = () => (
+    <svg
+      className="w-4 h-4 inline-block ml-1 text-gray-600"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+    >
+      <circle cx="12" cy="12" r="9" />
+      <line x1="12" y1="8" x2="12" y2="12" />
+      <circle cx="12" cy="16" r="1" />
+    </svg>
+  );
+
+  // Tooltip wrapper
+  const Tooltip = ({ text }: { text: string }) => (
+    <span className="relative group cursor-help">
+      <InfoIcon />
+      <span className="
+        absolute left-1/2 top-full mt-1 w-max max-w-xs
+        -translate-x-1/2 px-3 py-2 rounded-md shadow-lg
+        bg-black text-white text-xs opacity-0
+        group-hover:opacity-100 group-focus-within:opacity-100
+        transition-opacity
+        z-50
+      ">
+        {text}
+      </span>
+    </span>
+  );
 
   return (
-    <div ref={wrapperRef} className="relative w-full max-w-2xl mx-auto">
-      <div className="relative">
-        <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-        <input
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          onKeyDown={handleKeyDown}
-          placeholder="Zoek je beroep... (bijv. verpleegkundige, timmerman, grafisch ontwerper)"
-          className="w-full pl-12 pr-12 py-4 text-lg border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-red-900 focus:border-red-900 transition-all"
-          autoComplete="off"
-        />
-        {query && (
-          <button
-            onClick={clearSearch}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
-          >
-            <X className="w-5 h-5" />
-          </button>
-        )}
-      </div>
+    <div className="w-full max-w-3xl mx-auto mt-6 relative">
+      <label className="block font-semibold text-gray-800 mb-1">
+        Zoek een beroep in Frankrijk
+        <Tooltip text="Typ een Nederlands of Frans beroep, of een trefwoord." />
+      </label>
 
-      {isOpen && (
-        <div className="absolute z-50 w-full mt-2 bg-white border-2 border-gray-200 rounded-xl shadow-xl max-h-96 overflow-y-auto">
-          {results.length > 0 ? (
-            <ul className="py-2">
-              {results.map((beroep, index) => (
-                <li key={beroep.id}>
-                  <button
-                    onClick={() => handleSelect(beroep)}
-                    className={`w-full px-4 py-3 text-left hover:bg-red-50 transition-colors ${
-                      index === selectedIndex ? 'bg-red-50' : ''
-                    }`}
-                  >
-                    <div className="font-semibold text-gray-900">
-                      {highlightMatch(beroep.naam_nl, query)}
-                    </div>
-                    <div className="text-sm text-gray-600">
-                      {highlightMatch(beroep.naam_fr, query)}
-                    </div>
-                    <div className="text-xs text-gray-500 mt-1">
-                      <span className="inline-block px-2 py-0.5 bg-gray-100 rounded">
-                        {beroep.categorie}
-                      </span>
-                      {beroep.gereglementeerd && (
-                        <span className="inline-block ml-2 px-2 py-0.5 bg-yellow-100 text-yellow-800 rounded">
-                          Gereglementeerd
-                        </span>
-                      )}
-                    </div>
-                  </button>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <div className="px-4 py-8 text-center text-gray-500">
-              <p className="text-lg">Geen resultaten gevonden</p>
-              <p className="text-sm mt-2">Probeer een andere zoekterm</p>
-            </div>
-          )}
-        </div>
+      <input
+        type="text"
+        className="
+          w-full border border-gray-300 rounded-md px-4 py-3
+          focus:outline-none focus:border-red-900 focus:ring-1 focus:ring-red-900
+          text-lg shadow-sm
+        "
+        placeholder="Bijv. kok, gîte, tuinman, masseur, verpleegkundige…"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        onFocus={() => query && setShowDropdown(true)}
+      />
+
+      {showDropdown && results.length > 0 && (
+        <ul
+          className="
+            absolute z-40 left-0 right-0 bg-white border border-gray-300 
+            rounded-md mt-1 shadow-lg max-h-64 overflow-y-auto
+          "
+        >
+          {results.map((b) => (
+            <li
+              key={b.id}
+              onClick={() => {
+                setQuery(b.naamNl || "");
+                setShowDropdown(false);
+                onSelect(b);
+              }}
+              className="
+                px-4 py-3 border-b border-gray-100 cursor-pointer
+                hover:bg-gray-100 transition-colors
+              "
+            >
+              <div className="font-medium">
+                {b.naamNl}
+              </div>
+              <div className="text-sm text-gray-600">{b.naamFr}</div>
+
+              <div className="flex gap-2 mt-1 flex-wrap">
+                {b.categorie && (
+                  <span className="text-xs px-2 py-1 bg-red-900 text-white rounded">
+                    {b.categorie}
+                  </span>
+                )}
+                {b.taalvereiste && (
+                  <span className="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded">
+                    Taal: {b.taalvereiste}
+                  </span>
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
       )}
     </div>
-  )
+  );
 }
