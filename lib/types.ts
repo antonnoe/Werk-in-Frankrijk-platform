@@ -33,7 +33,12 @@ export interface Beroep {
     url: string
   }[]
   
-  laatste_update: string
+ laatste_update: string
+  rncp_code?: string  // Optioneel: FranceCompétences RNCP nummer
+  rome_code?: string  // Optioneel: Pôle Emploi ROME code
+  toelichting_kosten?: string  // Extra uitleg bij kosten
+  toelichting_tijdlijn?: string  // Extra uitleg bij tijdlijn
+}
 }
 
 export interface SearchResult {
