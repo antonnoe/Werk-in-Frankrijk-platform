@@ -1,67 +1,62 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import SearchBar from "../components/SearchBar";
 import BeroepResult from "../components/BeroepResult";
-import { Beroep } from "../lib/types";
-import { getBeroepen } from "../lib/getBeroepen";
-import { searchBeroepen } from "../lib/search";
 import SectorButtons from "../components/SectorButtons";
-import { sectors } from "../lib/sectors";
+import { Beroep } from "../lib/types";
+import beroepenData from "../data/beroepen.json";
 
 export default function HomePage() {
   const [selectedSector, setSelectedSector] = useState<string | null>(null);
-  const [query, setQuery] = useState("");
   const [selectedBeroep, setSelectedBeroep] = useState<Beroep | null>(null);
+  const [query, setQuery] = useState("");
 
-  const beroepen = getBeroepen();
-
-  // Filter op sector
-  const sectorFiltered =
-    selectedSector === null
-      ? beroepen
-      : beroepen.filter((b) => b.categorie === selectedSector);
-
-  // Filter op zoekterm
-  const searchResults =
-    query.trim().length > 0
-      ? searchBeroepen(sectorFiltered, query)
-      : sectorFiltered;
+  // ⭐ Filter beroepen op sector (indien gekozen)
+  const sectorFiltered: Beroep[] = useMemo(() => {
+    if (!selectedSector) return beroepenData as Beroep[];
+    return (beroepenData as Beroep[]).filter((b) =>
+      b.sectoren?.includes(selectedSector)
+    );
+  }, [selectedSector]);
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-6 text-red-900">
-        Beroepenchecker Frankrijk
+    <main className="max-w-3xl mx-auto px-4 py-10">
+      <h1 className="text-3xl font-bold text-red-900 mb-6">
+        Werk in Frankrijk – Beroepenchecker
       </h1>
 
-      {/* Sector-knoppen */}
+      {/* ⭐ Sector knoppen */}
       <SectorButtons
-        sectors={sectors}
-        selectedSector={selectedSector}
+        selected={selectedSector}
         onSelect={setSelectedSector}
       />
 
-      {/* Zoekbalk */}
-      <SearchBar
-        beroepen={sectorFiltered}
-        onSelect={(b, q) => {
-          setSelectedBeroep(b);
-          setQuery(q);
-        }}
-        searchQuery={query}
-        setSearchQuery={setQuery}
-      />
+      {/* ⭐ Zoekbalk */}
+      <div className="mt-6">
+        <SearchBar
+          beroepen={sectorFiltered}
+          onSelect={(b, q) => {
+            setSelectedBeroep(b);
+            setQuery(q);
+          }}
+        />
+      </div>
 
-      {/* Resultaat */}
+      {/* ⭐ Resultaat */}
       <div className="mt-6">
         {selectedBeroep ? (
           <BeroepResult beroep={selectedBeroep} />
+        ) : query.length > 0 ? (
+          <p className="text-gray-600 mt-4">
+            Geen beroep gevonden dat past bij: <strong>{query}</strong>
+          </p>
         ) : (
-          <p className="text-gray-600 text-sm">
-            {searchResults.length} beroepen gevonden
+          <p className="text-gray-500 mt-4">
+            Selecteer een sector of gebruik de zoekbalk.
           </p>
         )}
       </div>
-    </div>
+    </main>
   );
 }
