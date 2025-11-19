@@ -1,52 +1,46 @@
 "use client";
 
-import React from "react";
-import { cn } from "../lib/utils";
-
-interface Sector {
-  id: string;
-  label: string;
-}
-
 interface SectorButtonsProps {
-  sectors: Sector[];
   selectedSector: string | null;
-  onSelect: (sectorId: string | null) => void;
+  onSelect: (sector: string | null) => void;
 }
+
+const SECTOREN = [
+  "Toerisme & Verblijf",
+  "Horeca (Restauration)",
+  "Gezondheidszorg & Zorgverlening",
+  "(Para)medisch & Zorgberoepen",
+  "Bouw & Renovatie",
+  "Installatie & Techniek",
+  "Landbouw & Groene sector",
+  "Dienstverlening & Ambachten",
+  "Zakelijke dienstverlening",
+  "Onderwijs & Cultuur",
+];
 
 export default function SectorButtons({
-  sectors,
   selectedSector,
   onSelect,
 }: SectorButtonsProps) {
   return (
-    <div className="flex flex-wrap gap-2 mb-6">
-      <button
-        onClick={() => onSelect(null)}
-        className={cn(
-          "px-4 py-2 rounded-full border text-sm font-medium",
-          selectedSector === null
-            ? "bg-red-900 text-white border-red-900"
-            : "bg-white border-gray-300 text-gray-700 hover:bg-gray-100"
-        )}
-      >
-        Alle sectoren
-      </button>
+    <div className="flex flex-wrap gap-2 my-4">
+      {SECTOREN.map((sector) => {
+        const active = selectedSector === sector;
 
-      {sectors.map((s) => (
-        <button
-          key={s.id}
-          onClick={() => onSelect(s.id)}
-          className={cn(
-            "px-4 py-2 rounded-full border text-sm font-medium transition",
-            selectedSector === s.id
-              ? "bg-red-900 text-white border-red-900"
-              : "bg-white border-gray-300 text-gray-700 hover:bg-gray-100"
-          )}
-        >
-          {s.label}
-        </button>
-      ))}
+        return (
+          <button
+            key={sector}
+            onClick={() => onSelect(active ? null : sector)}
+            className={`px-3 py-1 rounded-full border text-sm transition ${
+              active
+                ? "bg-[#800000] text-white border-[#800000]"
+                : "bg-white text-[#800000] border-[#800000]"
+            }`}
+          >
+            {sector}
+          </button>
+        );
+      })}
     </div>
   );
 }
