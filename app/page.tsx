@@ -16,13 +16,13 @@ export default function HomePage() {
 
   const beroepen = getBeroepen();
 
-  // Sectorfilter
+  // Filter op sector
   const sectorFiltered =
     selectedSector === null
       ? beroepen
       : beroepen.filter((b) => b.categorie === selectedSector);
 
-  // Zoekfilter
+  // Filter op zoekterm
   const searchResults =
     query.trim().length > 0
       ? searchBeroepen(sectorFiltered, query)
@@ -52,7 +52,7 @@ export default function HomePage() {
         setSearchQuery={setQuery}
       />
 
-      {/* Resultaten */}
+      {/* Resultaat */}
       <div className="mt-6">
         {selectedBeroep ? (
           <BeroepResult beroep={selectedBeroep} />
