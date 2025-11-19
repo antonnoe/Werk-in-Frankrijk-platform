@@ -21,9 +21,13 @@ export default function HomePage() {
           </p>
         </div>
 
-        <SearchBar 
-          beroepen={beroepen as Beroep[]} 
-          onSelect={setSelectedBeroep}
+      const beroepen = getBeroepen();
+
+<SearchBar 
+  beroepen={beroepen}
+  onSelect={setSelectedBeroep}
+/>
+
         />
 
         {!selectedBeroep && (
