@@ -1,34 +1,22 @@
-import type { Beroep, SearchResult } from './types'
-import Fuse from 'fuse.js'
+// /lib/search.ts
+"use client";
 
-export function searchBeroepen(
-  query: string, 
-  alleBeroepen: Beroep[]
-): SearchResult[] {
-  if (!query || query.length < 2) return []
-  
-  const fuse = new Fuse(alleBeroepen, {
-    keys: ['naam_nl', 'naam_fr', 'categorie'],
+import Fuse from "fuse.js";
+import type { Beroep } from "./types";
+
+export function searchBeroepen(beroepen: Beroep[], query: string): Beroep[] {
+  if (!query.trim()) return [];
+
+  const fuse = new Fuse(beroepen, {
+    keys: [
+      "naamNl",
+      "naamFr",
+      "categorie",
+      "omschrijving",
+      "keywords"
+    ],
     threshold: 0.3,
-    includeScore: true,
-  })
+  });
 
-  const results = fuse.search(query, { limit: 10 })
-  
-  return results.map(result => ({
-    beroep: result.item,
-    score: result.score || 0
-  }))
-}
-
-export function getBeroepById(
-  id: string, 
-  alleBeroepen: Beroep[]
-): Beroep | undefined {
-  return alleBeroepen.find(b => b.id === id)
-}
-
-export function getAllCategories(alleBeroepen: Beroep[]): string[] {
-  const categories = new Set(alleBeroepen.map(b => b.categorie))
-  return Array.from(categories).sort()
+  return fuse.search(query).map(result => result.item);
 }
