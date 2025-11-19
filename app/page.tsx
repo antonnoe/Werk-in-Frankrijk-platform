@@ -14,8 +14,7 @@ export default function HomePage() {
       <div className="max-w-6xl mx-auto space-y-8">
         {/* Header */}
         <div className="text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
-            Werk in Frankrijk
+          <h1 className="text-4xl md:text-5xl font-bold" style={{color: '#800000'}}>
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Ontdek wat je nodig hebt om jouw beroep in Frankrijk uit te oefenen
