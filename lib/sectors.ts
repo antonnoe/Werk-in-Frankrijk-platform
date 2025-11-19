@@ -11,5 +11,5 @@ export const sectors = [
   { id: "it", label: "IT, Web & Digitale beroepen" },
   { id: "transport", label: "Transport & Logistiek" },
   { id: "creatief", label: "Kunst & Creatief" },
-  { id: "agrarisch", label: "Agrarisch & Buitenleven" },
+  { id: "agrarisch", label: "Agrarisch & Buitenleven" }
 ];
