@@ -2,7 +2,7 @@ export interface Beroep {
   id: string
   naam_nl: string
   naam_fr: string
-  categorie: 'medisch' | 'bouw' | 'horeca' | 'zakelijk' | 'creatief' | 'onderwijs' | 'technisch' | 'landbouw'
+  categorie: 'medisch' | 'bouw' | 'horeca' | 'zakelijk' | 'creatief' | 'onderwijs' | 'technisch' | 'landbouw' | 'vervoer' | 'logistiek' | 'toerisme'
   
   gereglementeerd: boolean
   
@@ -33,12 +33,12 @@ export interface Beroep {
     url: string
   }[]
   
- laatste_update: string
-  rncp_code?: string  // Optioneel: FranceCompétences RNCP nummer
-  rome_code?: string  // Optioneel: Pôle Emploi ROME code
-  toelichting_kosten?: string  // Extra uitleg bij kosten
-  toelichting_tijdlijn?: string  // Extra uitleg bij tijdlijn
-}
+  laatste_update: string
+  
+  rncp_code?: string
+  rome_code?: string
+  toelichting_kosten?: string
+  toelichting_tijdlijn?: string
 }
 
 export interface SearchResult {
