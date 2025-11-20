@@ -1,207 +1,72 @@
-// /components/BeroepResult.tsx
 "use client";
 
 import { Beroep } from "../lib/types";
 
 interface Props {
-  beroep: Beroep | null;
+  beroep: Beroep;
 }
 
-// Inline SVG info-icon
-const InfoIcon = () => (
-  <svg
-    className="w-4 h-4 inline-block ml-1 text-gray-600"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-  >
-    <circle cx="12" cy="12" r="9" />
-    <line x1="12" y1="8" x2="12" y2="12" />
-    <circle cx="12" cy="16" r="1" />
-  </svg>
-);
-
-// Tooltip wrapper
-const Tooltip = ({ text }: { text: string }) => (
-  <span className="relative group cursor-help">
-    <InfoIcon />
-    <span
-      className="
-        absolute left-1/2 top-full mt-1 w-max max-w-xs
-        -translate-x-1/2 px-3 py-2 rounded-md shadow-lg
-        bg-black text-white text-xs opacity-0
-        group-hover:opacity-100 group-focus-within:opacity-100
-        transition-opacity z-50
-      "
-    >
-      {text}
-    </span>
-  </span>
-);
-
 export default function BeroepResult({ beroep }: Props) {
-  if (!beroep) {
-    return (
-      <p className="mt-10 text-center text-gray-700 text-lg">
-        Selecteer een beroep om de details te bekijken.
-      </p>
-    );
-  }
+  if (!beroep) return null;
 
   return (
-    <div className="mt-10 bg-white shadow-md rounded-lg p-8 max-w-4xl mx-auto border border-gray-200">
-      {/* Titelblok */}
-      <div className="flex items-center gap-3 mb-6">
-        <h1 className="text-3xl font-bold text-red-900">
-          {beroep.naamNl}
-        </h1>
-      </div>
-
-      <p className="text-xl text-gray-600 ml-1">{beroep.naamFr}</p>
-
-      {/* Badges */}
-      <div className="flex flex-wrap gap-2 mt-4">
-        {beroep.categorie && (
-          <span className="px-3 py-1 bg-red-900 text-white text-sm rounded">
-            {beroep.categorie}
-          </span>
-        )}
-
-        {beroep.taalvereiste && (
-          <span className="px-3 py-1 bg-gray-200 text-gray-800 text-sm rounded">
-            Taalniveau: {beroep.taalvereiste}
-          </span>
-        )}
-
-        {beroep.diplomaVereist && (
-          <span className="px-3 py-1 bg-blue-100 text-blue-900 text-sm rounded">
-            Diploma verplicht
-          </span>
-        )}
-
-        {beroep.gereglementeerd && (
-          <span className="px-3 py-1 bg-yellow-200 text-yellow-900 text-sm rounded">
-            Gereglementeerd beroep
-          </span>
-        )}
+    <div className="p-6 bg-white shadow rounded-lg border border-gray-200 animate-in fade-in duration-300">
+      {/* Header */}
+      <div className="mb-4 border-b pb-4">
+        <h2 className="text-2xl font-bold text-[#800000]">{beroep.naamNl}</h2>
+        <p className="text-lg text-gray-600 italic">{beroep.naamFr}</p>
+        
+        <div className="flex flex-wrap gap-2 mt-3">
+            <span className="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full font-medium">
+                {beroep.categorie}
+            </span>
+            {beroep.taalniveau && (
+                <span className="px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-full font-medium border border-blue-100">
+                    Taal: {beroep.taalniveau}
+                </span>
+            )}
+        </div>
       </div>
 
       {/* Omschrijving */}
-      <section className="mt-8">
-        <h2 className="text-xl font-semibold text-red-900 flex items-center">
-          Omschrijving
-        </h2>
-        <p className="mt-2 text-gray-800 leading-relaxed">
-          {beroep.omschrijving}
-        </p>
-      </section>
+      <div className="mb-6">
+        <h3 className="text-lg font-semibold text-gray-900 mb-2">Omschrijving</h3>
+        <p className="text-gray-700 leading-relaxed">{beroep.omschrijving}</p>
+      </div>
 
-      {/* Diploma / Erkenning */}
-      <section className="mt-8">
-        <h2 className="text-xl font-semibold text-red-900 flex items-center">
-          Diploma & Erkenning
-          <Tooltip text="Informatie over vereiste diploma's en eventuele erkenningsprocedures." />
-        </h2>
+      {/* Grid voor details */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        {/* Diploma & Eisen */}
+        <div className="bg-gray-50 p-4 rounded-lg">
+            <h3 className="font-semibold text-[#800000] mb-2">Diploma & Eisen</h3>
+            <p className="text-sm mb-1">
+                <span className="font-medium">Diploma vereist:</span> {beroep.diplomaVereist ? "Ja" : "Nee"}
+            </p>
+            {beroep.diplomaDetails && (
+                <p className="text-sm text-gray-600">{beroep.diplomaDetails}</p>
+            )}
+            <p className="text-sm mt-2">
+                <span className="font-medium">Gereglementeerd:</span> {beroep.gereglementeerd ? "Ja" : "Nee"}
+            </p>
+        </div>
 
-        <ul className="mt-3 text-gray-800 leading-relaxed space-y-2">
-          <li>
-            <strong>Diploma vereist:</strong>{" "}
-            {beroep.diplomaVereist ? "Ja" : "Nee"}
-          </li>
-
-          {beroep.diplomaDetails && (
-            <li>
-              <strong>Details:</strong> {beroep.diplomaDetails}
-            </li>
-          )}
-
-          {beroep.erkenning && (
-            <li>
-              <strong>Erkenning:</strong> {beroep.erkenning}
-            </li>
-          )}
-
-          {beroep.erkenningProcedure && (
-            <li>
-              <strong>Procedure:</strong> {beroep.erkenningProcedure}
-            </li>
-          )}
-
-          {beroep.erkenningUrl && (
-            <li>
-              <a
-                href={beroep.erkenningUrl}
-                className="text-blue-700 underline"
-                target="_blank"
-              >
-                Officiële link (Service-Public)
-              </a>
-            </li>
-          )}
-        </ul>
-      </section>
-
-      {/* Verzekeringen */}
-      <section className="mt-8">
-        <h2 className="text-xl font-semibold text-red-900 flex items-center">
-          Verzekeringen
-          <Tooltip text="Welke verzekeringen zijn verplicht of aanbevolen voor dit beroep?" />
-        </h2>
-
-        <ul className="mt-3 text-gray-800 space-y-1">
-          {beroep.verzekeringen?.map((v, i) => (
-            <li key={i}>• {v}</li>
-          ))}
-        </ul>
-      </section>
-
-      {/* Kosten + Tijdslijn */}
-      <section className="mt-8">
-        <h2 className="text-xl font-semibold text-red-900 flex items-center">
-          Kosten & Tijdlijn
-          <Tooltip text="Indicatie van de opstartkosten en benodigde tijd." />
-        </h2>
-
-        <p className="mt-2 text-gray-800">
-          <strong>Kosten:</strong>{" "}
-          {beroep.kostenEuro ? `€${beroep.kostenEuro}` : "—"}
-        </p>
-        <p className="text-gray-800 mt-1">
-          <strong>Tijdlijn:</strong> {beroep.tijdlijnMaanden || "—"} maanden
-        </p>
-      </section>
-
-      {/* Links */}
-      {beroep.links && (
-        <section className="mt-8">
-          <h2 className="text-xl font-semibold text-red-900 flex items-center">
-            Officiële Bronnen
-            <Tooltip text="Rechtstreekse links naar officiële instanties." />
-          </h2>
-
-          <ul className="mt-3 text-blue-800 space-y-2">
-            {beroep.links.map((l, i) => (
-              <li key={i}>
-                <a
-                  href={l.url}
-                  target="_blank"
-                  className="underline"
-                >
-                  {l.titel}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
-
-      {/* Laatste update */}
-      {beroep.laatsteUpdate && (
-        <p className="mt-10 text-sm text-gray-500">
-          Laatste update: {beroep.laatsteUpdate}
-        </p>
-      )}
+        {/* Status & Geld */}
+        <div className="bg-gray-50 p-4 rounded-lg">
+            <h3 className="font-semibold text-[#800000] mb-2">Status & Inkomen</h3>
+            <p className="text-sm mb-1">
+                <span className="font-medium">Auto-entrepreneur:</span> {beroep.autoentrepreneurMogelijk ? "Mogelijk" : "Niet mogelijk"}
+            </p>
+            {beroep.gemiddeldInkomen && (
+                <p className="text-sm">
+                    <span className="font-medium">Gem. Inkomen:</span> €{beroep.gemiddeldInkomen} / jaar
+                </p>
+            )}
+             <p className="text-sm mt-2">
+                <span className="font-medium">Verzekering:</span> {beroep.verzekeringVerplicht ? "Verplicht" : "Optioneel"}
+            </p>
+        </div>
+      </div>
     </div>
   );
 }
