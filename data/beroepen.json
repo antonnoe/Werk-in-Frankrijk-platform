@@ -1,5 +1,131 @@
 [
   {
+    "id": "serveur",
+    "naamNl": "Bediening / Ober",
+    "naamFr": "Serveur / Serveuse",
+    "categorie": "Horeca",
+    "sectoren": ["horeca"],
+    "omschrijving": "Bediening van gasten in restaurant, café of brasserie. Opnemen van bestellingen en serveren.",
+    "diplomaVereist": false,
+    "diplomaDetails": "Geen wettelijk verplicht diploma. CAP Commercialisation et Services is een voordeel bij sollicitatie.",
+    "erkenning": "automatisch",
+    "verzekeringVerplicht": false,
+    "autoentrepreneurMogelijk": false,
+    "gereglementeerd": false,
+    "taalniveau": "B2",
+    "gemiddeldInkomen": 24000,
+    "links": [
+      { "titel": "UMIH - Hôtellerie Restauration", "url": "https://www.umih.fr" }
+    ],
+    "keywords": ["ober", "horeca", "restaurant", "bediening"]
+  },
+  {
+    "id": "kok",
+    "naamNl": "Kok",
+    "naamFr": "Cuisinier",
+    "categorie": "Horeca",
+    "sectoren": ["horeca"],
+    "omschrijving": "Bereiden van gerechten, mise-en-place en keukenbeheer.",
+    "diplomaVereist": false,
+    "diplomaDetails": "CAP Cuisine sterk aanbevolen voor vaste aanstellingen, maar niet wettelijk verplicht.",
+    "erkenning": "automatisch",
+    "verzekeringVerplicht": false,
+    "autoentrepreneurMogelijk": true,
+    "gereglementeerd": false,
+    "taalniveau": "A2",
+    "gemiddeldInkomen": 28000,
+    "links": [
+      { "titel": "L'Hôtellerie Restauration (Vakblad)", "url": "https://www.lhotellerie-restauration.fr/" }
+    ],
+    "keywords": ["kok", "keuken", "chef", "koken"]
+  },
+  {
+    "id": "eigenaar-gite",
+    "naamNl": "Gîte-eigenaar",
+    "naamFr": "Exploitant de gîte",
+    "categorie": "Toerisme",
+    "sectoren": ["toerisme"],
+    "omschrijving": "Verhuur van gemeubileerde vakantiewoning. Beheer, ontvangst gasten en schoonmaak.",
+    "diplomaVereist": false,
+    "erkenning": "automatisch",
+    "erkenningProcedure": "Aanmelding bij gemeente (Mairie) verplicht via Cerfa formulier.",
+    "verzekeringVerplicht": true,
+    "verzekeringen": ["RC Pro", "Woonverzekering met verhuurclausule"],
+    "autoentrepreneurMogelijk": true,
+    "gereglementeerd": false,
+    "taalniveau": "B1",
+    "gemiddeldInkomen": 15000,
+    "links": [
+      { "titel": "Service-Public: Meublé de tourisme", "url": "https://www.service-public.fr/particuliers/vosdroits/F2043" }
+    ],
+    "keywords": ["gite", "vakantiehuis", "verhuur", "toerisme"]
+  },
+  {
+    "id": "camping-beheerder",
+    "naamNl": "Camping beheerder",
+    "naamFr": "Gestionnaire de camping",
+    "categorie": "Toerisme",
+    "sectoren": ["toerisme"],
+    "omschrijving": "Volledig beheer van campingterrein, receptie, en faciliteiten.",
+    "diplomaVereist": false,
+    "erkenning": "automatisch",
+    "verzekeringVerplicht": true,
+    "verzekeringen": ["RC Pro Exploitation", "Opstalverzekering"],
+    "autoentrepreneurMogelijk": false,
+    "gereglementeerd": true,
+    "taalniveau": "B2",
+    "gemiddeldInkomen": 35000,
+    "links": [
+      { "titel": "FNHPA (Fédération Nationale de l'Hôtellerie de Plein Air)", "url": "https://www.fnhpa-pro.fr/" }
+    ],
+    "keywords": ["camping", "recreatie", "beheerder"]
+  },
+  {
+    "id": "verpleegkundige",
+    "naamNl": "Verpleegkundige (Algemeen)",
+    "naamFr": "Infirmier en soins généraux (IDE)",
+    "categorie": "Zorg",
+    "sectoren": ["zorg", "sante"],
+    "omschrijving": "Verlenen van verpleegkundige zorg in ziekenhuis, kliniek of thuiszorg.",
+    "diplomaVereist": true,
+    "diplomaDetails": "Erkenning Nederlands diploma verplicht via DREETS. Inschrijving in het BIG-register is niet genoeg.",
+    "erkenning": "procedure",
+    "erkenningProcedure": "Je moet eerst erkenning aanvragen bij de DREETS van je woonregio. Daarna is inschrijving bij de 'Ordre National des Infirmiers' verplicht.",
+    "verzekeringVerplicht": true,
+    "verzekeringen": ["RCP (verplicht voor zelfstandigen)", "Lidmaatschap Orde"],
+    "autoentrepreneurMogelijk": true,
+    "gereglementeerd": true,
+    "taalniveau": "B2",
+    "gemiddeldInkomen": 32000,
+    "links": [
+      { "titel": "Ordre National des Infirmiers (Registratie)", "url": "https://www.ordre-infirmiers.fr/" },
+      { "titel": "Service-Public: Erkenning Diploma's", "url": "https://www.service-public.fr/particuliers/vosdroits/F10" }
+    ],
+    "keywords": ["verpleegkundige", "zorg", "ziekenhuis", "medisch", "zuster"]
+  },
+  {
+    "id": "huisarts",
+    "naamNl": "Huisarts",
+    "naamFr": "Médecin généraliste",
+    "categorie": "Zorg",
+    "sectoren": ["zorg", "sante"],
+    "omschrijving": "Algemene medische zorg, diagnose en behandeling van patiënten.",
+    "diplomaVereist": true,
+    "diplomaDetails": "Erkenning artsendiploma + specialisatie verplicht. Inschrijving in de Orde is cruciaal.",
+    "erkenning": "procedure",
+    "erkenningProcedure": "Inschrijving bij de 'Ordre des Médecins' (CNOM) is de eerste stap. Zij controleren je diploma en taalkennis.",
+    "verzekeringVerplicht": true,
+    "verzekeringen": ["RCP Médicale (Beroepsaansprakelijkheid)"],
+    "autoentrepreneurMogelijk": false,
+    "gereglementeerd": true,
+    "taalniveau": "C1",
+    "gemiddeldInkomen": 85000,
+    "links": [
+      { "titel": "Ordre des Médecins (Inschrijving)", "url": "https://www.conseil-national.ordre.medecin.fr/" }
+    ],
+    "keywords": ["arts", "dokter", "medisch", "huisarts", "generaliste"]
+  },
+  {
     "id": "elektricien",
     "naamNl": "Elektricien",
     "naamFr": "Électricien",
@@ -163,8 +289,8 @@
     "taalniveau": "A2",
     "gemiddeldInkomen": 25000,
     "links": [
-        { "titel": "UNEP (Ondernemers Landschap)", "url": "https://www.lesentreprisesdupaysage.fr/" },
-        { "titel": "MSA (Sociale zekerheid groen)", "url": "https://www.msa.fr/" }
+      { "titel": "UNEP (Ondernemers Landschap)", "url": "https://www.lesentreprisesdupaysage.fr/" },
+      { "titel": "MSA (Sociale zekerheid groen)", "url": "https://www.msa.fr/" }
     ],
     "keywords": ["tuin", "buiten", "groen", "snoeien"]
   },
@@ -210,7 +336,7 @@
     "taalniveau": "C1",
     "gemiddeldInkomen": 45000,
     "links": [
-        { "titel": "Ordre des Architectes", "url": "https://www.architectes.org/" }
+      { "titel": "Ordre des Architectes", "url": "https://www.architectes.org/" }
     ],
     "keywords": ["ontwerp", "tekenen", "huis", "bouwvergunning"]
   },
@@ -235,9 +361,7 @@
     "gemiddeldInkomen": 30000,
     "links": [],
     "keywords": ["inrichting", "design", "styling"]
-  }
-]
-,
+  },
   {
     "id": "fysiotherapeut",
     "naamNl": "Fysiotherapeut",
@@ -500,8 +624,8 @@
       { "titel": "Ordre des Pédicures-Podologues", "url": "https://www.onpp.fr/" }
     ],
     "keywords": ["voeten", "medisch", "zorg", "podoloog"]
-  }
-{
+  },
+  {
     "id": "kapper",
     "naamNl": "Kapper (Aan huis of Salon)",
     "naamFr": "Coiffeur / Coiffeuse",
@@ -755,4 +879,264 @@
       { "titel": "Register VTC", "url": "https://registre-vtc.developpement-durable.gouv.fr/" }
     ],
     "keywords": ["uber", "chauffeur", "auto", "vervoer"]
+  },
+  {
+    "id": "wijnboer",
+    "naamNl": "Wijnboer / Wijnbouwer",
+    "naamFr": "Vigneron / Viticulteur",
+    "sectoren": ["agrarisch", "horeca"],
+    "categorie": "Landbouw",
+    "omschrijving": "Teelt van druiven en productie van wijn. Complex vakgebied met veel douane-regels.",
+    "diplomaVereist": true,
+    "diplomaDetails": "BPA of Bac Pro Vigne et Vin vereist voor vestiging als 'Jeune Agriculteur' (subsidies). Zonder subsidies vrij, maar pachtrecht (fermage) vereist vaak diploma.",
+    "erkenning": "procedure",
+    "erkenningProcedure": "Inschrijving bij de MSA (Mutualité Sociale Agricole). Douane-nummer verplicht voor verkoop alcohol.",
+    "verzekeringVerplicht": true,
+    "verzekeringen": ["RC Exploitation", "Hagelverzekering (sterk aanbevolen)", "Multirisque Agricole"],
+    "autoentrepreneurMogelijk": false,
+    "registratieInstantie": "MSA (Mutualité Sociale Agricole)",
+    "activiteitType": "Agricole",
+    "gereglementeerd": true,
+    "taalniveau": "B2",
+    "gemiddeldInkomen": 30000,
+    "kostenEuro": 50000,
+    "tijdlijnMaanden": "6-12",
+    "links": [
+      { "titel": "MSA - Starten in Landbouw", "url": "https://www.msa.fr/" },
+      { "titel": "Douane - Wijnverkoop", "url": "https://www.douane.gouv.fr/" }
+    ],
+    "keywords": ["wijn", "druiven", "boer", "landbouw"]
+  },
+  {
+    "id": "dierenpension",
+    "naamNl": "Dierenpensionhouder",
+    "naamFr": "Gestionnaire de pension canine/féline",
+    "sectoren": ["agrarisch", "dienstverlening", "dieren"],
+    "categorie": "Dieren",
+    "omschrijving": "Opvang van honden en katten. Strenge regels omtrent geluid, hygiëne en afstand tot buren.",
+    "diplomaVereist": true,
+    "diplomaDetails": "Verplicht certificaat: ACACED (Attestation de Connaissances pour les Animaux de Compagnie).",
+    "erkenning": "procedure",
+    "erkenningProcedure": "1. ACACED behalen. 2. Aanmelding DDPP (Direction Départementale de la Protection des Populations). 3. Inschrijving MSA of CMA.",
+    "verzekeringVerplicht": true,
+    "verzekeringen": ["RC Pro Animaux", "Rechtsbijstand"],
+    "autoentrepreneurMogelijk": true,
+    "registratieInstantie": "CMA (als <10 dieren) of MSA (als >10 dieren/fokkerij)",
+    "activiteitType": "Artisanale / Agricole",
+    "gereglementeerd": true,
+    "taalniveau": "B1",
+    "gemiddeldInkomen": 24000,
+    "kostenEuro": 5000,
+    "tijdlijnMaanden": "3-6",
+    "links": [
+      { "titel": "Informatie ACACED", "url": "https://agriculture.gouv.fr/animaux-de-compagnie-formation" }
+    ],
+    "keywords": ["hond", "kat", "opvang", "kennel"]
+  },
+  {
+    "id": "groenteteler",
+    "naamNl": "Groenteteler / Tuinder (Kleinschalig)",
+    "naamFr": "Maraîcher",
+    "sectoren": ["agrarisch", "groen"],
+    "categorie": "Landbouw",
+    "omschrijving": "Teelt van groenten en fruit, vaak voor directe verkoop (markten, AMAP).",
+    "diplomaVereist": false,
+    "diplomaDetails": "Geen wettelijke eis voor start, wel BPREA vereist voor subsidies (DJA).",
+    "erkenning": "automatisch",
+    "erkenningProcedure": "Inschrijving bij de MSA. Let op de oppervlakte: onder de SMI (Surface Minimum d'Installation) ben je 'Cotisant Solidaire', daarboven 'Chef d'Exploitation'.",
+    "verzekeringVerplicht": true,
+    "verzekeringen": ["Multirisque Agricole", "RC Pro"],
+    "autoentrepreneurMogelijk": false,
+    "registratieInstantie": "MSA",
+    "activiteitType": "Agricole",
+    "gereglementeerd": false,
+    "taalniveau": "B1",
+    "gemiddeldInkomen": 20000,
+    "kostenEuro": 15000,
+    "tijdlijnMaanden": "6",
+    "links": [
+      { "titel": "Chambre d'Agriculture", "url": "https://chambres-agriculture.fr/" }
+    ],
+    "keywords": ["bio", "permacultuur", "moestuin", "markt"]
+  },
+  {
+    "id": "imker",
+    "naamNl": "Imker",
+    "naamFr": "Apiculteur",
+    "sectoren": ["agrarisch", "groen"],
+    "categorie": "Landbouw",
+    "omschrijving": "Houden van bijen en productie van honing/was.",
+    "diplomaVereist": false,
+    "diplomaDetails": "Geen diploma vereist. Cursus bij 'Rucher Ecole' sterk aanbevolen.",
+    "erkenning": "procedure",
+    "erkenningProcedure": "Aanvragen NAPI-nummer (Numéro d'Apiculteur) is verplicht zodra je 1 kast verkoopt. Jaarlijkse aangifte van aantal kasten.",
+    "verzekeringVerplicht": true,
+    "verzekeringen": ["RC Apiculture"],
+    "autoentrepreneurMogelijk": true,
+    "registratieInstantie": "MSA (als hoofdberoep) of Belastingdienst (als hobby <50 kasten)",
+    "activiteitType": "Agricole",
+    "gereglementeerd": true,
+    "taalniveau": "A2",
+    "gemiddeldInkomen": 18000,
+    "kostenEuro": 2000,
+    "tijdlijnMaanden": "1",
+    "links": [
+      { "titel": "UNAF (Imkersbond)", "url": "https://www.unaf-apiculture.info/" }
+    ],
+    "keywords": ["honing", "bijen", "natuur"]
+  },
+  {
+    "id": "boomverzorger",
+    "naamNl": "Boomverzorger",
+    "naamFr": "Élagueur-Grimpeur",
+    "sectoren": ["groen", "agrarisch"],
+    "categorie": "Groen",
+    "omschrijving": "Snoeien en kappen van bomen op hoogte. Gevaarlijk en fysiek zwaar werk.",
+    "diplomaVereist": true,
+    "diplomaDetails": "Verplicht 'Certificat de Spécialisation' (CS) Taille et soins des arbres.",
+    "erkenning": "procedure",
+    "erkenningProcedure": "Inschrijving MSA (want: 'cyclus van de boom'). Zeer streng op veiligheidsuitrusting (EPI).",
+    "verzekeringVerplicht": true,
+    "verzekeringen": ["RC Pro Élagueur (Duur!)", "Ongevallenverzekering"],
+    "autoentrepreneurMogelijk": true,
+    "registratieInstantie": "MSA",
+    "activiteitType": "Agricole / Service",
+    "gereglementeerd": true,
+    "taalniveau": "B1",
+    "gemiddeldInkomen": 32000,
+    "kostenEuro": 3000,
+    "tijdlijnMaanden": "2",
+    "links": [
+      { "titel": "Société Française d'Arboriculture", "url": "https://sfa-asso.fr/" }
+    ],
+    "keywords": ["bomen", "zaag", "klimmen", "tuin"]
+  },
+  {
+    "id": "hondentrainer",
+    "naamNl": "Hondentrainer / Gedragstherapeut",
+    "naamFr": "Éducateur canin / Comportementaliste",
+    "sectoren": ["dieren", "dienstverlening"],
+    "categorie": "Dieren",
+    "omschrijving": "Training van honden en begeleiding van eigenaren.",
+    "diplomaVereist": true,
+    "diplomaDetails": "ACACED certificaat verplicht. BP Educateur Canin is de officiële titel, maar niet strikt verplicht voor start.",
+    "erkenning": "procedure",
+    "erkenningProcedure": "ACACED behalen en registreren bij DDPP. Mag als auto-entrepreneur.",
+    "verzekeringVerplicht": true,
+    "verzekeringen": ["RC Pro Animaux"],
+    "autoentrepreneurMogelijk": true,
+    "registratieInstantie": "CMA (Artisan) of URSSAF (Libéral) afhankelijk van focus.",
+    "activiteitType": "Artisanale / Libérale",
+    "gereglementeerd": true,
+    "taalniveau": "B2",
+    "gemiddeldInkomen": 22000,
+    "kostenEuro": 500,
+    "tijdlijnMaanden": "1-2",
+    "links": [],
+    "keywords": ["hond", "training", "gedrag", "huisdier"]
+  },
+  {
+    "id": "bloemist",
+    "naamNl": "Bloemist",
+    "naamFr": "Fleuriste",
+    "sectoren": ["groen", "artisanat", "commerce"],
+    "categorie": "Ambacht & Handel",
+    "omschrijving": "Samenstellen en verkopen van boeketten en planten.",
+    "diplomaVereist": true,
+    "diplomaDetails": "CAP Fleuriste verplicht om jezelf 'Artisan Fleuriste' te noemen.",
+    "erkenning": "procedure",
+    "erkenningProcedure": "Inschrijving CMA (voor het maak-gedeelte) en vaak ook CCI (voor de inkoop/verkoop).",
+    "verzekeringVerplicht": true,
+    "verzekeringen": ["RC Pro", "Verzekering winkelpand"],
+    "autoentrepreneurMogelijk": true,
+    "registratieInstantie": "CMA",
+    "activiteitType": "Artisanale / Commerciale",
+    "gereglementeerd": true,
+    "taalniveau": "B1",
+    "gemiddeldInkomen": 23000,
+    "kostenEuro": 10000,
+    "tijdlijnMaanden": "3",
+    "links": [
+      { "titel": "Fédération des Fleuristes", "url": "https://www.fleuristes-et-fleurs.com/" }
+    ],
+    "keywords": ["bloemen", "winkel", "boeket", "planten"]
+  },
+  {
+    "id": "tuinarchitect",
+    "naamNl": "Tuinarchitect",
+    "naamFr": "Paysagiste-Concepteur",
+    "sectoren": ["groen", "dienstverlening", "bouw"],
+    "categorie": "Ontwerp",
+    "omschrijving": "Ontwerp en planning van tuinen en parken. Let op: voert het werk zelf NIET uit.",
+    "diplomaVereist": true,
+    "diplomaDetails": "Titel 'Paysagiste-Concepteur' is beschermd. Vereist erkend diploma (Hogeschool/Universiteit).",
+    "erkenning": "procedure",
+    "erkenningProcedure": "Inschrijving als vrij beroep (Libéral). Mag niet verward worden met 'Paysagiste' (de uitvoerder).",
+    "verzekeringVerplicht": true,
+    "verzekeringen": ["RC Pro", "Décennale (indien toezicht op zware constructies)"],
+    "autoentrepreneurMogelijk": true,
+    "registratieInstantie": "URSSAF",
+    "activiteitType": "Libérale",
+    "gereglementeerd": true,
+    "taalniveau": "C1",
+    "gemiddeldInkomen": 35000,
+    "kostenEuro": 1000,
+    "tijdlijnMaanden": "1",
+    "links": [
+      { "titel": "FFP (Fédération Française du Paysage)", "url": "https://www.f-f-p.org/" }
+    ],
+    "keywords": ["ontwerp", "tekenen", "buiten", "landschap"]
+  },
+  {
+    "id": "paardenfokker",
+    "naamNl": "Paardenhouder / Fokker",
+    "naamFr": "Éleveur équin",
+    "sectoren": ["agrarisch", "dieren"],
+    "categorie": "Landbouw",
+    "omschrijving": "Fokken en houden van paarden. Vaak gecombineerd met pensionstal.",
+    "diplomaVereist": false,
+    "diplomaDetails": "Certificaat van vakbekwaamheid (Capacité) nodig voor transport dieren.",
+    "erkenning": "procedure",
+    "erkenningProcedure": "Inschrijving MSA. Registratie van elk paard bij SIRE (IFCE) verplicht.",
+    "verzekeringVerplicht": true,
+    "verzekeringen": ["RC Pro Équine"],
+    "autoentrepreneurMogelijk": false,
+    "registratieInstantie": "MSA",
+    "activiteitType": "Agricole",
+    "gereglementeerd": true,
+    "taalniveau": "B1",
+    "gemiddeldInkomen": 28000,
+    "kostenEuro": 20000,
+    "tijdlijnMaanden": "6",
+    "links": [
+      { "titel": "IFCE (Institut français du cheval)", "url": "https://www.ifce.fr/" }
+    ],
+    "keywords": ["paard", "stal", "manege", "fokkerij"]
+  },
+  {
+    "id": "bosbeheerder",
+    "naamNl": "Bosbeheerder",
+    "naamFr": "Gestionnaire forestier / Sylviculteur",
+    "sectoren": ["groen", "agrarisch"],
+    "categorie": "Landbouw",
+    "omschrijving": "Beheer en exploitatie van bospercelen.",
+    "diplomaVereist": false,
+    "diplomaDetails": "Voor professioneel beheerder (Expert Forestier) is een diploma vereist.",
+    "erkenning": "procedure",
+    "erkenningProcedure": "Inschrijving MSA. PSG (Plan Simple de Gestion) verplicht voor bossen >25ha.",
+    "verzekeringVerplicht": true,
+    "verzekeringen": ["RC Forestière"],
+    "autoentrepreneurMogelijk": true,
+    "registratieInstantie": "MSA",
+    "activiteitType": "Agricole",
+    "gereglementeerd": true,
+    "taalniveau": "B2",
+    "gemiddeldInkomen": 26000,
+    "kostenEuro": 2000,
+    "tijdlijnMaanden": "3",
+    "links": [
+      { "titel": "CNPF (Bosbeheer)", "url": "https://www.cnpf.fr/" }
+    ],
+    "keywords": ["bos", "hout", "natuur", "bomen"]
   }
+]
