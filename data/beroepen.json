@@ -124,5 +124,95 @@
         { "titel": "Conseil National de l'Ordre des Médecins", "url": "https://www.conseil-national.ordre.medecin.fr/" }
     ],
     "keywords": ["arts", "dokter", "medisch", "huisarts"]
+  },
+  {
+    "id": "timmerman",
+    "naamNl": "Timmerman / Schrijnwerker",
+    "naamFr": "Charpentier / Menuisier",
+    "categorie": "Bouw",
+    "sectoren": ["bouw", "artisanat"],
+    "omschrijving": "Constructie en reparatie van houten structuren (daken, vloeren, kozijnen).",
+    "diplomaVereist": true,
+    "diplomaDetails": "CAP Charpentier of 3 jaar aantoonbare werkervaring in EU.",
+    "erkenning": "procedure",
+    "erkenningProcedure": "Inschrijving bij Chambre de Métiers (CMA) verplicht. Bij geen Frans diploma: dossier indienen voor erkenning kwalificatie (JQP).",
+    "verzekeringVerplicht": true,
+    "verzekeringen": ["Assurance Décennale (Tienjarige aansprakelijkheid)", "RC Pro"],
+    "autoentrepreneurMogelijk": true,
+    "gereglementeerd": true,
+    "taalniveau": "A2",
+    "gemiddeldInkomen": 30000,
+    "kostenEuro": 1200,
+    "tijdlijnMaanden": "2",
+    "links": [
+        { "titel": "CMA - Inschrijving Ambacht", "url": "https://www.artisanat.fr/" },
+        { "titel": "Service-Public: BTP Verzekeringen", "url": "https://www.service-public.fr/professionnels-entreprises/vosdroits/F2032" }
+    ],
+    "keywords": ["bouw", "hout", "ambacht", "klusjesman"]
+  },
+  {
+    "id": "elektricien",
+    "naamNl": "Elektricien",
+    "naamFr": "Électricien",
+    "categorie": "Bouw",
+    "sectoren": ["bouw", "artisanat", "techniek"],
+    "omschrijving": "Installatie en onderhoud van elektrische systemen in woningen en bedrijven.",
+    "diplomaVereist": true,
+    "diplomaDetails": "CAP Électricien of 3 jaar ervaring. Verplichte 'Habilitation électrique' voor veiligheid.",
+    "erkenning": "procedure",
+    "erkenningProcedure": "Inschrijving CMA. Kwalificatie-eis streng gecontroleerd ivm brandveiligheid.",
+    "verzekeringVerplicht": true,
+    "verzekeringen": ["Assurance Décennale", "RC Pro"],
+    "autoentrepreneurMogelijk": true,
+    "gereglementeerd": true,
+    "taalniveau": "B1",
+    "gemiddeldInkomen": 34000,
+    "links": [
+        { "titel": "Qualifelec (Kwaliteitslabel)", "url": "https://www.qualifelec.fr/" }
+    ],
+    "keywords": ["stroom", "bouw", "installateur", "elektra"]
+  },
+  {
+    "id": "vrachtwagenchauffeur",
+    "naamNl": "Vrachtwagenchauffeur",
+    "naamFr": "Conducteur routier",
+    "categorie": "Transport",
+    "sectoren": ["transport"],
+    "omschrijving": "Vervoer van goederen met zware voertuigen (Super Poids Lourds).",
+    "diplomaVereist": true,
+    "diplomaDetails": "Rijbewijs C/EC + FIMO/FCO (vakbekwaamheid).",
+    "erkenning": "procedure",
+    "erkenningProcedure": "Omwisselen NL rijbewijs vaak nodig als je in FR woont. FIMO-kaart moet geldig zijn.",
+    "verzekeringVerplicht": false,
+    "autoentrepreneurMogelijk": false,
+    "gereglementeerd": true,
+    "taalniveau": "A2",
+    "gemiddeldInkomen": 29000,
+    "links": [
+        { "titel": "Ministerie van Transport", "url": "https://www.ecologie.gouv.fr/transports" }
+    ],
+    "keywords": ["chauffeur", "transport", "logistiek", "vrachtwagen"]
+  },
+  {
+    "id": "kapper",
+    "naamNl": "Kapper / Kapster",
+    "naamFr": "Coiffeur / Coiffeuse",
+    "categorie": "Dienstverlening",
+    "sectoren": ["dienstverlening", "artisanat"],
+    "omschrijving": "Verzorging van haar (knippen, kleuren, stylen) in salon of aan huis.",
+    "diplomaVereist": true,
+    "diplomaDetails": "CAP Coiffure verplicht om zelfstandig te werken. BP Coiffure verplicht om salon te openen.",
+    "erkenning": "procedure",
+    "erkenningProcedure": "Inschrijving CMA. Zonder BP (Brevet Professionnel) mag je geen salon leiden, alleen aan huis werken of in loondienst.",
+    "verzekeringVerplicht": true,
+    "verzekeringen": ["RC Pro"],
+    "autoentrepreneurMogelijk": true,
+    "gereglementeerd": true,
+    "taalniveau": "B1",
+    "gemiddeldInkomen": 22000,
+    "links": [
+        { "titel": "UNEC (Kappersbond)", "url": "https://www.unec.fr/" }
+    ],
+    "keywords": ["haar", "kapper", "beauty", "salon"]
   }
 ]
