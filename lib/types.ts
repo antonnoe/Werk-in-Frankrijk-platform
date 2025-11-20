@@ -1,4 +1,3 @@
-// lib/types.ts
 export interface Link {
   titel: string;
   url: string;
@@ -8,7 +7,7 @@ export interface Beroep {
   id: string;
   naamNl: string;
   naamFr: string;
-  sectoren: string[]; // Dit veld miste steeds
+  sectoren: string[];
   categorie: string;
   omschrijving: string;
   
@@ -17,18 +16,22 @@ export interface Beroep {
   diplomaDetails?: string;
   erkenning?: string;
   erkenningProcedure?: string;
-  erkenningUrl?: string;
   
   // Werk & Status
   verzekeringVerplicht: boolean;
   verzekeringen?: string[];
+  
+  // Ondernemers Info (NIEUW)
   autoentrepreneurMogelijk: boolean;
+  registratieInstantie?: string; // Bijv: "CMA (Ambacht)", "CCI (Handel)", "URSSAF (Vrij beroep)"
+  activiteitType?: string;       // Bijv: "Artisanale", "Commerciale", "Libérale"
+
   gereglementeerd: boolean;
   
   // Details
   taalniveau?: string;
-  salarisIndicatie?: string;
-  gemiddeldInkomen?: number;
+  salarisIndicatie?: string;     // Tekstuele indicatie
+  gemiddeldInkomen?: number;     // Getal voor sortering
   kostenEuro?: number;
   tijdlijnMaanden?: string;
   
