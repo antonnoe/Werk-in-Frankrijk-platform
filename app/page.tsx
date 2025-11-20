@@ -1,107 +1,85 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import beroepenDataRaw from "../data/beroepen.json";
-import { Beroep } from "../lib/types";
 import SearchBar from "../components/SearchBar";
+import BeroepResult from "../components/BeroepResult";
 import SectorButtons from "../components/SectorButtons";
+// Importeer de JSON direct, maar cast het naar het juiste type voor veiligheid
+import rawData from "../data/beroepen.json";
+import { Beroep } from "../lib/types";
+
+// Forceer TypeScript om de JSON als Beroep[] te zien
+const beroepenData = rawData as unknown as Beroep[];
 
 export default function HomePage() {
-  const beroepenData = beroepenDataRaw as Beroep[];
-
   const [selectedSector, setSelectedSector] = useState<string | null>(null);
   const [selectedBeroep, setSelectedBeroep] = useState<Beroep | null>(null);
-  const [query, setQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
 
-  // ⭐ Filter op sector
-  const sectorFiltered: Beroep[] = useMemo(() => {
+  // 1. Filter op sector
+  const sectorFiltered = useMemo(() => {
     if (!selectedSector) return beroepenData;
+    return beroepenData.filter((b) => 
+      b.sectoren && b.sectoren.includes(selectedSector)
+    );
+  }, [selectedSector]);
 
-    return beroepenData.filter((b) => {
-      return b.categorie === selectedSector;
-    });
-  }, [selectedSector, beroepenData]);
+  // 2. Reset functie
+  const handleReset = () => {
+    setSelectedSector(null);
+    setSelectedBeroep(null);
+    setSearchQuery("");
+  };
 
   return (
-    <div className="max-w-3xl mx-auto p-4">
-      <h1 className="text-2xl font-semibold mb-4 text-[#800000]">
-        Werk in Frankrijk – Beroepenchecker (v0.2)
+    <main className="max-w-4xl mx-auto px-4 py-10 min-h-screen bg-gray-50">
+      <h1 className="text-3xl font-bold text-[#800000] mb-2 text-center">
+        Werk in Frankrijk
       </h1>
+      <p className="text-center text-gray-600 mb-8">Beroepenchecker & Regelgeving</p>
 
+      {/* Sector Knoppen */}
       <SectorButtons
         selectedSector={selectedSector}
-        onSelect={(s) => {
-          setSelectedSector(s);
-          setSelectedBeroep(null);
+        onSelect={(sec) => {
+            setSelectedSector(sec);
+            setSelectedBeroep(null);
         }}
       />
 
-      <SearchBar
-        beroepen={sectorFiltered}
-        onSelect={(b) => setSelectedBeroep(b)}
-        searchQuery={query}
-        setSearchQuery={setQuery}
-      />
-
-      {/* Reset button */}
-      {(selectedBeroep || selectedSector || query) && (
-        <button
-          onClick={() => {
-            setSelectedBeroep(null);
-            setSelectedSector(null);
-            setQuery("");
+      {/* Zoekbalk - Let op: we geven GEEN searchQuery props door als de SearchBar die niet ondersteunt */}
+      <div className="mt-6 relative">
+        <SearchBar
+          beroepen={sectorFiltered}
+          onSelect={(b, queryText) => {
+             setSelectedBeroep(b);
+             if(queryText) setSearchQuery(queryText);
           }}
-          className="mt-3 mb-4 px-3 py-1 border rounded bg-gray-100 hover:bg-gray-200 text-sm"
-        >
-          Zoek opnieuw
-        </button>
-      )}
+        />
+      </div>
 
-      {/* Result: detail van beroep */}
-      {selectedBeroep && (
-        <div className="border rounded p-4 mt-4 bg-white shadow-sm">
-          <h2 className="text-xl font-semibold text-[#800000]">
-            {selectedBeroep.naamNl}
-          </h2>
-          <div className="text-sm text-gray-500 mb-2">
-            {selectedBeroep.categorie}
+      {/* Reset Knop (alleen tonen als er iets geselecteerd is) */}
+      {(selectedSector || selectedBeroep) && (
+          <div className="text-center mt-4">
+              <button 
+                onClick={handleReset}
+                className="text-sm text-gray-500 underline hover:text-[#800000]"
+              >
+                  Zoek opnieuw / Reset filters
+              </button>
           </div>
-
-          <p className="mb-3">{selectedBeroep.omschrijving}</p>
-
-          <hr className="my-3" />
-
-          <p>
-            <strong>Diploma vereist:</strong>{" "}
-            {selectedBeroep.diplomaVereist ? "Ja" : "Nee"}
-          </p>
-
-          {selectedBeroep.erkenning && (
-            <p>
-              <strong>Erkenning:</strong> {selectedBeroep.erkenning}
-            </p>
-          )}
-
-          {selectedBeroep.links && selectedBeroep.links.length > 0 && (
-            <>
-              <h3 className="mt-4 mb-1 font-semibold">Links</h3>
-              <ul className="list-disc ml-6">
-                {selectedBeroep.links.map((l, i) => (
-                  <li key={i}>
-                    <a
-                      href={l.url}
-                      target="_blank"
-                      className="text-[#800000] underline"
-                    >
-                      {l.titel}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
-        </div>
       )}
-    </div>
+
+      {/* Resultaat Weergave */}
+      <div className="mt-8">
+        {selectedBeroep ? (
+          <BeroepResult beroep={selectedBeroep} />
+        ) : (
+          <div className="text-center text-gray-400 mt-10">
+             {sectorFiltered.length} beroepen beschikbaar in deze selectie.
+          </div>
+        )}
+      </div>
+    </main>
   );
 }
