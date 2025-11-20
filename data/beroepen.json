@@ -5,36 +5,60 @@
     "naamFr": "Serveur / Serveuse",
     "categorie": "Horeca",
     "sectoren": ["horeca"],
-    "omschrijving": "Bediening van gasten in restaurant, café of brasserie.",
+    "omschrijving": "Bediening van gasten in restaurant, café of brasserie. Opnemen van bestellingen en serveren.",
     "diplomaVereist": false,
-    "diplomaDetails": "Geen diploma vereist.",
+    "diplomaDetails": "Geen wettelijk verplicht diploma. CAP Commercialisation et Services is een voordeel bij sollicitatie.",
     "erkenning": "automatisch",
     "verzekeringVerplicht": false,
     "autoentrepreneurMogelijk": false,
     "gereglementeerd": false,
     "taalniveau": "B2",
     "gemiddeldInkomen": 24000,
-    "links": [],
-    "keywords": ["ober", "horeca"]
+    "links": [
+       { "titel": "UMIH - Hôtellerie Restauration", "url": "https://www.umih.fr" }
+    ],
+    "keywords": ["ober", "horeca", "restaurant", "bediening"]
   },
   {
-    "id": "patissier",
-    "naamNl": "Banketbakker",
-    "naamFr": "Pâtissier",
+    "id": "kok",
+    "naamNl": "Kok",
+    "naamFr": "Cuisinier",
     "categorie": "Horeca",
-    "sectoren": ["horeca", "artisanat"],
-    "omschrijving": "Bereiding van patisserie en taarten.",
-    "diplomaVereist": true,
-    "diplomaDetails": "CAP Pâtissier verplicht.",
-    "erkenning": "procedure",
+    "sectoren": ["horeca"],
+    "omschrijving": "Bereiden van gerechten, mise-en-place en keukenbeheer.",
+    "diplomaVereist": false,
+    "diplomaDetails": "CAP Cuisine sterk aanbevolen voor vaste aanstellingen, maar niet wettelijk verplicht.",
+    "erkenning": "automatisch",
+    "verzekeringVerplicht": false,
+    "autoentrepreneurMogelijk": true,
+    "gereglementeerd": false,
+    "taalniveau": "A2",
+    "gemiddeldInkomen": 28000,
+    "links": [
+        { "titel": "L'Hôtellerie Restauration (Vakblad)", "url": "https://www.lhotellerie-restauration.fr/" }
+    ],
+    "keywords": ["kok", "keuken", "chef", "koken"]
+  },
+  {
+    "id": "eigenaar-gite",
+    "naamNl": "Gîte-eigenaar",
+    "naamFr": "Exploitant de gîte",
+    "categorie": "Toerisme",
+    "sectoren": ["toerisme"],
+    "omschrijving": "Verhuur van gemeubileerde vakantiewoning. Beheer, ontvangst gasten en schoonmaak.",
+    "diplomaVereist": false,
+    "erkenning": "automatisch",
+    "erkenningProcedure": "Aanmelding bij gemeente (Mairie) verplicht via Cerfa formulier.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro"],
-    "autoentrepreneurMogelijk": false,
-    "gereglementeerd": true,
+    "verzekeringen": ["RC Pro", "Woonverzekering met verhuurclausule"],
+    "autoentrepreneurMogelijk": true,
+    "gereglementeerd": false,
     "taalniveau": "B1",
-    "gemiddeldInkomen": 32000,
-    "links": [],
-    "keywords": ["banketbakker", "taart"]
+    "gemiddeldInkomen": 15000,
+    "links": [
+        { "titel": "Service-Public: Meublé de tourisme", "url": "https://www.service-public.fr/particuliers/vosdroits/F2043" }
+    ],
+    "keywords": ["gite", "vakantiehuis", "verhuur", "toerisme"]
   },
   {
     "id": "camping-beheerder",
@@ -42,14 +66,63 @@
     "naamFr": "Gestionnaire de camping",
     "categorie": "Toerisme",
     "sectoren": ["toerisme"],
-    "omschrijving": "Beheer van camping en ontvangst gasten.",
+    "omschrijving": "Volledig beheer van campingterrein, receptie, en faciliteiten.",
     "diplomaVereist": false,
     "erkenning": "automatisch",
     "verzekeringVerplicht": true,
+    "verzekeringen": ["RC Pro Exploitation", "Opstalverzekering"],
     "autoentrepreneurMogelijk": false,
-    "gereglementeerd": false,
+    "gereglementeerd": true,
     "taalniveau": "B2",
-    "links": [],
-    "keywords": ["camping", "toerisme"]
+    "gemiddeldInkomen": 35000,
+    "links": [
+         { "titel": "FNHPA (Fédération Nationale de l'Hôtellerie de Plein Air)", "url": "https://www.fnhpa-pro.fr/" }
+    ],
+    "keywords": ["camping", "recreatie", "beheerder"]
+  },
+  {
+    "id": "verpleegkundige",
+    "naamNl": "Verpleegkundige (Algemeen)",
+    "naamFr": "Infirmier en soins généraux (IDE)",
+    "categorie": "Zorg",
+    "sectoren": ["zorg", "sante"],
+    "omschrijving": "Verlenen van verpleegkundige zorg in ziekenhuis, kliniek of thuiszorg.",
+    "diplomaVereist": true,
+    "diplomaDetails": "Erkenning Nederlands diploma verplicht via DREETS.",
+    "erkenning": "procedure",
+    "erkenningProcedure": "Aanvraag erkenning beroepskwalificatie bij DREETS + Inschrijving Ordre National des Infirmiers.",
+    "verzekeringVerplicht": true,
+    "verzekeringen": ["RCP (indien zelfstandig)"],
+    "autoentrepreneurMogelijk": true,
+    "gereglementeerd": true,
+    "taalniveau": "B2",
+    "gemiddeldInkomen": 32000,
+    "links": [
+        { "titel": "Ordre National des Infirmiers", "url": "https://www.ordre-infirmiers.fr/" },
+        { "titel": "Guichet Qualifications", "url": "https://www.guichet-qualifications.fr/" }
+    ],
+    "keywords": ["verpleegkundige", "zorg", "ziekenhuis", "medisch"]
+  },
+  {
+    "id": "huisarts",
+    "naamNl": "Huisarts",
+    "naamFr": "Médecin généraliste",
+    "categorie": "Zorg",
+    "sectoren": ["zorg", "sante"],
+    "omschrijving": "Algemene medische zorg, diagnose en behandeling van patiënten.",
+    "diplomaVereist": true,
+    "diplomaDetails": "Erkenning artsendiploma + specialisatie verplicht.",
+    "erkenning": "procedure",
+    "erkenningProcedure": "Inschrijving bij Ordre des Médecins verplicht. Taaltest vaak vereist.",
+    "verzekeringVerplicht": true,
+    "verzekeringen": ["RCP Médicale"],
+    "autoentrepreneurMogelijk": false,
+    "gereglementeerd": true,
+    "taalniveau": "C1",
+    "gemiddeldInkomen": 85000,
+    "links": [
+        { "titel": "Conseil National de l'Ordre des Médecins", "url": "https://www.conseil-national.ordre.medecin.fr/" }
+    ],
+    "keywords": ["arts", "dokter", "medisch", "huisarts"]
   }
 ]
