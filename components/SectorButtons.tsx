@@ -7,18 +7,21 @@ interface SectorButtonsProps {
   onSelect: (sector: string | null) => void;
 }
 
-// De hardcoded lijst voor de UI (komt overeen met je JSON data straks)
+// Hier koppelen we het 'Label' (Mooi) aan de 'Value' (JSON data match)
+// Dit zorgt dat de filter altijd 100% werkt.
 const SECTOREN = [
-  "Horeca",
-  "Toerisme",
-  "Bouw",
-  "Zorg",
-  "Techniek",
-  "Transport",
-  "Dienstverlening",
-  "Groen",
-  "IT",
-  "Onderwijs"
+  { label: "Horeca & Voeding", value: "horeca" },
+  { label: "Toerisme & Verblijf", value: "toerisme" },
+  { label: "Bouw & Techniek", value: "bouw" },
+  { label: "Zorg & Welzijn", value: "zorg" },
+  { label: "Handel & Retail", value: "commerce" }, // <--- NIEUW!
+  { label: "Transport & Logistiek", value: "transport" }, // <--- NIEUW!
+  { label: "Dienstverlening", value: "dienstverlening" },
+  { label: "Landbouw & Groen", value: "agrarisch" },
+  { label: "IT & Digitaal", value: "it" },
+  { label: "Onderwijs", value: "onderwijs" },
+  { label: "Kunst & Creatief", value: "creatief" }, // <--- NIEUW!
+  { label: "Juridisch & Financieel", value: "administratif-juridique" }
 ];
 
 export default function SectorButtons({
@@ -26,7 +29,7 @@ export default function SectorButtons({
   onSelect,
 }: SectorButtonsProps) {
   return (
-    <div className="flex flex-wrap gap-2 mb-6">
+    <div className="flex flex-wrap gap-2 mb-6 justify-center">
       <button
         onClick={() => onSelect(null)}
         className={`px-4 py-2 rounded-full border text-sm font-medium transition-colors ${
@@ -40,15 +43,15 @@ export default function SectorButtons({
 
       {SECTOREN.map((sector) => (
         <button
-          key={sector}
-          onClick={() => onSelect(sector.toLowerCase())}
+          key={sector.value}
+          onClick={() => onSelect(sector.value)}
           className={`px-4 py-2 rounded-full border text-sm font-medium transition-colors ${
-            selectedSector === sector.toLowerCase()
+            selectedSector === sector.value
               ? "bg-[#800000] text-white border-[#800000]"
               : "bg-white border-gray-300 text-gray-700 hover:bg-gray-100"
           }`}
         >
-          {sector}
+          {sector.label}
         </button>
       ))}
     </div>
