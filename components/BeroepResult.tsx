@@ -4,18 +4,31 @@ import { Beroep } from "../lib/types";
 import { 
   ExternalLink, 
   CheckCircle2, 
-  AlertTriangle, // Nieuw icoon
+  AlertTriangle, 
   Euro, 
   Clock, 
   ShieldCheck, 
   BookOpen,
-  Printer,       // Nieuw icoon
-  Share2         // Nieuw icoon
+  Printer,
+  Info // Nieuw icoon
 } from "lucide-react";
 
 interface Props {
   beroep: Beroep;
 }
+
+// Interne Tooltip Component
+const InfoTooltip = ({ text }: { text: string }) => (
+  <div className="group relative inline-flex items-center ml-1.5 cursor-help align-middle">
+    <Info className="w-4 h-4 text-gray-400 hover:text-[#800000] transition-colors" />
+    {/* Tooltip Bubble */}
+    <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-gray-900 text-white text-xs rounded-lg shadow-xl z-50 text-center leading-relaxed pointer-events-none">
+      {text}
+      {/* Pijl naar beneden */}
+      <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
+    </div>
+  </div>
+);
 
 export default function BeroepResult({ beroep }: Props) {
   if (!beroep) return null;
@@ -34,7 +47,7 @@ export default function BeroepResult({ beroep }: Props) {
                 <h2 className="text-3xl font-bold text-[#800000] mb-1">{beroep.naamNl}</h2>
                 <p className="text-xl text-gray-500 italic font-medium">{beroep.naamFr}</p>
                 
-                {/* Synoniemen / Keywords tonen */}
+                {/* Synoniemen */}
                 {beroep.keywords && beroep.keywords.length > 0 && (
                     <div className="mt-2 text-sm text-gray-500 print:hidden">
                         <span className="mr-2 opacity-70">Ook bekend als:</span>
@@ -53,20 +66,21 @@ export default function BeroepResult({ beroep }: Props) {
                         {beroep.categorie}
                     </span>
                     {beroep.taalniveau && (
-                        <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full font-medium border border-blue-200 print:hidden">
+                        <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full font-medium border border-blue-200 print:hidden flex items-center">
                             Taal: {beroep.taalniveau}
+                            <InfoTooltip text="Taalniveau volgens Europees referentiekader (CEFR). A2 is basis, C1 is gevorderd." />
                         </span>
                     )}
                 </div>
                 
-                {/* Actieknoppen (niet zichtbaar op print) */}
+                {/* Actieknoppen */}
                 <div className="flex gap-2 print:hidden">
                     <button 
                         onClick={handlePrint}
                         className="flex items-center gap-1 text-sm text-gray-600 hover:text-[#800000] transition-colors"
                         title="Print deze fiche"
                     >
-                        <Printer className="w-4 h-4" /> Print
+                        <Printer className="w-4 h-4" /> Print fiche
                     </button>
                 </div>
             </div>
@@ -81,10 +95,13 @@ export default function BeroepResult({ beroep }: Props) {
             <div className="mt-6 bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg flex items-start gap-3">
                 <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
                 <div>
-                    <h4 className="font-bold text-amber-800 text-sm uppercase">Let op: Gereglementeerd Beroep</h4>
+                    <h4 className="font-bold text-amber-800 text-sm uppercase flex items-center">
+                        Let op: Gereglementeerd Beroep
+                        <InfoTooltip text="Uitoefening zonder diploma-erkenning is strafbaar in Frankrijk. Controleer uw status bij de bevoegde instantie." />
+                    </h4>
                     <p className="text-sm text-amber-700 mt-1">
                         Je mag dit beroep in Frankrijk <strong>niet</strong> uitoefenen zonder de juiste diploma's of erkenning. 
-                        Illegaal werken kan leiden tot hoge boetes en sluiting. Controleer je erkenning goed.
+                        Controleer de procedure hieronder.
                     </p>
                 </div>
             </div>
@@ -98,7 +115,10 @@ export default function BeroepResult({ beroep }: Props) {
         <div className="bg-white p-6 lg:p-8 print:border-b">
             <div className="flex items-center gap-2 mb-5 text-[#800000] border-b pb-2 border-gray-100">
                 <BookOpen className="w-6 h-6" />
-                <h3 className="font-bold text-xl">Diploma & Erkenning</h3>
+                <h3 className="font-bold text-xl flex items-center">
+                    Diploma & Erkenning
+                    <InfoTooltip text="Nederlandse diploma's zijn niet automatisch geldig. Vaak is een 'Attestation de comparabilité' of inschrijving in een register nodig." />
+                </h3>
             </div>
             
             <ul className="space-y-4 text-gray-700">
@@ -134,7 +154,10 @@ export default function BeroepResult({ beroep }: Props) {
 
             <ul className="space-y-4 text-gray-700">
                 <li className="flex justify-between items-center py-1 border-b border-gray-50">
-                    <span className="font-medium">Auto-entrepreneur mogelijk?</span>
+                    <span className="font-medium flex items-center">
+                        Auto-entrepreneur mogelijk?
+                        <InfoTooltip text="Micro-entreprise: Eenvoudig starten, lage lasten, maar omzetplafonds en geen kostenaftrek." />
+                    </span>
                     <span className={beroep.autoentrepreneurMogelijk ? "text-green-600 font-bold" : "text-red-600 font-bold"}>
                         {beroep.autoentrepreneurMogelijk ? "Ja" : "Nee"}
                     </span>
@@ -175,7 +198,10 @@ export default function BeroepResult({ beroep }: Props) {
         <div className="bg-white p-6 lg:p-8 print:border-b">
             <div className="flex items-center gap-2 mb-4 text-[#800000] border-b pb-2 border-gray-100">
                 <ShieldCheck className="w-6 h-6" />
-                <h3 className="font-bold text-xl">Verzekeringen</h3>
+                <h3 className="font-bold text-xl flex items-center">
+                    Verzekeringen
+                    <InfoTooltip text="In Frankrijk zijn beroepsverzekeringen (RC Pro, Décennale) vaak wettelijk verplicht en strikt gecontroleerd." />
+                </h3>
             </div>
             
             <div className="flex items-center gap-2 mb-3">
@@ -190,7 +216,11 @@ export default function BeroepResult({ beroep }: Props) {
                     {beroep.verzekeringen.map((verz, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
                             <CheckCircle2 className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                            <span>{verz}</span>
+                            <span className="flex items-center">
+                                {verz}
+                                {verz.includes("Décennale") && <InfoTooltip text="Dekt schade aan constructies gedurende 10 jaar. Absoluut verplicht in de bouw." />}
+                                {verz.includes("RC Pro") && <InfoTooltip text="Responsabilité Civile Professionnelle: Dekt schade aan derden tijdens uitoefening van het beroep." />}
+                            </span>
                         </li>
                     ))}
                 </ul>
