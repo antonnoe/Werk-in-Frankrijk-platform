@@ -4,11 +4,9 @@ import { useState, useMemo } from "react";
 import SearchBar from "../components/SearchBar";
 import BeroepResult from "../components/BeroepResult";
 import SectorButtons from "../components/SectorButtons";
-// Importeer de JSON direct, maar cast het naar het juiste type voor veiligheid
 import rawData from "../data/beroepen.json";
 import { Beroep } from "../lib/types";
 
-// Forceer TypeScript om de JSON als Beroep[] te zien
 const beroepenData = rawData as unknown as Beroep[];
 
 export default function HomePage() {
@@ -24,60 +22,55 @@ export default function HomePage() {
     );
   }, [selectedSector]);
 
-  // 2. Reset functie
-  const handleReset = () => {
-    setSelectedSector(null);
-    setSelectedBeroep(null);
-    setSearchQuery("");
-  };
-
   return (
-    <main className="max-w-4xl mx-auto px-4 py-10 min-h-screen bg-gray-50">
-      <h1 className="text-3xl font-bold text-[#800000] mb-2 text-center">
-        Werk in Frankrijk
-      </h1>
-      <p className="text-center text-gray-600 mb-8">Beroepenchecker & Regelgeving</p>
+    <main className="max-w-5xl mx-auto px-4 py-10 min-h-screen bg-[#f8f9fa]">
+      
+      {/* Header */}
+      <div className="text-center mb-10">
+        <h1 className="text-4xl font-extrabold text-[#800000] mb-3 tracking-tight">
+          Werk in Frankrijk
+        </h1>
+        <p className="text-lg text-gray-600">
+            Officiële informatie over beroepseisen, diploma's en regelgeving.
+        </p>
+      </div>
 
       {/* Sector Knoppen */}
       <SectorButtons
         selectedSector={selectedSector}
         onSelect={(sec) => {
             setSelectedSector(sec);
-            setSelectedBeroep(null);
+            setSelectedBeroep(null); // Reset resultaat bij wisselen sector
         }}
       />
 
-      {/* Zoekbalk - Let op: we geven GEEN searchQuery props door als de SearchBar die niet ondersteunt */}
-      <div className="mt-6 relative">
+      {/* Zoekbalk (Sticky effect optioneel, nu gewoon clean) */}
+      <div className="mt-8 mb-6">
         <SearchBar
           beroepen={sectorFiltered}
-          onSelect={(b, queryText) => {
+          searchQuery={searchQuery}          // We geven de state door
+          setSearchQuery={setSearchQuery}    // We geven de controle door
+          onSelect={(b) => {
              setSelectedBeroep(b);
-             if(queryText) setSearchQuery(queryText);
+             // SearchQuery wordt al geleegd in de SearchBar component zelf
           }}
         />
       </div>
-
-      {/* Reset Knop (alleen tonen als er iets geselecteerd is) */}
-      {(selectedSector || selectedBeroep) && (
-          <div className="text-center mt-4">
-              <button 
-                onClick={handleReset}
-                className="text-sm text-gray-500 underline hover:text-[#800000]"
-              >
-                  Zoek opnieuw / Reset filters
-              </button>
-          </div>
-      )}
 
       {/* Resultaat Weergave */}
       <div className="mt-8">
         {selectedBeroep ? (
           <BeroepResult beroep={selectedBeroep} />
         ) : (
-          <div className="text-center text-gray-400 mt-10">
-             {sectorFiltered.length} beroepen beschikbaar in deze selectie.
-          </div>
+            // Welkomst / Lege staat
+           !searchQuery && (
+              <div className="text-center py-12 bg-white rounded-xl border border-gray-200 shadow-sm mt-4">
+                  <p className="text-gray-400 mb-2">Selecteer een sector of zoek een beroep</p>
+                  <p className="text-sm text-gray-300">
+                      {sectorFiltered.length} beroepen in huidige selectie
+                  </p>
+              </div>
+           )
         )}
       </div>
     </main>
