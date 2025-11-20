@@ -1,8 +1,6 @@
-// /lib/types.ts
-// Clean & consistent type systeem voor fase 1
-
+// lib/types.ts
 export interface Link {
-  label: string;
+  titel: string;
   url: string;
 }
 
@@ -10,32 +8,31 @@ export interface Beroep {
   id: string;
   naamNl: string;
   naamFr: string;
+  sectoren: string[]; // Dit veld miste steeds
+  categorie: string;
   omschrijving: string;
-
-  // Sector(en)
-  sectoren: string[];
-
-  // Diploma en erkenning
+  
+  // Diploma & Eisen
   diplomaVereist: boolean;
-  diplomaEisen?: string;
+  diplomaDetails?: string;
   erkenning?: string;
-
-  // Instanties en verplichtingen
-  instanties?: Link[];
-  verplichtingen?: string[];
-
-  // Codes
-  romeCode?: string;
-  rncpCode?: string;
-
-  // Registratie & verzekering
-  verzekeringVerplicht?: boolean;
-  verzekeringUitleg?: string;
-
-  // Arbeidsmarkt
+  erkenningProcedure?: string;
+  erkenningUrl?: string;
+  
+  // Werk & Status
+  verzekeringVerplicht: boolean;
+  verzekeringen?: string[];
+  autoentrepreneurMogelijk: boolean;
+  gereglementeerd: boolean;
+  
+  // Details
+  taalniveau?: string;
   salarisIndicatie?: string;
-  arbeidsmarktKans?: string;
-
-  // Zoekwoorden
+  gemiddeldInkomen?: number;
+  kostenEuro?: number;
+  tijdlijnMaanden?: string;
+  
+  links?: Link[];
   keywords?: string[];
+  laatsteUpdate?: string;
 }
