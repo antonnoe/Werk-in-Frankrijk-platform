@@ -12,6 +12,7 @@ const beroepenData = rawData as unknown as Beroep[];
 export default function HomePage() {
   const [selectedSector, setSelectedSector] = useState<string | null>(null);
   const [selectedBeroep, setSelectedBeroep] = useState<Beroep | null>(null);
+  // Hier beheren we de zoekterm voor de hele pagina
   const [searchQuery, setSearchQuery] = useState("");
 
   // 1. Filter op sector
@@ -44,15 +45,16 @@ export default function HomePage() {
         }}
       />
 
-      {/* Zoekbalk (Sticky effect optioneel, nu gewoon clean) */}
+      {/* Zoekbalk */}
       <div className="mt-8 mb-6">
         <SearchBar
           beroepen={sectorFiltered}
-          searchQuery={searchQuery}          // We geven de state door
-          setSearchQuery={setSearchQuery}    // We geven de controle door
+          // We geven nu de verplichte props door waar Vercel om vroeg:
+          searchQuery={searchQuery}          
+          setSearchQuery={setSearchQuery}    
           onSelect={(b) => {
              setSelectedBeroep(b);
-             // SearchQuery wordt al geleegd in de SearchBar component zelf
+             // We hoeven hier searchQuery niet te resetten, dat doet de SearchBar zelf of de gebruiker
           }}
         />
       </div>
@@ -62,7 +64,7 @@ export default function HomePage() {
         {selectedBeroep ? (
           <BeroepResult beroep={selectedBeroep} />
         ) : (
-            // Welkomst / Lege staat
+            // Welkomst / Lege staat (alleen tonen als er niet gezocht wordt)
            !searchQuery && (
               <div className="text-center py-12 bg-white rounded-xl border border-gray-200 shadow-sm mt-4">
                   <p className="text-gray-400 mb-2">Selecteer een sector of zoek een beroep</p>
