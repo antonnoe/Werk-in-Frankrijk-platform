@@ -17,12 +17,14 @@ interface Props {
   beroep: Beroep;
 }
 
+// De interne Tooltip component (zweeft nu boven alles dankzij z-50)
 const InfoTooltip = ({ text }: { text: string }) => (
   <div className="group relative inline-flex items-center ml-1.5 cursor-help align-middle">
     <Info className="w-4 h-4 text-gray-400 hover:text-[#800000] transition-colors" />
-    {/* Tooltip Bubble - Nu met z-50 en bredere context */}
+    {/* Tooltip Bubble */}
     <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-gray-900 text-white text-xs rounded-lg shadow-xl z-50 text-center leading-relaxed pointer-events-none">
       {text}
+      {/* Pijltje naar beneden */}
       <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
     </div>
   </div>
@@ -36,17 +38,17 @@ export default function BeroepResult({ beroep }: Props) {
   };
 
   return (
-    // AANPASSING: overflow-hidden weggehaald zodat tooltips kunnen "ontsnappen"
+    // LET OP: overflow-hidden is hier weggehaald zodat tooltips zichtbaar blijven
     <div className="bg-white shadow-xl rounded-xl border border-gray-200 animate-in fade-in duration-300 mt-6 print:shadow-none print:border-0 relative">
       
-      {/* 1. HERO HEADER - Rounded corners handmatig toegevoegd aan bovenkant */}
+      {/* 1. HERO HEADER */}
       <div className="bg-gray-50 p-6 border-b border-gray-100 rounded-t-xl print:bg-white print:border-b-2">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
             <div>
                 <h2 className="text-3xl font-bold text-[#800000] mb-1">{beroep.naamNl}</h2>
                 <p className="text-xl text-gray-500 italic font-medium">{beroep.naamFr}</p>
                 
-                {/* Synoniemen */}
+                {/* Synoniemen / Keywords tonen */}
                 {beroep.keywords && beroep.keywords.length > 0 && (
                     <div className="mt-2 text-sm text-gray-500 print:hidden">
                         <span className="mr-2 opacity-70">Ook bekend als:</span>
@@ -72,6 +74,7 @@ export default function BeroepResult({ beroep }: Props) {
                     )}
                 </div>
                 
+                {/* Actieknoppen */}
                 <div className="flex gap-2 print:hidden">
                     <button 
                         onClick={handlePrint}
@@ -88,6 +91,7 @@ export default function BeroepResult({ beroep }: Props) {
             <p className="text-gray-700 leading-relaxed text-lg">{beroep.omschrijving}</p>
         </div>
 
+        {/* WAARSCHUWING BIJ GEREGLEMENTEERD BEROEP */}
         {beroep.gereglementeerd && (
             <div className="mt-6 bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg flex items-start gap-3">
                 <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
@@ -97,7 +101,7 @@ export default function BeroepResult({ beroep }: Props) {
                         <InfoTooltip text="Strafbaar om uit te oefenen zonder de juiste diploma's of officiële erkenning." />
                     </h4>
                     <p className="text-sm text-amber-700 mt-1">
-                        Je mag dit beroep in Frankrijk <strong>niet</strong> uitoefenen zonder de juiste diploma's.
+                        Je mag dit beroep in Frankrijk <strong>niet</strong> uitoefenen zonder de juiste diploma's of erkenning.
                     </p>
                 </div>
             </div>
@@ -107,7 +111,7 @@ export default function BeroepResult({ beroep }: Props) {
       {/* 2. DETAIL GRID */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-px bg-gray-200 print:block print:bg-white">
         
-        {/* BLOK A: DIPLOMA */}
+        {/* BLOK A: DIPLOMA & ERKENNING */}
         <div className="bg-white p-6 lg:p-8 print:border-b">
             <div className="flex items-center gap-2 mb-5 text-[#800000] border-b pb-2 border-gray-100">
                 <BookOpen className="w-6 h-6" />
@@ -124,12 +128,14 @@ export default function BeroepResult({ beroep }: Props) {
                         {beroep.diplomaVereist ? "Ja, verplicht" : "Nee, niet verplicht"}
                     </span>
                 </li>
+                
                 {beroep.diplomaDetails && (
                     <li className="bg-gray-50 p-3 rounded border border-gray-100 text-sm print:border-0 print:pl-0">
                         <span className="block font-bold text-xs uppercase text-gray-500 mb-1">Details</span>
                         {beroep.diplomaDetails}
                     </li>
                 )}
+
                 {beroep.erkenningProcedure && (
                     <li className="bg-blue-50 p-4 rounded border border-blue-100 text-sm text-blue-900 print:bg-white print:border print:text-black">
                         <span className="block font-bold text-xs uppercase mb-1 text-blue-700">Procedure</span>
@@ -139,7 +145,7 @@ export default function BeroepResult({ beroep }: Props) {
             </ul>
         </div>
 
-        {/* BLOK B: STATUS */}
+        {/* BLOK B: PRAKTISCH & GELD */}
         <div className="bg-white p-6 lg:p-8 print:border-b">
             <div className="flex items-center gap-2 mb-5 text-[#800000] border-b pb-2 border-gray-100">
                 <Euro className="w-6 h-6" />
@@ -149,13 +155,14 @@ export default function BeroepResult({ beroep }: Props) {
             <ul className="space-y-4 text-gray-700">
                 <li className="flex justify-between items-center py-1 border-b border-gray-50">
                     <span className="font-medium flex items-center">
-                        Auto-entrepreneur?
-                        <InfoTooltip text="Eenvoudig statuut voor starters. Let op omzetplafonds!" />
+                        Auto-entrepreneur mogelijk?
+                        <InfoTooltip text="Micro-entreprise: Eenvoudig starten, lage lasten, maar omzetplafonds en geen kostenaftrek." />
                     </span>
                     <span className={beroep.autoentrepreneurMogelijk ? "text-green-600 font-bold" : "text-red-600 font-bold"}>
                         {beroep.autoentrepreneurMogelijk ? "Ja" : "Nee"}
                     </span>
                 </li>
+                
                 {beroep.registratieInstantie && (
                     <li className="flex justify-between items-center py-1 border-b border-gray-50">
                         <span className="font-medium flex items-center">
@@ -165,20 +172,35 @@ export default function BeroepResult({ beroep }: Props) {
                         <span className="font-bold text-gray-900 text-right">{beroep.registratieInstantie}</span>
                     </li>
                 )}
+
+                {beroep.gemiddeldInkomen && (
+                    <li className="flex justify-between items-center py-1 border-b border-gray-50">
+                        <span className="font-medium">Gem. Inkomen (bruto/jaar):</span>
+                        <span className="font-bold text-gray-900">€{beroep.gemiddeldInkomen.toLocaleString()}</span>
+                    </li>
+                )}
+
                 <div className="grid grid-cols-2 gap-4 mt-4">
                     <div className="bg-orange-50 p-3 rounded border border-orange-100 print:border print:bg-white">
                         <div className="flex items-center gap-1.5 mb-1 text-orange-800">
                             <Euro className="w-4 h-4" />
-                            <span className="text-xs font-bold uppercase">Kosten</span>
+                            <span className="text-xs font-bold uppercase flex items-center">
+                                Opstartkosten
+                                <InfoTooltip text="Schatting van verplichte kosten: inschrijving KvK/CMA, verplichte cursussen, eerste verzekering en diploma-erkenning. Exclusief bedrijfspand/voorraad." />
+                            </span>
                         </div>
                         <span className="font-bold text-gray-900">
-                            {beroep.kostenEuro ? `€${beroep.kostenEuro.toLocaleString()}` : "Gratis/Laag"}
+                            {beroep.kostenEuro ? `€${beroep.kostenEuro.toLocaleString()}` : "N.v.t."}
                         </span>
                     </div>
+                    
                     <div className="bg-purple-50 p-3 rounded border border-purple-100 print:border print:bg-white">
                         <div className="flex items-center gap-1.5 mb-1 text-purple-800">
                             <Clock className="w-4 h-4" />
-                            <span className="text-xs font-bold uppercase">Tijdlijn</span>
+                            <span className="text-xs font-bold uppercase flex items-center">
+                                Tijdlijn
+                                <InfoTooltip text="Gemiddelde doorlooptijd van aanvraag tot start: inclusief diploma-erkenning, inschrijving registers en wachttijd vergunningen." />
+                            </span>
                         </div>
                         <span className="font-bold text-gray-900">
                             {beroep.tijdlijnMaanden ? `${beroep.tijdlijnMaanden} mnd` : "Direct"}
@@ -194,7 +216,7 @@ export default function BeroepResult({ beroep }: Props) {
                 <ShieldCheck className="w-6 h-6" />
                 <h3 className="font-bold text-xl flex items-center">
                     Verzekeringen
-                    <InfoTooltip text="Verzekeringen zijn in Frankrijk vaak wettelijk verplicht en strafbaar om te missen." />
+                    <InfoTooltip text="In Frankrijk zijn beroepsverzekeringen (RC Pro, Décennale) vaak wettelijk verplicht en strafbaar om te missen." />
                 </h3>
             </div>
             
@@ -212,8 +234,8 @@ export default function BeroepResult({ beroep }: Props) {
                             <CheckCircle2 className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
                             <span className="flex items-center flex-wrap">
                                 {verz}
-                                {verz.toLowerCase().includes("décennale") && <InfoTooltip text="Garantie Décennale: Dekt 10 jaar schade aan de constructie. Zonder deze verzekering mag je niet bouwen." />}
-                                {verz.toLowerCase().includes("rc pro") && <InfoTooltip text="Responsabilité Civile Professionnelle: Dekt schade aan klanten of derden." />}
+                                {verz.toLowerCase().includes("décennale") && <InfoTooltip text="Garantie Décennale: Dekt 10 jaar schade aan constructie. Zonder deze verzekering mag je niet bouwen." />}
+                                {verz.toLowerCase().includes("rc pro") && <InfoTooltip text="Responsabilité Civile Professionnelle: Dekt schade aan klanten of derden tijdens werk." />}
                             </span>
                         </li>
                     ))}
@@ -223,7 +245,7 @@ export default function BeroepResult({ beroep }: Props) {
             )}
         </div>
 
-        {/* BLOK D: BRONNEN */}
+        {/* BLOK D: OFFICIËLE BRONNEN */}
         <div className="bg-white p-6 lg:p-8 print:hidden rounded-br-xl">
             <div className="flex items-center gap-2 mb-4 text-[#800000] border-b pb-2 border-gray-100">
                 <ExternalLink className="w-6 h-6" />
@@ -256,7 +278,7 @@ export default function BeroepResult({ beroep }: Props) {
 
       </div>
       
-      {/* Footer print */}
+      {/* Footer voor print */}
       <div className="hidden print:block p-6 text-center text-xs text-gray-400 border-t">
         Gegenereerd via Werk in Frankrijk Beroepenchecker - Infofrankrijk.com
       </div>
