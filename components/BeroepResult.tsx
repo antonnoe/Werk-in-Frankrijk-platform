@@ -4,12 +4,13 @@ import { Beroep } from "../lib/types";
 import { 
   ExternalLink, 
   CheckCircle2, 
-  AlertCircle, 
+  AlertTriangle, // Nieuw icoon
   Euro, 
   Clock, 
   ShieldCheck, 
   BookOpen,
-  Building2
+  Printer,       // Nieuw icoon
+  Share2         // Nieuw icoon
 } from "lucide-react";
 
 interface Props {
@@ -19,43 +20,82 @@ interface Props {
 export default function BeroepResult({ beroep }: Props) {
   if (!beroep) return null;
 
+  const handlePrint = () => {
+    window.print();
+  };
+
   return (
-    <div className="bg-white shadow-xl rounded-xl border border-gray-200 overflow-hidden animate-in fade-in duration-300 mt-6">
+    <div className="bg-white shadow-xl rounded-xl border border-gray-200 overflow-hidden animate-in fade-in duration-300 mt-6 print:shadow-none print:border-0">
       
       {/* 1. HERO HEADER */}
-      <div className="bg-gray-50 p-6 border-b border-gray-100">
+      <div className="bg-gray-50 p-6 border-b border-gray-100 print:bg-white print:border-b-2">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
             <div>
                 <h2 className="text-3xl font-bold text-[#800000] mb-1">{beroep.naamNl}</h2>
                 <p className="text-xl text-gray-500 italic font-medium">{beroep.naamFr}</p>
+                
+                {/* Synoniemen / Keywords tonen */}
+                {beroep.keywords && beroep.keywords.length > 0 && (
+                    <div className="mt-2 text-sm text-gray-500 print:hidden">
+                        <span className="mr-2 opacity-70">Ook bekend als:</span>
+                        {beroep.keywords.slice(0, 4).map((k, i) => (
+                            <span key={i} className="inline-block bg-gray-200 rounded-full px-2 py-0.5 text-xs mr-1 mb-1">
+                                {k}
+                            </span>
+                        ))}
+                    </div>
+                )}
             </div>
-            <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-[#800000] text-white text-sm rounded-full font-medium shadow-sm">
-                    {beroep.categorie}
-                </span>
-                {beroep.taalniveau && (
-                    <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full font-medium border border-blue-200">
-                        Taal: {beroep.taalniveau}
+            
+            <div className="flex flex-col items-end gap-3">
+                <div className="flex flex-wrap gap-2 justify-end">
+                    <span className="px-3 py-1 bg-[#800000] text-white text-sm rounded-full font-medium shadow-sm print:border print:border-black print:text-black print:bg-white">
+                        {beroep.categorie}
                     </span>
-                )}
-                {beroep.gereglementeerd && (
-                    <span className="px-3 py-1 bg-amber-100 text-amber-800 text-sm rounded-full font-medium border border-amber-200 flex items-center gap-1">
-                        <AlertCircle className="w-3 h-3" /> Gereglementeerd
-                    </span>
-                )}
+                    {beroep.taalniveau && (
+                        <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full font-medium border border-blue-200 print:hidden">
+                            Taal: {beroep.taalniveau}
+                        </span>
+                    )}
+                </div>
+                
+                {/* Actieknoppen (niet zichtbaar op print) */}
+                <div className="flex gap-2 print:hidden">
+                    <button 
+                        onClick={handlePrint}
+                        className="flex items-center gap-1 text-sm text-gray-600 hover:text-[#800000] transition-colors"
+                        title="Print deze fiche"
+                    >
+                        <Printer className="w-4 h-4" /> Print
+                    </button>
+                </div>
             </div>
         </div>
         
         <div className="mt-6">
             <p className="text-gray-700 leading-relaxed text-lg">{beroep.omschrijving}</p>
         </div>
+
+        {/* WAARSCHUWING BIJ GEREGLEMENTEERD BEROEP */}
+        {beroep.gereglementeerd && (
+            <div className="mt-6 bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg flex items-start gap-3">
+                <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                <div>
+                    <h4 className="font-bold text-amber-800 text-sm uppercase">Let op: Gereglementeerd Beroep</h4>
+                    <p className="text-sm text-amber-700 mt-1">
+                        Je mag dit beroep in Frankrijk <strong>niet</strong> uitoefenen zonder de juiste diploma's of erkenning. 
+                        Illegaal werken kan leiden tot hoge boetes en sluiting. Controleer je erkenning goed.
+                    </p>
+                </div>
+            </div>
+        )}
       </div>
 
       {/* 2. DETAIL GRID */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-px bg-gray-200">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-px bg-gray-200 print:block print:bg-white">
         
         {/* BLOK A: DIPLOMA & ERKENNING */}
-        <div className="bg-white p-6 lg:p-8">
+        <div className="bg-white p-6 lg:p-8 print:border-b">
             <div className="flex items-center gap-2 mb-5 text-[#800000] border-b pb-2 border-gray-100">
                 <BookOpen className="w-6 h-6" />
                 <h3 className="font-bold text-xl">Diploma & Erkenning</h3>
@@ -70,28 +110,23 @@ export default function BeroepResult({ beroep }: Props) {
                 </li>
                 
                 {beroep.diplomaDetails && (
-                    <li className="bg-gray-50 p-3 rounded border border-gray-100 text-sm">
+                    <li className="bg-gray-50 p-3 rounded border border-gray-100 text-sm print:border-0 print:pl-0">
                         <span className="block font-bold text-xs uppercase text-gray-500 mb-1">Details</span>
                         {beroep.diplomaDetails}
                     </li>
                 )}
 
                 {beroep.erkenningProcedure && (
-                    <li className="bg-blue-50 p-4 rounded border border-blue-100 text-sm text-blue-900">
-                        <div className="flex items-start gap-2">
-                            <Building2 className="w-4 h-4 mt-0.5 text-blue-700 flex-shrink-0" />
-                            <div>
-                                <span className="block font-bold text-xs uppercase mb-1 text-blue-700">Procedure</span>
-                                {beroep.erkenningProcedure}
-                            </div>
-                        </div>
+                    <li className="bg-blue-50 p-4 rounded border border-blue-100 text-sm text-blue-900 print:bg-white print:border print:text-black">
+                        <span className="block font-bold text-xs uppercase mb-1 text-blue-700">Procedure</span>
+                        {beroep.erkenningProcedure}
                     </li>
                 )}
             </ul>
         </div>
 
         {/* BLOK B: PRAKTISCH & GELD */}
-        <div className="bg-white p-6 lg:p-8">
+        <div className="bg-white p-6 lg:p-8 print:border-b">
             <div className="flex items-center gap-2 mb-5 text-[#800000] border-b pb-2 border-gray-100">
                 <Euro className="w-6 h-6" />
                 <h3 className="font-bold text-xl">Status & Kosten</h3>
@@ -113,7 +148,7 @@ export default function BeroepResult({ beroep }: Props) {
                 )}
 
                 <div className="grid grid-cols-2 gap-4 mt-4">
-                    <div className="bg-orange-50 p-3 rounded border border-orange-100">
+                    <div className="bg-orange-50 p-3 rounded border border-orange-100 print:border print:bg-white">
                         <div className="flex items-center gap-1.5 mb-1 text-orange-800">
                             <Euro className="w-4 h-4" />
                             <span className="text-xs font-bold uppercase">Opstartkosten</span>
@@ -123,7 +158,7 @@ export default function BeroepResult({ beroep }: Props) {
                         </span>
                     </div>
                     
-                    <div className="bg-purple-50 p-3 rounded border border-purple-100">
+                    <div className="bg-purple-50 p-3 rounded border border-purple-100 print:border print:bg-white">
                         <div className="flex items-center gap-1.5 mb-1 text-purple-800">
                             <Clock className="w-4 h-4" />
                             <span className="text-xs font-bold uppercase">Tijdlijn</span>
@@ -137,7 +172,7 @@ export default function BeroepResult({ beroep }: Props) {
         </div>
 
         {/* BLOK C: VERZEKERINGEN */}
-        <div className="bg-white p-6 lg:p-8">
+        <div className="bg-white p-6 lg:p-8 print:border-b">
             <div className="flex items-center gap-2 mb-4 text-[#800000] border-b pb-2 border-gray-100">
                 <ShieldCheck className="w-6 h-6" />
                 <h3 className="font-bold text-xl">Verzekeringen</h3>
@@ -165,7 +200,7 @@ export default function BeroepResult({ beroep }: Props) {
         </div>
 
         {/* BLOK D: OFFICIËLE BRONNEN */}
-        <div className="bg-white p-6 lg:p-8">
+        <div className="bg-white p-6 lg:p-8 print:hidden">
             <div className="flex items-center gap-2 mb-4 text-[#800000] border-b pb-2 border-gray-100">
                 <ExternalLink className="w-6 h-6" />
                 <h3 className="font-bold text-xl">Officiële Bronnen</h3>
@@ -195,6 +230,11 @@ export default function BeroepResult({ beroep }: Props) {
             )}
         </div>
 
+      </div>
+      
+      {/* Footer voor print */}
+      <div className="hidden print:block p-6 text-center text-xs text-gray-400 border-t">
+        Gegenereerd via Werk in Frankrijk Beroepenchecker - Infofrankrijk.com
       </div>
     </div>
   );
