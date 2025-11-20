@@ -6,60 +6,60 @@ import { Beroep } from "../lib/types";
 
 interface SearchBarProps {
   beroepen: Beroep[];
-  onSelect: (b: Beroep | null, q: string) => void;
-  searchQuery: string;
-  setSearchQuery: (q: string) => void;
+  onSelect: (b: Beroep | null, query: string) => void;
 }
 
-export default function SearchBar({
-  beroepen,
-  onSelect,
-  searchQuery,
-  setSearchQuery,
-}: SearchBarProps) {
-  const [open, setOpen] = useState(false);
+export default function SearchBar({ beroepen, onSelect }: SearchBarProps) {
+  const [input, setInput] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
 
   const fuse = useMemo(() => {
     return new Fuse(beroepen, {
-      keys: ["naamNl", "naamFr", "categorie", "keywords"],
+      keys: ["naamNl", "naamFr", "keywords", "categorie"],
       threshold: 0.3,
     });
   }, [beroepen]);
 
   const results = useMemo(() => {
-    if (!searchQuery.trim()) return [];
-    return fuse.search(searchQuery).map((r) => r.item);
-  }, [searchQuery, fuse]);
+      if (!input) return [];
+      return fuse.search(input).map(r => r.item);
+  }, [input, fuse]);
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full max-w-2xl mx-auto">
       <input
         type="text"
-        value={searchQuery}
-        placeholder="Zoek een beroep..."
-        className="w-full border rounded px-3 py-2"
-        onFocus={() => setOpen(true)}
-        onChange={(e) => setSearchQuery(e.target.value)}
+        className="w-full p-4 border rounded-lg shadow-sm focus:ring-2 focus:ring-[#800000] outline-none"
+        placeholder="Zoek een beroep (bijv. kok, arts, timmerman)..."
+        value={input}
+        onChange={(e) => {
+            setInput(e.target.value);
+            setIsOpen(true);
+        }}
+        onFocus={() => setIsOpen(true)}
       />
 
-      {open && results.length > 0 && (
-        <div
-          className="absolute mt-1 w-full bg-white border rounded shadow-lg overflow-y-auto z-20"
-          style={{ maxHeight: "400px" }}
-        >
-          {results.map((b) => (
-            <div
-              key={b.id}
-              onClick={() => {
-                onSelect(b, searchQuery);
-                setOpen(false);
-              }}
-              className="p-2 border-b cursor-pointer hover:bg-gray-100"
-            >
-              <strong>{b.naamNl}</strong>
-              <div className="text-xs text-gray-500">{b.categorie}</div>
-            </div>
-          ))}
+      {/* Resultaten Dropdown */}
+      {isOpen && input.length > 0 && (
+        <div className="absolute top-full left-0 right-0 bg-white border rounded-lg shadow-xl mt-1 z-50 max-h-96 overflow-y-auto">
+            {results.length === 0 ? (
+                <div className="p-4 text-gray-500">Geen resultaten gevonden.</div>
+            ) : (
+                results.map((beroep) => (
+                    <button
+                        key={beroep.id}
+                        className="w-full text-left p-3 hover:bg-gray-50 border-b last:border-0 transition-colors"
+                        onClick={() => {
+                            setInput(beroep.naamNl);
+                            onSelect(beroep, beroep.naamNl);
+                            setIsOpen(false);
+                        }}
+                    >
+                        <div className="font-bold text-[#800000]">{beroep.naamNl}</div>
+                        <div className="text-sm text-gray-600">{beroep.naamFr}</div>
+                    </button>
+                ))
+            )}
         </div>
       )}
     </div>
