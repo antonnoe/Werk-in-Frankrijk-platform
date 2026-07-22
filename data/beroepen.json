@@ -4,7 +4,9 @@
     "naamNl": "Bediening / Ober",
     "naamFr": "Serveur / Serveuse",
     "categorie": "Horeca",
-    "sectoren": ["horeca"],
+    "sectoren": [
+      "horeca"
+    ],
     "omschrijving": "Bediening van gasten in restaurant, café of brasserie. Opnemen van bestellingen en serveren.",
     "diplomaVereist": false,
     "diplomaDetails": "Geen wettelijk verplicht diploma. CAP Commercialisation et Services is een voordeel bij sollicitatie.",
@@ -15,16 +17,33 @@
     "taalniveau": "B2",
     "gemiddeldInkomen": 24000,
     "links": [
-      { "titel": "UMIH - Hôtellerie Restauration", "url": "https://www.umih.fr" }
+      {
+        "titel": "UMIH - Hôtellerie Restauration",
+        "url": "https://www.umih.fr"
+      }
     ],
-    "keywords": ["ober", "horeca", "restaurant", "bediening"]
+    "keywords": [
+      "ober",
+      "horeca",
+      "restaurant",
+      "bediening"
+    ],
+    "loket": {
+      "inschrijving": "Geen ondernemingsinschrijving: dit beroep wordt in loondienst uitgeoefend; inschrijving verloopt via de werkgever.",
+      "type": "geen",
+      "bevoegdeInstanties": []
+    },
+    "laatstGecontroleerd": "",
+    "bron": ""
   },
   {
     "id": "kok",
     "naamNl": "Kok",
     "naamFr": "Cuisinier",
     "categorie": "Horeca",
-    "sectoren": ["horeca"],
+    "sectoren": [
+      "horeca"
+    ],
     "omschrijving": "Bereiden van gerechten, mise-en-place en keukenbeheer.",
     "diplomaVereist": false,
     "diplomaDetails": "CAP Cuisine sterk aanbevolen voor vaste aanstellingen, maar niet wettelijk verplicht.",
@@ -35,101 +54,246 @@
     "taalniveau": "A2",
     "gemiddeldInkomen": 28000,
     "links": [
-      { "titel": "L'Hôtellerie Restauration (Vakblad)", "url": "https://www.lhotellerie-restauration.fr/" }
+      {
+        "titel": "L'Hôtellerie Restauration (Vakblad)",
+        "url": "https://www.lhotellerie-restauration.fr/"
+      }
     ],
-    "keywords": ["kok", "keuken", "chef", "koken"]
+    "keywords": [
+      "kok",
+      "keuken",
+      "chef",
+      "koken"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning sociale premies bij zelfstandige uitoefening (chef à domicile)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F22387"
   },
   {
     "id": "eigenaar-gite",
     "naamNl": "Gîte-eigenaar",
     "naamFr": "Exploitant de gîte",
     "categorie": "Toerisme",
-    "sectoren": ["toerisme"],
+    "sectoren": [
+      "toerisme"
+    ],
     "omschrijving": "Verhuur van gemeubileerde vakantiewoning. Beheer, ontvangst gasten en schoonmaak.",
     "diplomaVereist": false,
     "erkenning": "automatisch",
     "erkenningProcedure": "Aanmelding bij gemeente (Mairie) verplicht via Cerfa formulier.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro", "Woonverzekering met verhuurclausule"],
+    "verzekeringen": [
+      "RC Pro",
+      "Woonverzekering met verhuurclausule"
+    ],
     "autoentrepreneurMogelijk": true,
     "gereglementeerd": false,
     "taalniveau": "B1",
     "gemiddeldInkomen": 15000,
     "links": [
-      { "titel": "Service-Public: Meublé de tourisme", "url": "https://www.service-public.fr/particuliers/vosdroits/F2043" }
+      {
+        "titel": "Service-Public: Meublé de tourisme",
+        "url": "https://www.service-public.fr/particuliers/vosdroits/F2043"
+      }
     ],
-    "keywords": ["gite", "vakantiehuis", "verhuur", "toerisme"]
+    "keywords": [
+      "gite",
+      "vakantiehuis",
+      "verhuur",
+      "toerisme"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "Mairie",
+          "rol": "verplichte aangifte meublé de tourisme (déclaration en mairie)"
+        },
+        {
+          "instantie": "URSSAF",
+          "rol": "sociale premies bij verhuur als bedrijfsmatige activiteit"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "camping-beheerder",
     "naamNl": "Camping beheerder",
     "naamFr": "Gestionnaire de camping",
     "categorie": "Toerisme",
-    "sectoren": ["toerisme"],
+    "sectoren": [
+      "toerisme"
+    ],
     "omschrijving": "Volledig beheer van campingterrein, receptie, en faciliteiten.",
     "diplomaVereist": false,
     "erkenning": "automatisch",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Exploitation", "Opstalverzekering"],
+    "verzekeringen": [
+      "RC Pro Exploitation",
+      "Opstalverzekering"
+    ],
     "autoentrepreneurMogelijk": false,
     "gereglementeerd": true,
     "taalniveau": "B2",
     "gemiddeldInkomen": 35000,
     "links": [
-      { "titel": "FNHPA (Fédération Nationale de l'Hôtellerie de Plein Air)", "url": "https://www.fnhpa-pro.fr/" }
+      {
+        "titel": "FNHPA (Fédération Nationale de l'Hôtellerie de Plein Air)",
+        "url": "https://www.fnhpa-pro.fr/"
+      }
     ],
-    "keywords": ["camping", "recreatie", "beheerder"]
+    "keywords": [
+      "camping",
+      "recreatie",
+      "beheerder"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CCI (Chambre de Commerce et d'Industrie)",
+          "rol": "begeleiding en registratie van de commerciële activiteit"
+        },
+        {
+          "instantie": "Mairie / préfecture",
+          "rol": "classement van het terrein en exploitatievergunning"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "verpleegkundige",
     "naamNl": "Verpleegkundige (Algemeen)",
     "naamFr": "Infirmier en soins généraux (IDE)",
     "categorie": "Zorg",
-    "sectoren": ["zorg", "sante"],
+    "sectoren": [
+      "zorg",
+      "sante"
+    ],
     "omschrijving": "Verlenen van verpleegkundige zorg in ziekenhuis, kliniek of thuiszorg.",
     "diplomaVereist": true,
     "diplomaDetails": "Erkenning Nederlands diploma verplicht via DREETS. Inschrijving in het BIG-register is niet genoeg.",
     "erkenning": "procedure",
     "erkenningProcedure": "Je moet eerst erkenning aanvragen bij de DREETS van je woonregio. Daarna is inschrijving bij de 'Ordre National des Infirmiers' verplicht.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RCP (verplicht voor zelfstandigen)", "Lidmaatschap Orde"],
+    "verzekeringen": [
+      "RCP (verplicht voor zelfstandigen)",
+      "Lidmaatschap Orde"
+    ],
     "autoentrepreneurMogelijk": true,
     "gereglementeerd": true,
     "taalniveau": "B2",
     "gemiddeldInkomen": 32000,
     "links": [
-      { "titel": "Ordre National des Infirmiers (Registratie)", "url": "https://www.ordre-infirmiers.fr/" },
-      { "titel": "Service-Public: Erkenning Diploma's", "url": "https://www.service-public.fr/particuliers/vosdroits/F10" }
+      {
+        "titel": "Ordre National des Infirmiers (Registratie)",
+        "url": "https://www.ordre-infirmiers.fr/"
+      },
+      {
+        "titel": "Service-Public: Erkenning Diploma's",
+        "url": "https://www.service-public.fr/particuliers/vosdroits/F10"
+      }
     ],
-    "keywords": ["verpleegkundige", "zorg", "ziekenhuis", "medisch", "zuster"]
+    "keywords": [
+      "verpleegkundige",
+      "zorg",
+      "ziekenhuis",
+      "medisch",
+      "zuster"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "Ordre National des Infirmiers",
+          "rol": "verplichte registratie op het tableau (voorwaarde om het beroep uit te oefenen)"
+        },
+        {
+          "instantie": "URSSAF / CPAM",
+          "rol": "sociale premies en conventionering bij zelfstandige (libérale) uitoefening"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://www.ordre-infirmiers.fr/devenir-infirmier-liberal"
   },
   {
     "id": "huisarts",
     "naamNl": "Huisarts",
     "naamFr": "Médecin généraliste",
     "categorie": "Zorg",
-    "sectoren": ["zorg", "sante"],
+    "sectoren": [
+      "zorg",
+      "sante"
+    ],
     "omschrijving": "Algemene medische zorg, diagnose en behandeling van patiënten.",
     "diplomaVereist": true,
     "diplomaDetails": "Erkenning artsendiploma + specialisatie verplicht. Inschrijving in de Orde is cruciaal.",
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving bij de 'Ordre des Médecins' (CNOM) is de eerste stap. Zij controleren je diploma en taalkennis.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RCP Médicale (Beroepsaansprakelijkheid)"],
+    "verzekeringen": [
+      "RCP Médicale (Beroepsaansprakelijkheid)"
+    ],
     "autoentrepreneurMogelijk": false,
     "gereglementeerd": true,
     "taalniveau": "C1",
     "gemiddeldInkomen": 85000,
     "links": [
-      { "titel": "Ordre des Médecins (Inschrijving)", "url": "https://www.conseil-national.ordre.medecin.fr/" }
+      {
+        "titel": "Ordre des Médecins (Inschrijving)",
+        "url": "https://www.conseil-national.ordre.medecin.fr/"
+      }
     ],
-    "keywords": ["arts", "dokter", "medisch", "huisarts", "generaliste"]
+    "keywords": [
+      "arts",
+      "dokter",
+      "medisch",
+      "huisarts",
+      "generaliste"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "Conseil National de l'Ordre des Médecins",
+          "rol": "verplichte inschrijving op het tableau (voorwaarde om te praktiseren)"
+        },
+        {
+          "instantie": "CPAM / ARS",
+          "rol": "conventionering en registratie zorgaanbod bij libérale uitoefening"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "elektricien",
     "naamNl": "Elektricien",
     "naamFr": "Électricien",
-    "sectoren": ["bouw", "techniek", "artisanat"],
+    "sectoren": [
+      "bouw",
+      "techniek",
+      "artisanat"
+    ],
     "categorie": "Bouw",
     "omschrijving": "Installatie en onderhoud van elektrische installaties. Zeer strenge veiligheidsnormen (NF C 15-100).",
     "diplomaVereist": true,
@@ -137,7 +301,10 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving bij de Chambre de Métiers (CMA). Bij buitenlands diploma: dossier 'JQP' (Justification de Qualification Professionnelle).",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["Assurance Décennale (Tienjarige aansprakelijkheid)", "RC Pro"],
+    "verzekeringen": [
+      "Assurance Décennale (Tienjarige aansprakelijkheid)",
+      "RC Pro"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "CMA (Chambre de Métiers et de l'Artisanat)",
     "activiteitType": "Artisanale",
@@ -147,16 +314,43 @@
     "kostenEuro": 1500,
     "tijdlijnMaanden": "2-3",
     "links": [
-      { "titel": "CMA France - Inschrijving", "url": "https://www.artisanat.fr/" },
-      { "titel": "Qualifelec (Kwaliteitslabel)", "url": "https://www.qualifelec.fr/" }
+      {
+        "titel": "CMA France - Inschrijving",
+        "url": "https://www.artisanat.fr/"
+      },
+      {
+        "titel": "Qualifelec (Kwaliteitslabel)",
+        "url": "https://www.qualifelec.fr/"
+      }
     ],
-    "keywords": ["elektra", "stroom", "bouw", "klusjesman"]
+    "keywords": [
+      "elektra",
+      "stroom",
+      "bouw",
+      "klusjesman"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "loodgieter",
     "naamNl": "Loodgieter",
     "naamFr": "Plombier / Chauffagiste",
-    "sectoren": ["bouw", "techniek", "artisanat"],
+    "sectoren": [
+      "bouw",
+      "techniek",
+      "artisanat"
+    ],
     "categorie": "Bouw",
     "omschrijving": "Installatie van sanitair, waterleidingen en verwarmingssystemen.",
     "diplomaVereist": true,
@@ -164,7 +358,10 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Gereglementeerd beroep. Inschrijving CMA verplicht. Voor gasinstallaties is extra certificering (PG - Professionnel du Gaz) nodig.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["Assurance Décennale", "RC Pro"],
+    "verzekeringen": [
+      "Assurance Décennale",
+      "RC Pro"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "CMA (Chambre de Métiers et de l'Artisanat)",
     "activiteitType": "Artisanale",
@@ -174,15 +371,38 @@
     "kostenEuro": 1800,
     "tijdlijnMaanden": "2",
     "links": [
-      { "titel": "CAPEB (Vakbond Bouw)", "url": "https://www.capeb.fr/" }
+      {
+        "titel": "CAPEB (Vakbond Bouw)",
+        "url": "https://www.capeb.fr/"
+      }
     ],
-    "keywords": ["water", "sanitair", "verwarming", "bouw"]
+    "keywords": [
+      "water",
+      "sanitair",
+      "verwarming",
+      "bouw"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F39042"
   },
   {
     "id": "timmerman",
     "naamNl": "Timmerman",
     "naamFr": "Charpentier / Menuisier",
-    "sectoren": ["bouw", "artisanat"],
+    "sectoren": [
+      "bouw",
+      "artisanat"
+    ],
     "categorie": "Bouw",
     "omschrijving": "Constructie van daken (Charpentier) of kozijnen, deuren en binnenwerk (Menuisier).",
     "diplomaVereist": true,
@@ -190,7 +410,10 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving CMA. Let op: Charpentier (constructief) is zwaarder verzekerd dan Menuisier (afwerking).",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["Assurance Décennale (Cruciaal!)", "RC Pro"],
+    "verzekeringen": [
+      "Assurance Décennale (Cruciaal!)",
+      "RC Pro"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "CMA (Chambre de Métiers et de l'Artisanat)",
     "activiteitType": "Artisanale",
@@ -198,15 +421,38 @@
     "taalniveau": "A2",
     "gemiddeldInkomen": 29000,
     "links": [
-      { "titel": "Guichet Unique (Inschrijving)", "url": "https://procedures.inpi.fr/" }
+      {
+        "titel": "Guichet Unique (Inschrijving)",
+        "url": "https://procedures.inpi.fr/"
+      }
     ],
-    "keywords": ["hout", "dak", "kozijnen", "bouw"]
+    "keywords": [
+      "hout",
+      "dak",
+      "kozijnen",
+      "bouw"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "schilder",
     "naamNl": "Schilder",
     "naamFr": "Peintre en bâtiment",
-    "sectoren": ["bouw", "artisanat"],
+    "sectoren": [
+      "bouw",
+      "artisanat"
+    ],
     "categorie": "Bouw",
     "omschrijving": "Schilderwerk binnen en buiten, behangen en afwerking.",
     "diplomaVereist": true,
@@ -214,7 +460,10 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving CMA. Bewijs van kwalificatie nodig voor de titel 'Artisan'.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["Assurance Décennale (Vaak vergeten, maar verplicht voor vast werk)", "RC Pro"],
+    "verzekeringen": [
+      "Assurance Décennale (Vaak vergeten, maar verplicht voor vast werk)",
+      "RC Pro"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "CMA (Chambre de Métiers et de l'Artisanat)",
     "activiteitType": "Artisanale",
@@ -222,13 +471,32 @@
     "taalniveau": "A1",
     "gemiddeldInkomen": 24000,
     "links": [],
-    "keywords": ["verf", "afwerking", "decoratie"]
+    "keywords": [
+      "verf",
+      "afwerking",
+      "decoratie"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "metselaar",
     "naamNl": "Metselaar",
     "naamFr": "Maçon",
-    "sectoren": ["bouw", "artisanat"],
+    "sectoren": [
+      "bouw",
+      "artisanat"
+    ],
     "categorie": "Bouw",
     "omschrijving": "Funderingen, muren en betonwerk. Ruwbouw (Gros œuvre).",
     "diplomaVereist": true,
@@ -236,7 +504,10 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Zeer streng gereglementeerd vanwege constructieve veiligheid. Inschrijving CMA verplicht.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["Assurance Décennale (Duurste categorie)", "RC Pro"],
+    "verzekeringen": [
+      "Assurance Décennale (Duurste categorie)",
+      "RC Pro"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "CMA (Chambre de Métiers et de l'Artisanat)",
     "activiteitType": "Artisanale",
@@ -245,13 +516,33 @@
     "gemiddeldInkomen": 31000,
     "kostenEuro": 2500,
     "links": [],
-    "keywords": ["stenen", "beton", "ruwbouw", "aannemer"]
+    "keywords": [
+      "stenen",
+      "beton",
+      "ruwbouw",
+      "aannemer"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "tegelzetter",
     "naamNl": "Tegelzetter",
     "naamFr": "Carreleur / Mosaïste",
-    "sectoren": ["bouw", "artisanat"],
+    "sectoren": [
+      "bouw",
+      "artisanat"
+    ],
     "categorie": "Bouw",
     "omschrijving": "Plaatsen van tegels, mozaïek en vloeren.",
     "diplomaVereist": true,
@@ -259,7 +550,10 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving CMA.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["Assurance Décennale", "RC Pro"],
+    "verzekeringen": [
+      "Assurance Décennale",
+      "RC Pro"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "CMA (Chambre de Métiers et de l'Artisanat)",
     "activiteitType": "Artisanale",
@@ -267,13 +561,33 @@
     "taalniveau": "A1",
     "gemiddeldInkomen": 26000,
     "links": [],
-    "keywords": ["vloer", "badkamer", "tegels"]
+    "keywords": [
+      "vloer",
+      "badkamer",
+      "tegels"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "hovenier",
     "naamNl": "Hovenier / Tuinman",
     "naamFr": "Paysagiste / Jardinier",
-    "sectoren": ["groen", "artisanat", "agrarisch"],
+    "sectoren": [
+      "groen",
+      "artisanat",
+      "agrarisch"
+    ],
     "categorie": "Groen",
     "omschrijving": "Tuinaanleg en onderhoud. Let op verschil tussen 'Création' (aanleg) en 'Entretien' (onderhoud).",
     "diplomaVereist": false,
@@ -281,7 +595,9 @@
     "erkenning": "automatisch",
     "erkenningProcedure": "Aanleg = MSA (Mutualité Sociale Agricole) inschrijving. Klein onderhoud = URSSAF/SAP.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro"],
+    "verzekeringen": [
+      "RC Pro"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "MSA (voor aanleg) of URSSAF (voor klein onderhoud)",
     "activiteitType": "Agricole / Service",
@@ -289,16 +605,46 @@
     "taalniveau": "A2",
     "gemiddeldInkomen": 25000,
     "links": [
-      { "titel": "UNEP (Ondernemers Landschap)", "url": "https://www.lesentreprisesdupaysage.fr/" },
-      { "titel": "MSA (Sociale zekerheid groen)", "url": "https://www.msa.fr/" }
+      {
+        "titel": "UNEP (Ondernemers Landschap)",
+        "url": "https://www.lesentreprisesdupaysage.fr/"
+      },
+      {
+        "titel": "MSA (Sociale zekerheid groen)",
+        "url": "https://www.msa.fr/"
+      }
     ],
-    "keywords": ["tuin", "buiten", "groen", "snoeien"]
+    "keywords": [
+      "tuin",
+      "buiten",
+      "groen",
+      "snoeien"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "MSA (Mutualité Sociale Agricole)",
+          "rol": "sociale zekerheid en aansluiting voor landbouwactiviteiten"
+        },
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "klusjesman",
     "naamNl": "Klusjesman (Multi-service)",
     "naamFr": "Homme toutes mains / Bricoleur",
-    "sectoren": ["bouw", "dienstverlening"],
+    "sectoren": [
+      "bouw",
+      "dienstverlening"
+    ],
     "categorie": "Dienstverlening",
     "omschrijving": "Kleine klussen: lampen vervangen, meubels monteren, klein verfwerk. GEEN constructief werk.",
     "diplomaVereist": false,
@@ -306,7 +652,9 @@
     "erkenning": "automatisch",
     "erkenningProcedure": "Inschrijving URSSAF als 'Petit Bricolage' (Service à la personne) of CMA als Multi-services.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro"],
+    "verzekeringen": [
+      "RC Pro"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "URSSAF of CMA",
     "activiteitType": "Artisanale / Service",
@@ -314,13 +662,36 @@
     "taalniveau": "A2",
     "gemiddeldInkomen": 20000,
     "links": [],
-    "keywords": ["bricolage", "onderhoud", "handyman"]
+    "keywords": [
+      "bricolage",
+      "onderhoud",
+      "handyman"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        },
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "architect",
     "naamNl": "Architect",
     "naamFr": "Architecte",
-    "sectoren": ["bouw", "dienstverlening"],
+    "sectoren": [
+      "bouw",
+      "dienstverlening"
+    ],
     "categorie": "Bouw",
     "omschrijving": "Ontwerp van gebouwen en toezicht op de bouw.",
     "diplomaVereist": true,
@@ -328,7 +699,11 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving bij 'Ordre des Architectes' verplicht. Strenge controle buitenlandse diploma's.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["Assurance Décennale", "RC Pro", "Lidmaatschap Orde"],
+    "verzekeringen": [
+      "Assurance Décennale",
+      "RC Pro",
+      "Lidmaatschap Orde"
+    ],
     "autoentrepreneurMogelijk": false,
     "registratieInstantie": "Ordre des Architectes",
     "activiteitType": "Libérale",
@@ -336,15 +711,38 @@
     "taalniveau": "C1",
     "gemiddeldInkomen": 45000,
     "links": [
-      { "titel": "Ordre des Architectes", "url": "https://www.architectes.org/" }
+      {
+        "titel": "Ordre des Architectes",
+        "url": "https://www.architectes.org/"
+      }
     ],
-    "keywords": ["ontwerp", "tekenen", "huis", "bouwvergunning"]
+    "keywords": [
+      "ontwerp",
+      "tekenen",
+      "huis",
+      "bouwvergunning"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "Ordre des Architectes",
+          "rol": "verplichte inschrijving op het tableau (voorwaarde om het beroep/de titel te voeren)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "interieurontwerper",
     "naamNl": "Interieurontwerper",
     "naamFr": "Architecte d'intérieur / Décorateur",
-    "sectoren": ["bouw", "dienstverlening"],
+    "sectoren": [
+      "bouw",
+      "dienstverlening"
+    ],
     "categorie": "Bouw",
     "omschrijving": "Advies over inrichting en verbouwing binnenshuis.",
     "diplomaVereist": false,
@@ -352,7 +750,9 @@
     "erkenning": "automatisch",
     "erkenningProcedure": "Voor Décorateur: URSSAF (libéral) of CMA (als je ook schildert).",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro"],
+    "verzekeringen": [
+      "RC Pro"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "URSSAF",
     "activiteitType": "Libérale",
@@ -360,13 +760,33 @@
     "taalniveau": "B2",
     "gemiddeldInkomen": 30000,
     "links": [],
-    "keywords": ["inrichting", "design", "styling"]
+    "keywords": [
+      "inrichting",
+      "design",
+      "styling"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "fysiotherapeut",
     "naamNl": "Fysiotherapeut",
     "naamFr": "Masseur-Kinésithérapeute",
-    "sectoren": ["zorg", "sante", "medisch"],
+    "sectoren": [
+      "zorg",
+      "sante",
+      "medisch"
+    ],
     "categorie": "Zorg",
     "omschrijving": "Behandeling van patiënten via massage en bewegingstherapie. Zeer gevraagd in Frankrijk (veel 'déserts médicaux').",
     "diplomaVereist": true,
@@ -374,7 +794,11 @@
     "erkenning": "procedure",
     "erkenningProcedure": "1. Erkenning diploma bij DREETS (regionaal). 2. Inschrijving bij de 'Ordre des Masseurs-Kinésithérapeutes'.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RCP (Aansprakelijkheid)", "Lidmaatschap Orde", "CARPIMKO (Pensioen)"],
+    "verzekeringen": [
+      "RCP (Aansprakelijkheid)",
+      "Lidmaatschap Orde",
+      "CARPIMKO (Pensioen)"
+    ],
     "autoentrepreneurMogelijk": false,
     "registratieInstantie": "Ordre des Masseurs-Kinésithérapeutes",
     "activiteitType": "Libérale (Réglementée)",
@@ -384,16 +808,42 @@
     "kostenEuro": 800,
     "tijdlijnMaanden": "3-5",
     "links": [
-      { "titel": "Ordre des Kinés (Inschrijving)", "url": "https://www.ordremk.fr/" },
-      { "titel": "Guichet Qualifications (Procedure)", "url": "https://www.guichet-qualifications.fr/" }
+      {
+        "titel": "Ordre des Kinés (Inschrijving)",
+        "url": "https://www.ordremk.fr/"
+      },
+      {
+        "titel": "Guichet Qualifications (Procedure)",
+        "url": "https://www.guichet-qualifications.fr/"
+      }
     ],
-    "keywords": ["fysio", "kine", "paramedisch", "massage"]
+    "keywords": [
+      "fysio",
+      "kine",
+      "paramedisch",
+      "massage"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "Ordre des Masseurs-Kinésithérapeutes",
+          "rol": "verplichte inschrijving op het tableau (voorwaarde om het beroep/de titel te voeren)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "psycholoog",
     "naamNl": "Psycholoog",
     "naamFr": "Psychologue",
-    "sectoren": ["zorg", "sante"],
+    "sectoren": [
+      "zorg",
+      "sante"
+    ],
     "categorie": "Zorg",
     "omschrijving": "Begeleiding en therapie bij mentale problemen. Titel 'Psychologue' is beschermd.",
     "diplomaVereist": true,
@@ -401,7 +851,9 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Registratie van diploma bij ARS (Agence Régionale de Santé) voor verkrijgen ADELI-nummer. Geen Orde, wel registratieplicht.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro"],
+    "verzekeringen": [
+      "RC Pro"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "URSSAF (voor bedrijf) + ARS (voor beroep)",
     "activiteitType": "Libérale",
@@ -411,15 +863,43 @@
     "kostenEuro": 200,
     "tijdlijnMaanden": "1-2",
     "links": [
-      { "titel": "ARS - ADELI nummer aanvragen", "url": "https://www.ars.sante.fr/" }
+      {
+        "titel": "ARS - ADELI nummer aanvragen",
+        "url": "https://www.ars.sante.fr/"
+      }
     ],
-    "keywords": ["therapie", "ggz", "coach", "mentaal"]
+    "keywords": [
+      "therapie",
+      "ggz",
+      "coach",
+      "mentaal"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        },
+        {
+          "instantie": "ARS",
+          "rol": "registratie van het zorgberoep (RPPS/ADELI)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "tandarts",
     "naamNl": "Tandarts",
     "naamFr": "Chirurgien-dentiste",
-    "sectoren": ["zorg", "sante", "medisch"],
+    "sectoren": [
+      "zorg",
+      "sante",
+      "medisch"
+    ],
     "categorie": "Zorg",
     "omschrijving": "Medische zorg voor gebit en mondgezondheid.",
     "diplomaVereist": true,
@@ -427,7 +907,11 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving bij 'Ordre National des Chirurgiens-Dentistes' verplicht. Taaltest is standaard onderdeel.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RCP Médicale", "Lidmaatschap Orde", "CARCDSF (Pensioen)"],
+    "verzekeringen": [
+      "RCP Médicale",
+      "Lidmaatschap Orde",
+      "CARCDSF (Pensioen)"
+    ],
     "autoentrepreneurMogelijk": false,
     "registratieInstantie": "Ordre des Chirurgiens-Dentistes",
     "activiteitType": "Libérale (Réglementée)",
@@ -437,15 +921,38 @@
     "kostenEuro": 1500,
     "tijdlijnMaanden": "3-6",
     "links": [
-      { "titel": "Ordre des Dentistes", "url": "https://www.ordre-chirurgiens-dentistes.fr/" }
+      {
+        "titel": "Ordre des Dentistes",
+        "url": "https://www.ordre-chirurgiens-dentistes.fr/"
+      }
     ],
-    "keywords": ["tandarts", "dentiste", "medisch", "zorg"]
+    "keywords": [
+      "tandarts",
+      "dentiste",
+      "medisch",
+      "zorg"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "Ordre des Chirurgiens-Dentistes",
+          "rol": "verplichte inschrijving op het tableau (voorwaarde om het beroep/de titel te voeren)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "thuiszorg",
     "naamNl": "Thuiszorg / Thuishulp",
     "naamFr": "Auxiliaire de vie / Aide à domicile",
-    "sectoren": ["zorg", "services-personne"],
+    "sectoren": [
+      "zorg",
+      "services-personne"
+    ],
     "categorie": "Dienstverlening",
     "omschrijving": "Ondersteuning van ouderen of hulpbehoevenden in de thuissituatie (wassen, kleden, eten, gezelschap).",
     "diplomaVereist": false,
@@ -453,7 +960,10 @@
     "erkenning": "automatisch",
     "erkenningProcedure": "Vrije vestiging. Vaak betaald via CESU (Dienstencheques).",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Services à la personne", "Autoverzekering (zakelijk gebruik)"],
+    "verzekeringen": [
+      "RC Pro Services à la personne",
+      "Autoverzekering (zakelijk gebruik)"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "URSSAF (via CESU of Auto-entrepreneur)",
     "activiteitType": "Service à la personne (SAP)",
@@ -463,16 +973,43 @@
     "kostenEuro": 100,
     "tijdlijnMaanden": "0-1",
     "links": [
-      { "titel": "Service-Public: Services à la personne", "url": "https://www.service-public.fr/particuliers/vosdroits/F13244" },
-      { "titel": "CESU (Dienstencheques)", "url": "https://www.cesu.urssaf.fr/" }
+      {
+        "titel": "Service-Public: Services à la personne",
+        "url": "https://www.service-public.fr/particuliers/vosdroits/F13244"
+      },
+      {
+        "titel": "CESU (Dienstencheques)",
+        "url": "https://www.cesu.urssaf.fr/"
+      }
     ],
-    "keywords": ["ouderenzorg", "zorg", "thuishulp", "mantelzorg"]
+    "keywords": [
+      "ouderenzorg",
+      "zorg",
+      "thuishulp",
+      "mantelzorg"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "gastouder",
     "naamNl": "Gastouder / Nanny",
     "naamFr": "Assistante Maternelle / Nounou",
-    "sectoren": ["zorg", "services-personne", "onderwijs"],
+    "sectoren": [
+      "zorg",
+      "services-personne",
+      "onderwijs"
+    ],
     "categorie": "Dienstverlening",
     "omschrijving": "Opvang van kinderen (0-3 jaar) in eigen huis of bij de ouders thuis.",
     "diplomaVereist": true,
@@ -480,7 +1017,9 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Aanvraag Agrément bij departement. Huisbezoek en veiligheidscheck zijn verplicht, plus 120 uur opleiding.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Professionnelle Assistante Maternelle"],
+    "verzekeringen": [
+      "RC Professionnelle Assistante Maternelle"
+    ],
     "autoentrepreneurMogelijk": false,
     "registratieInstantie": "PMI (Departement) / Pajemploi",
     "activiteitType": "Salariale (Speciaal statuut)",
@@ -490,16 +1029,46 @@
     "kostenEuro": 0,
     "tijdlijnMaanden": "3-4",
     "links": [
-      { "titel": "Mon Enfant (CAF Portal)", "url": "https://monenfant.fr/devenir-assistante-maternelle" },
-      { "titel": "Pajemploi", "url": "https://www.pajemploi.urssaf.fr/" }
+      {
+        "titel": "Mon Enfant (CAF Portal)",
+        "url": "https://monenfant.fr/devenir-assistante-maternelle"
+      },
+      {
+        "titel": "Pajemploi",
+        "url": "https://www.pajemploi.urssaf.fr/"
+      }
     ],
-    "keywords": ["kinderopvang", "crèche", "oppas", "kinderen"]
+    "keywords": [
+      "kinderopvang",
+      "crèche",
+      "oppas",
+      "kinderen"
+    ],
+    "loket": {
+      "inschrijving": "Geen inschrijving bij het Guichet unique. Assistant maternel werkt op basis van een agrément van de PMI en wordt betaald door de ouders (via Pajemploi).",
+      "type": "geen",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "PMI (Conseil départemental)",
+          "rol": "verplichte agrément als assistant maternel"
+        },
+        {
+          "instantie": "Pajemploi (URSSAF)",
+          "rol": "loonadministratie; de ouders zijn juridisch de werkgever"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "",
+    "bron": ""
   },
   {
     "id": "osteopaat",
     "naamNl": "Osteopaat",
     "naamFr": "Ostéopathe",
-    "sectoren": ["zorg", "sante"],
+    "sectoren": [
+      "zorg",
+      "sante"
+    ],
     "categorie": "Zorg",
     "omschrijving": "Manuele therapie gericht op het herstellen van de balans in het lichaam.",
     "diplomaVereist": true,
@@ -507,7 +1076,9 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Registratie bij ARS voor verkrijgen ADELI nummer en titelgebruik 'Ostéopathe'.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Ostéopathe"],
+    "verzekeringen": [
+      "RC Pro Ostéopathe"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "URSSAF (CIPAV voor pensioen)",
     "activiteitType": "Libérale",
@@ -517,15 +1088,43 @@
     "kostenEuro": 400,
     "tijdlijnMaanden": "2",
     "links": [
-      { "titel": "Syndicat Français des Ostéopathes", "url": "https://www.osteopathe-syndicat.fr/" }
+      {
+        "titel": "Syndicat Français des Ostéopathes",
+        "url": "https://www.osteopathe-syndicat.fr/"
+      }
     ],
-    "keywords": ["alternatief", "therapie", "rugpijn", "medisch"]
+    "keywords": [
+      "alternatief",
+      "therapie",
+      "rugpijn",
+      "medisch"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        },
+        {
+          "instantie": "CIPAV",
+          "rol": "pensioenkas voor bepaalde vrije beroepen"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "dierenarts",
     "naamNl": "Dierenarts",
     "naamFr": "Vétérinaire",
-    "sectoren": ["zorg", "agrarisch", "medisch"],
+    "sectoren": [
+      "zorg",
+      "agrarisch",
+      "medisch"
+    ],
     "categorie": "Zorg",
     "omschrijving": "Medische zorg voor gezelschapsdieren, paarden of vee.",
     "diplomaVereist": true,
@@ -533,7 +1132,9 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving bij 'Ordre des Vétérinaires'. Taaltest verplicht voor buitenlanders.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RCP Vétérinaire"],
+    "verzekeringen": [
+      "RCP Vétérinaire"
+    ],
     "autoentrepreneurMogelijk": false,
     "registratieInstantie": "Ordre des Vétérinaires",
     "activiteitType": "Libérale (Réglementée)",
@@ -543,15 +1144,38 @@
     "kostenEuro": 1200,
     "tijdlijnMaanden": "3-5",
     "links": [
-      { "titel": "Ordre des Vétérinaires", "url": "https://www.veterinaire.fr/" }
+      {
+        "titel": "Ordre des Vétérinaires",
+        "url": "https://www.veterinaire.fr/"
+      }
     ],
-    "keywords": ["dieren", "veearts", "huisdieren", "paarden"]
+    "keywords": [
+      "dieren",
+      "veearts",
+      "huisdieren",
+      "paarden"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "Ordre des Vétérinaires",
+          "rol": "verplichte inschrijving op het tableau (voorwaarde om het beroep/de titel te voeren)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "coach",
     "naamNl": "Coach / Consultant",
     "naamFr": "Coach (Bien-être / Professionnel)",
-    "sectoren": ["dienstverlening", "zorg"],
+    "sectoren": [
+      "dienstverlening",
+      "zorg"
+    ],
     "categorie": "Dienstverlening",
     "omschrijving": "Begeleiding van particulieren of bedrijven (lifestyle, carrière, mental).",
     "diplomaVereist": false,
@@ -559,7 +1183,9 @@
     "erkenning": "automatisch",
     "erkenningProcedure": "Vrije vestiging als Auto-entrepreneur (Libérale non-réglementée).",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro"],
+    "verzekeringen": [
+      "RC Pro"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "URSSAF",
     "activiteitType": "Libérale",
@@ -569,15 +1195,38 @@
     "kostenEuro": 0,
     "tijdlijnMaanden": "0",
     "links": [
-      { "titel": "Auto-entrepreneur Portal", "url": "https://www.autoentrepreneur.urssaf.fr/" }
+      {
+        "titel": "Auto-entrepreneur Portal",
+        "url": "https://www.autoentrepreneur.urssaf.fr/"
+      }
     ],
-    "keywords": ["advies", "begeleiding", "trainer", "zelfstandig"]
+    "keywords": [
+      "advies",
+      "begeleiding",
+      "trainer",
+      "zelfstandig"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "schoonheidsspecialiste",
     "naamNl": "Schoonheidsspecialiste",
     "naamFr": "Esthéticienne",
-    "sectoren": ["dienstverlening", "artisanat"],
+    "sectoren": [
+      "dienstverlening",
+      "artisanat"
+    ],
     "categorie": "Uiterlijke verzorging",
     "omschrijving": "Gezichtsbehandeling, massage, manicure en make-up.",
     "diplomaVereist": true,
@@ -585,7 +1234,9 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving CMA. Erkenning buitenlands diploma via CMA noodzakelijk.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Esthétique"],
+    "verzekeringen": [
+      "RC Pro Esthétique"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "CMA (Chambre de Métiers et de l'Artisanat)",
     "activiteitType": "Artisanale",
@@ -595,15 +1246,38 @@
     "kostenEuro": 800,
     "tijdlijnMaanden": "2",
     "links": [
-      { "titel": "CNAIB (Vakbond Esthétique)", "url": "https://www.cnaib.fr/" }
+      {
+        "titel": "CNAIB (Vakbond Esthétique)",
+        "url": "https://www.cnaib.fr/"
+      }
     ],
-    "keywords": ["beauty", "salon", "verzorging", "massage"]
+    "keywords": [
+      "beauty",
+      "salon",
+      "verzorging",
+      "massage"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "pedicure",
     "naamNl": "Pedicure (Medisch)",
     "naamFr": "Pédicure-Podologue",
-    "sectoren": ["zorg", "sante"],
+    "sectoren": [
+      "zorg",
+      "sante"
+    ],
     "categorie": "Zorg",
     "omschrijving": "Medische voetverzorging en podologie. Let op: verschilt van esthetische pedicure.",
     "diplomaVereist": true,
@@ -611,7 +1285,9 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving bij Ordre des Pédicures-Podologues + ARS.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RCP"],
+    "verzekeringen": [
+      "RCP"
+    ],
     "autoentrepreneurMogelijk": false,
     "registratieInstantie": "Ordre des Pédicures-Podologues",
     "activiteitType": "Libérale (Réglementée)",
@@ -621,15 +1297,39 @@
     "kostenEuro": 1000,
     "tijdlijnMaanden": "3",
     "links": [
-      { "titel": "Ordre des Pédicures-Podologues", "url": "https://www.onpp.fr/" }
+      {
+        "titel": "Ordre des Pédicures-Podologues",
+        "url": "https://www.onpp.fr/"
+      }
     ],
-    "keywords": ["voeten", "medisch", "zorg", "podoloog"]
+    "keywords": [
+      "voeten",
+      "medisch",
+      "zorg",
+      "podoloog"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "Ordre des Pédicures-Podologues",
+          "rol": "verplichte inschrijving op het tableau (voorwaarde om het beroep/de titel te voeren)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "kapper",
     "naamNl": "Kapper (Aan huis of Salon)",
     "naamFr": "Coiffeur / Coiffeuse",
-    "sectoren": ["dienstverlening", "artisanat", "uiterlijke-verzorging"],
+    "sectoren": [
+      "dienstverlening",
+      "artisanat",
+      "uiterlijke-verzorging"
+    ],
     "categorie": "Uiterlijke verzorging",
     "omschrijving": "Knippen, kleuren en verzorgen van haar. Kan in een salon of ambulant (bij klanten thuis).",
     "diplomaVereist": true,
@@ -637,7 +1337,9 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving bij de Chambre de Métiers (CMA). Nederlands diploma moet erkend worden (EQF niveau 3/4).",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Coiffure"],
+    "verzekeringen": [
+      "RC Pro Coiffure"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "CMA (Chambre de Métiers)",
     "activiteitType": "Artisanale",
@@ -647,15 +1349,38 @@
     "kostenEuro": 600,
     "tijdlijnMaanden": "2",
     "links": [
-      { "titel": "UNEC (Unie van Kappers)", "url": "https://www.unec.fr/" }
+      {
+        "titel": "UNEC (Unie van Kappers)",
+        "url": "https://www.unec.fr/"
+      }
     ],
-    "keywords": ["haar", "knippen", "salon", "mobiel"]
+    "keywords": [
+      "haar",
+      "knippen",
+      "salon",
+      "mobiel"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "webdeveloper",
     "naamNl": "Webdeveloper / IT-specialist",
     "naamFr": "Développeur Web",
-    "sectoren": ["it", "dienstverlening"],
+    "sectoren": [
+      "it",
+      "dienstverlening"
+    ],
     "categorie": "IT & Digitaal",
     "omschrijving": "Ontwikkelen van websites, apps of software. Vaak op afstand uit te voeren.",
     "diplomaVereist": false,
@@ -663,7 +1388,9 @@
     "erkenning": "automatisch",
     "erkenningProcedure": "Vrije vestiging. Eenvoudige online inschrijving via URSSAF.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Informatique (sterk aanbevolen voor contracten)"],
+    "verzekeringen": [
+      "RC Pro Informatique (sterk aanbevolen voor contracten)"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "URSSAF",
     "activiteitType": "Libérale",
@@ -673,15 +1400,39 @@
     "kostenEuro": 0,
     "tijdlijnMaanden": "0-1",
     "links": [
-      { "titel": "La French Tech", "url": "https://lafrenchtech.com/" }
+      {
+        "titel": "La French Tech",
+        "url": "https://lafrenchtech.com/"
+      }
     ],
-    "keywords": ["website", "programmeren", "tech", "remote"]
+    "keywords": [
+      "website",
+      "programmeren",
+      "tech",
+      "remote"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "grafisch-ontwerper",
     "naamNl": "Grafisch Ontwerper",
     "naamFr": "Graphiste / Designer",
-    "sectoren": ["dienstverlening", "it", "creatief"],
+    "sectoren": [
+      "dienstverlening",
+      "it",
+      "creatief"
+    ],
     "categorie": "Creatief",
     "omschrijving": "Ontwerpen van logo's, huisstijlen en visuele content.",
     "diplomaVereist": false,
@@ -689,7 +1440,9 @@
     "erkenning": "automatisch",
     "erkenningProcedure": "Inschrijving URSSAF. Let op: auteursrechten vallen soms onder 'Maison des Artistes' (specifiek regime).",
     "verzekeringVerplicht": false,
-    "verzekeringen": ["RC Pro"],
+    "verzekeringen": [
+      "RC Pro"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "URSSAF",
     "activiteitType": "Libérale / Artistique",
@@ -699,13 +1452,33 @@
     "kostenEuro": 100,
     "tijdlijnMaanden": "1",
     "links": [],
-    "keywords": ["design", "logo", "zzp", "creatief"]
+    "keywords": [
+      "design",
+      "logo",
+      "zzp",
+      "creatief"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "vertaler",
     "naamNl": "Vertaler",
     "naamFr": "Traducteur / Interprète",
-    "sectoren": ["dienstverlening", "onderwijs"],
+    "sectoren": [
+      "dienstverlening",
+      "onderwijs"
+    ],
     "categorie": "Taal & Communicatie",
     "omschrijving": "Vertalen van documenten of tolken (NL-FR-EN).",
     "diplomaVereist": false,
@@ -713,7 +1486,9 @@
     "erkenning": "automatisch",
     "erkenningProcedure": "Vrije vestiging voor niet-beëdigde vertalers.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro"],
+    "verzekeringen": [
+      "RC Pro"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "URSSAF",
     "activiteitType": "Libérale",
@@ -723,15 +1498,38 @@
     "kostenEuro": 50,
     "tijdlijnMaanden": "0",
     "links": [
-      { "titel": "SFT (Société française des traducteurs)", "url": "https://www.sft.fr/" }
+      {
+        "titel": "SFT (Société française des traducteurs)",
+        "url": "https://www.sft.fr/"
+      }
     ],
-    "keywords": ["taal", "tolk", "schrijven", "tekst"]
+    "keywords": [
+      "taal",
+      "tolk",
+      "schrijven",
+      "tekst"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "makelaar",
     "naamNl": "Zelfstandig Makelaar (Agent Co)",
     "naamFr": "Agent Commercial Immobilier (Mandataire)",
-    "sectoren": ["dienstverlening", "bouw"],
+    "sectoren": [
+      "dienstverlening",
+      "bouw"
+    ],
     "categorie": "Vastgoed",
     "omschrijving": "Bemiddeling bij verkoop van huizen in opdracht van een makelaarskantoor (Carte T houder).",
     "diplomaVereist": false,
@@ -739,7 +1537,9 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving in het RSAC-register (Registre Spécial des Agents Commerciaux) via de Greffe du Tribunal de Commerce.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RCP (Verplicht via verzekeraar of kantoor)"],
+    "verzekeringen": [
+      "RCP (Verplicht via verzekeraar of kantoor)"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "Greffe du Tribunal de Commerce (RSAC)",
     "activiteitType": "Commerciale (Agent Co)",
@@ -749,15 +1549,39 @@
     "kostenEuro": 300,
     "tijdlijnMaanden": "1-2",
     "links": [
-      { "titel": "Inschrijving RSAC (Infogreffe)", "url": "https://www.infogreffe.fr/" }
+      {
+        "titel": "Inschrijving RSAC (Infogreffe)",
+        "url": "https://www.infogreffe.fr/"
+      }
     ],
-    "keywords": ["huizen", "verkoop", "vastgoed", "agent"]
+    "keywords": [
+      "huizen",
+      "verkoop",
+      "vastgoed",
+      "agent"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "Greffe du Tribunal de Commerce",
+          "rol": "inschrijving in het RSAC (handelsagent) of RCS (vennootschap) — nu ingediend via het Guichet unique"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F32994"
   },
   {
     "id": "fotograaf",
     "naamNl": "Fotograaf",
     "naamFr": "Photographe",
-    "sectoren": ["dienstverlening", "creatief", "artisanat"],
+    "sectoren": [
+      "dienstverlening",
+      "creatief",
+      "artisanat"
+    ],
     "categorie": "Creatief / Ambacht",
     "omschrijving": "Sociale fotografie (huwelijken, portretten) of kunstfotografie.",
     "diplomaVereist": false,
@@ -765,7 +1589,10 @@
     "erkenning": "automatisch",
     "erkenningProcedure": "Let op het onderscheid: 'Artisan' (huwelijken, schoolfoto's) via CMA, 'Auteur' (kunst) via speciaal regime.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro", "Apparatuurverzekering"],
+    "verzekeringen": [
+      "RC Pro",
+      "Apparatuurverzekering"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "CMA (voor sociale fotografie)",
     "activiteitType": "Artisanale",
@@ -775,15 +1602,38 @@
     "kostenEuro": 200,
     "tijdlijnMaanden": "1",
     "links": [
-      { "titel": "UPP (Beroepsfotografen)", "url": "https://www.upp.photo/" }
+      {
+        "titel": "UPP (Beroepsfotografen)",
+        "url": "https://www.upp.photo/"
+      }
     ],
-    "keywords": ["foto", "camera", "kunst", "trouwen"]
+    "keywords": [
+      "foto",
+      "camera",
+      "kunst",
+      "trouwen"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "administratief-assistent",
     "naamNl": "Virtual Assistant / Admin",
     "naamFr": "Secrétaire indépendante / Assistant virtuel",
-    "sectoren": ["dienstverlening", "administratief"],
+    "sectoren": [
+      "dienstverlening",
+      "administratief"
+    ],
     "categorie": "Administratie",
     "omschrijving": "Ondersteuning van bedrijven met administratie, planning en correspondentie op afstand.",
     "diplomaVereist": false,
@@ -791,7 +1641,9 @@
     "erkenning": "automatisch",
     "erkenningProcedure": "Inschrijving URSSAF als Auto-entrepreneur.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro"],
+    "verzekeringen": [
+      "RC Pro"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "URSSAF",
     "activiteitType": "Libérale",
@@ -801,13 +1653,33 @@
     "kostenEuro": 50,
     "tijdlijnMaanden": "0",
     "links": [],
-    "keywords": ["admin", "kantoor", "secretaresse", "online"]
+    "keywords": [
+      "admin",
+      "kantoor",
+      "secretaresse",
+      "online"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "leraar-prive",
     "naamNl": "Privéleraar / Bijlesdocent",
     "naamFr": "Professeur particulier / Soutien scolaire",
-    "sectoren": ["onderwijs", "dienstverlening"],
+    "sectoren": [
+      "onderwijs",
+      "dienstverlening"
+    ],
     "categorie": "Onderwijs",
     "omschrijving": "Geven van taalles, muziekles of huiswerkbegeleiding aan huis.",
     "diplomaVereist": false,
@@ -824,15 +1696,38 @@
     "kostenEuro": 0,
     "tijdlijnMaanden": "0",
     "links": [
-      { "titel": "CESU Informatie", "url": "https://www.cesu.urssaf.fr/" }
+      {
+        "titel": "CESU Informatie",
+        "url": "https://www.cesu.urssaf.fr/"
+      }
     ],
-    "keywords": ["les", "school", "taalles", "muziekles"]
+    "keywords": [
+      "les",
+      "school",
+      "taalles",
+      "muziekles"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "chauffeur-taxi",
     "naamNl": "Taxichauffeur",
     "naamFr": "Chauffeur de Taxi",
-    "sectoren": ["transport", "dienstverlening"],
+    "sectoren": [
+      "transport",
+      "dienstverlening"
+    ],
     "categorie": "Transport",
     "omschrijving": "Personenvervoer met vergunning (ADS).",
     "diplomaVereist": true,
@@ -840,7 +1735,10 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Slagen voor examen, verkrijgen beroepskaart bij Préfecture én aankoop/huur licentie (ADS).",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro", "Verzekering personenvervoer"],
+    "verzekeringen": [
+      "RC Pro",
+      "Verzekering personenvervoer"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "CMA",
     "activiteitType": "Artisanale",
@@ -850,15 +1748,38 @@
     "kostenEuro": 2000,
     "tijdlijnMaanden": "6-12",
     "links": [
-      { "titel": "Service-Public: Taxi", "url": "https://www.service-public.fr/professionnels-entreprises/vosdroits/F21907" }
+      {
+        "titel": "Service-Public: Taxi",
+        "url": "https://www.service-public.fr/professionnels-entreprises/vosdroits/F21907"
+      }
     ],
-    "keywords": ["auto", "vervoer", "rijden", "passagiers"]
+    "keywords": [
+      "auto",
+      "vervoer",
+      "rijden",
+      "passagiers"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "vtc-chauffeur",
     "naamNl": "VTC Chauffeur (Uber/Privé)",
     "naamFr": "Chauffeur VTC",
-    "sectoren": ["transport", "dienstverlening"],
+    "sectoren": [
+      "transport",
+      "dienstverlening"
+    ],
     "categorie": "Transport",
     "omschrijving": "Personenvervoer op bestelling (Voiture de Transport avec Chauffeur).",
     "diplomaVereist": true,
@@ -866,7 +1787,10 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Aanvraag Carte VTC bij Préfecture. Inschrijving in Register VTC.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Circulation", "RC Pro Exploitation"],
+    "verzekeringen": [
+      "RC Pro Circulation",
+      "RC Pro Exploitation"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "CMA",
     "activiteitType": "Artisanale / Commerciale",
@@ -876,15 +1800,38 @@
     "kostenEuro": 1500,
     "tijdlijnMaanden": "3-4",
     "links": [
-      { "titel": "Register VTC", "url": "https://registre-vtc.developpement-durable.gouv.fr/" }
+      {
+        "titel": "Register VTC",
+        "url": "https://registre-vtc.developpement-durable.gouv.fr/"
+      }
     ],
-    "keywords": ["uber", "chauffeur", "auto", "vervoer"]
+    "keywords": [
+      "uber",
+      "chauffeur",
+      "auto",
+      "vervoer"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "wijnboer",
     "naamNl": "Wijnboer / Wijnbouwer",
     "naamFr": "Vigneron / Viticulteur",
-    "sectoren": ["agrarisch", "horeca"],
+    "sectoren": [
+      "agrarisch",
+      "horeca"
+    ],
     "categorie": "Landbouw",
     "omschrijving": "Teelt van druiven en productie van wijn. Complex vakgebied met veel douane-regels.",
     "diplomaVereist": true,
@@ -892,7 +1839,11 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving bij de MSA (Mutualité Sociale Agricole). Douane-nummer verplicht voor verkoop alcohol.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Exploitation", "Hagelverzekering (sterk aanbevolen)", "Multirisque Agricole"],
+    "verzekeringen": [
+      "RC Exploitation",
+      "Hagelverzekering (sterk aanbevolen)",
+      "Multirisque Agricole"
+    ],
     "autoentrepreneurMogelijk": false,
     "registratieInstantie": "MSA (Mutualité Sociale Agricole)",
     "activiteitType": "Agricole",
@@ -902,16 +1853,43 @@
     "kostenEuro": 50000,
     "tijdlijnMaanden": "6-12",
     "links": [
-      { "titel": "MSA - Starten in Landbouw", "url": "https://www.msa.fr/" },
-      { "titel": "Douane - Wijnverkoop", "url": "https://www.douane.gouv.fr/" }
+      {
+        "titel": "MSA - Starten in Landbouw",
+        "url": "https://www.msa.fr/"
+      },
+      {
+        "titel": "Douane - Wijnverkoop",
+        "url": "https://www.douane.gouv.fr/"
+      }
     ],
-    "keywords": ["wijn", "druiven", "boer", "landbouw"]
+    "keywords": [
+      "wijn",
+      "druiven",
+      "boer",
+      "landbouw"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "MSA (Mutualité Sociale Agricole)",
+          "rol": "sociale zekerheid en aansluiting voor landbouwactiviteiten"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "dierenpension",
     "naamNl": "Dierenpensionhouder",
     "naamFr": "Gestionnaire de pension canine/féline",
-    "sectoren": ["agrarisch", "dienstverlening", "dieren"],
+    "sectoren": [
+      "agrarisch",
+      "dienstverlening",
+      "dieren"
+    ],
     "categorie": "Dieren",
     "omschrijving": "Opvang van honden en katten. Strenge regels omtrent geluid, hygiëne en afstand tot buren.",
     "diplomaVereist": true,
@@ -919,7 +1897,10 @@
     "erkenning": "procedure",
     "erkenningProcedure": "1. ACACED behalen. 2. Aanmelding DDPP (Direction Départementale de la Protection des Populations). 3. Inschrijving MSA of CMA.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Animaux", "Rechtsbijstand"],
+    "verzekeringen": [
+      "RC Pro Animaux",
+      "Rechtsbijstand"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "CMA (als <10 dieren) of MSA (als >10 dieren/fokkerij)",
     "activiteitType": "Artisanale / Agricole",
@@ -929,15 +1910,42 @@
     "kostenEuro": 5000,
     "tijdlijnMaanden": "3-6",
     "links": [
-      { "titel": "Informatie ACACED", "url": "https://agriculture.gouv.fr/animaux-de-compagnie-formation" }
+      {
+        "titel": "Informatie ACACED",
+        "url": "https://agriculture.gouv.fr/animaux-de-compagnie-formation"
+      }
     ],
-    "keywords": ["hond", "kat", "opvang", "kennel"]
+    "keywords": [
+      "hond",
+      "kat",
+      "opvang",
+      "kennel"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        },
+        {
+          "instantie": "MSA (Mutualité Sociale Agricole)",
+          "rol": "sociale zekerheid en aansluiting voor landbouwactiviteiten"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "groenteteler",
     "naamNl": "Groenteteler / Tuinder (Kleinschalig)",
     "naamFr": "Maraîcher",
-    "sectoren": ["agrarisch", "groen"],
+    "sectoren": [
+      "agrarisch",
+      "groen"
+    ],
     "categorie": "Landbouw",
     "omschrijving": "Teelt van groenten en fruit, vaak voor directe verkoop (markten, AMAP).",
     "diplomaVereist": false,
@@ -945,7 +1953,10 @@
     "erkenning": "automatisch",
     "erkenningProcedure": "Inschrijving bij de MSA. Let op de oppervlakte: onder de SMI (Surface Minimum d'Installation) ben je 'Cotisant Solidaire', daarboven 'Chef d'Exploitation'.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["Multirisque Agricole", "RC Pro"],
+    "verzekeringen": [
+      "Multirisque Agricole",
+      "RC Pro"
+    ],
     "autoentrepreneurMogelijk": false,
     "registratieInstantie": "MSA",
     "activiteitType": "Agricole",
@@ -955,15 +1966,38 @@
     "kostenEuro": 15000,
     "tijdlijnMaanden": "6",
     "links": [
-      { "titel": "Chambre d'Agriculture", "url": "https://chambres-agriculture.fr/" }
+      {
+        "titel": "Chambre d'Agriculture",
+        "url": "https://chambres-agriculture.fr/"
+      }
     ],
-    "keywords": ["bio", "permacultuur", "moestuin", "markt"]
+    "keywords": [
+      "bio",
+      "permacultuur",
+      "moestuin",
+      "markt"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "MSA (Mutualité Sociale Agricole)",
+          "rol": "sociale zekerheid en aansluiting voor landbouwactiviteiten"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "imker",
     "naamNl": "Imker",
     "naamFr": "Apiculteur",
-    "sectoren": ["agrarisch", "groen"],
+    "sectoren": [
+      "agrarisch",
+      "groen"
+    ],
     "categorie": "Landbouw",
     "omschrijving": "Houden van bijen en productie van honing/was.",
     "diplomaVereist": false,
@@ -971,7 +2005,9 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Aanvragen NAPI-nummer (Numéro d'Apiculteur) is verplicht zodra je 1 kast verkoopt. Jaarlijkse aangifte van aantal kasten.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Apiculture"],
+    "verzekeringen": [
+      "RC Apiculture"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "MSA (als hoofdberoep) of Belastingdienst (als hobby <50 kasten)",
     "activiteitType": "Agricole",
@@ -981,15 +2017,37 @@
     "kostenEuro": 2000,
     "tijdlijnMaanden": "1",
     "links": [
-      { "titel": "UNAF (Imkersbond)", "url": "https://www.unaf-apiculture.info/" }
+      {
+        "titel": "UNAF (Imkersbond)",
+        "url": "https://www.unaf-apiculture.info/"
+      }
     ],
-    "keywords": ["honing", "bijen", "natuur"]
+    "keywords": [
+      "honing",
+      "bijen",
+      "natuur"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "MSA (Mutualité Sociale Agricole)",
+          "rol": "sociale zekerheid en aansluiting voor landbouwactiviteiten"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "boomverzorger",
     "naamNl": "Boomverzorger",
     "naamFr": "Élagueur-Grimpeur",
-    "sectoren": ["groen", "agrarisch"],
+    "sectoren": [
+      "groen",
+      "agrarisch"
+    ],
     "categorie": "Groen",
     "omschrijving": "Snoeien en kappen van bomen op hoogte. Gevaarlijk en fysiek zwaar werk.",
     "diplomaVereist": true,
@@ -997,7 +2055,10 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving MSA (want: 'cyclus van de boom'). Zeer streng op veiligheidsuitrusting (EPI).",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Élagueur (Duur!)", "Ongevallenverzekering"],
+    "verzekeringen": [
+      "RC Pro Élagueur (Duur!)",
+      "Ongevallenverzekering"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "MSA",
     "activiteitType": "Agricole / Service",
@@ -1007,15 +2068,38 @@
     "kostenEuro": 3000,
     "tijdlijnMaanden": "2",
     "links": [
-      { "titel": "Société Française d'Arboriculture", "url": "https://sfa-asso.fr/" }
+      {
+        "titel": "Société Française d'Arboriculture",
+        "url": "https://sfa-asso.fr/"
+      }
     ],
-    "keywords": ["bomen", "zaag", "klimmen", "tuin"]
+    "keywords": [
+      "bomen",
+      "zaag",
+      "klimmen",
+      "tuin"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "MSA (Mutualité Sociale Agricole)",
+          "rol": "sociale zekerheid en aansluiting voor landbouwactiviteiten"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "hondentrainer",
     "naamNl": "Hondentrainer / Gedragstherapeut",
     "naamFr": "Éducateur canin / Comportementaliste",
-    "sectoren": ["dieren", "dienstverlening"],
+    "sectoren": [
+      "dieren",
+      "dienstverlening"
+    ],
     "categorie": "Dieren",
     "omschrijving": "Training van honden en begeleiding van eigenaren.",
     "diplomaVereist": true,
@@ -1023,7 +2107,9 @@
     "erkenning": "procedure",
     "erkenningProcedure": "ACACED behalen en registreren bij DDPP. Mag als auto-entrepreneur.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Animaux"],
+    "verzekeringen": [
+      "RC Pro Animaux"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "CMA (Artisan) of URSSAF (Libéral) afhankelijk van focus.",
     "activiteitType": "Artisanale / Libérale",
@@ -1033,13 +2119,38 @@
     "kostenEuro": 500,
     "tijdlijnMaanden": "1-2",
     "links": [],
-    "keywords": ["hond", "training", "gedrag", "huisdier"]
+    "keywords": [
+      "hond",
+      "training",
+      "gedrag",
+      "huisdier"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        },
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "bloemist",
     "naamNl": "Bloemist",
     "naamFr": "Fleuriste",
-    "sectoren": ["groen", "artisanat", "commerce"],
+    "sectoren": [
+      "groen",
+      "artisanat",
+      "commerce"
+    ],
     "categorie": "Ambacht & Handel",
     "omschrijving": "Samenstellen en verkopen van boeketten en planten.",
     "diplomaVereist": true,
@@ -1047,7 +2158,10 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving CMA (voor het maak-gedeelte) en vaak ook CCI (voor de inkoop/verkoop).",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro", "Verzekering winkelpand"],
+    "verzekeringen": [
+      "RC Pro",
+      "Verzekering winkelpand"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "CMA",
     "activiteitType": "Artisanale / Commerciale",
@@ -1057,15 +2171,39 @@
     "kostenEuro": 10000,
     "tijdlijnMaanden": "3",
     "links": [
-      { "titel": "Fédération des Fleuristes", "url": "https://www.fleuristes-et-fleurs.com/" }
+      {
+        "titel": "Fédération des Fleuristes",
+        "url": "https://www.fleuristes-et-fleurs.com/"
+      }
     ],
-    "keywords": ["bloemen", "winkel", "boeket", "planten"]
+    "keywords": [
+      "bloemen",
+      "winkel",
+      "boeket",
+      "planten"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "tuinarchitect",
     "naamNl": "Tuinarchitect",
     "naamFr": "Paysagiste-Concepteur",
-    "sectoren": ["groen", "dienstverlening", "bouw"],
+    "sectoren": [
+      "groen",
+      "dienstverlening",
+      "bouw"
+    ],
     "categorie": "Ontwerp",
     "omschrijving": "Ontwerp en planning van tuinen en parken. Let op: voert het werk zelf NIET uit.",
     "diplomaVereist": true,
@@ -1073,7 +2211,10 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving als vrij beroep (Libéral). Mag niet verward worden met 'Paysagiste' (de uitvoerder).",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro", "Décennale (indien toezicht op zware constructies)"],
+    "verzekeringen": [
+      "RC Pro",
+      "Décennale (indien toezicht op zware constructies)"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "URSSAF",
     "activiteitType": "Libérale",
@@ -1083,15 +2224,38 @@
     "kostenEuro": 1000,
     "tijdlijnMaanden": "1",
     "links": [
-      { "titel": "FFP (Fédération Française du Paysage)", "url": "https://www.f-f-p.org/" }
+      {
+        "titel": "FFP (Fédération Française du Paysage)",
+        "url": "https://www.f-f-p.org/"
+      }
     ],
-    "keywords": ["ontwerp", "tekenen", "buiten", "landschap"]
+    "keywords": [
+      "ontwerp",
+      "tekenen",
+      "buiten",
+      "landschap"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "paardenfokker",
     "naamNl": "Paardenhouder / Fokker",
     "naamFr": "Éleveur équin",
-    "sectoren": ["agrarisch", "dieren"],
+    "sectoren": [
+      "agrarisch",
+      "dieren"
+    ],
     "categorie": "Landbouw",
     "omschrijving": "Fokken en houden van paarden. Vaak gecombineerd met pensionstal.",
     "diplomaVereist": false,
@@ -1099,7 +2263,9 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving MSA. Registratie van elk paard bij SIRE (IFCE) verplicht.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Équine"],
+    "verzekeringen": [
+      "RC Pro Équine"
+    ],
     "autoentrepreneurMogelijk": false,
     "registratieInstantie": "MSA",
     "activiteitType": "Agricole",
@@ -1109,15 +2275,38 @@
     "kostenEuro": 20000,
     "tijdlijnMaanden": "6",
     "links": [
-      { "titel": "IFCE (Institut français du cheval)", "url": "https://www.ifce.fr/" }
+      {
+        "titel": "IFCE (Institut français du cheval)",
+        "url": "https://www.ifce.fr/"
+      }
     ],
-    "keywords": ["paard", "stal", "manege", "fokkerij"]
+    "keywords": [
+      "paard",
+      "stal",
+      "manege",
+      "fokkerij"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "MSA (Mutualité Sociale Agricole)",
+          "rol": "sociale zekerheid en aansluiting voor landbouwactiviteiten"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "bosbeheerder",
     "naamNl": "Bosbeheerder",
     "naamFr": "Gestionnaire forestier / Sylviculteur",
-    "sectoren": ["groen", "agrarisch"],
+    "sectoren": [
+      "groen",
+      "agrarisch"
+    ],
     "categorie": "Landbouw",
     "omschrijving": "Beheer en exploitatie van bospercelen.",
     "diplomaVereist": false,
@@ -1125,7 +2314,9 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving MSA. PSG (Plan Simple de Gestion) verplicht voor bossen >25ha.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Forestière"],
+    "verzekeringen": [
+      "RC Forestière"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "MSA",
     "activiteitType": "Agricole",
@@ -1135,15 +2326,38 @@
     "kostenEuro": 2000,
     "tijdlijnMaanden": "3",
     "links": [
-      { "titel": "CNPF (Bosbeheer)", "url": "https://www.cnpf.fr/" }
+      {
+        "titel": "CNPF (Bosbeheer)",
+        "url": "https://www.cnpf.fr/"
+      }
     ],
-    "keywords": ["bos", "hout", "natuur", "bomen"]
+    "keywords": [
+      "bos",
+      "hout",
+      "natuur",
+      "bomen"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "MSA (Mutualité Sociale Agricole)",
+          "rol": "sociale zekerheid en aansluiting voor landbouwactiviteiten"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "advocaat",
     "naamNl": "Advocaat",
     "naamFr": "Avocat",
-    "sectoren": ["administratif-juridique", "dienstverlening"],
+    "sectoren": [
+      "administratif-juridique",
+      "dienstverlening"
+    ],
     "categorie": "Juridisch",
     "omschrijving": "Juridisch advies en vertegenwoordiging in de rechtbank. In Frankrijk is er één beroep (geen onderscheid advocaat/procureur meer).",
     "diplomaVereist": true,
@@ -1151,7 +2365,10 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving bij een 'Barreau' (Orde van Advocaten) is verplicht. Voor EU-advocaten is er een speciale toelatingsprocedure (art. 99/100).",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RCP Avocat (via de Orde)", "Caisse de règlement pécuniaire (CARPA)"],
+    "verzekeringen": [
+      "RCP Avocat (via de Orde)",
+      "Caisse de règlement pécuniaire (CARPA)"
+    ],
     "autoentrepreneurMogelijk": false,
     "registratieInstantie": "Barreau (Orde van Advocaten)",
     "activiteitType": "Libérale (Réglementée)",
@@ -1161,15 +2378,38 @@
     "kostenEuro": 2000,
     "tijdlijnMaanden": "6",
     "links": [
-      { "titel": "CNB (Conseil National des Barreaux)", "url": "https://www.cnb.avocat.fr/" }
+      {
+        "titel": "CNB (Conseil National des Barreaux)",
+        "url": "https://www.cnb.avocat.fr/"
+      }
     ],
-    "keywords": ["recht", "jurist", "rechtbank", "balie"]
+    "keywords": [
+      "recht",
+      "jurist",
+      "rechtbank",
+      "balie"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "Barreau (Ordre des Avocats)",
+          "rol": "verplichte inschrijving; toelating tot de balie"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "accountant",
     "naamNl": "Accountant / Expert-Comptable",
     "naamFr": "Expert-Comptable",
-    "sectoren": ["administratif-juridique", "financieel"],
+    "sectoren": [
+      "administratif-juridique",
+      "financieel"
+    ],
     "categorie": "Financieel",
     "omschrijving": "Boekhouding, fiscale aangiftes en bedrijfsadvies. Enige beroep dat de boekhouding van derden mag doen!",
     "diplomaVereist": true,
@@ -1177,7 +2417,9 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving op de 'Tableau de l'Ordre des Experts-Comptables' is strikt verplicht. Illegaal uitoefenen is strafbaar.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RCP Expert-Comptable"],
+    "verzekeringen": [
+      "RCP Expert-Comptable"
+    ],
     "autoentrepreneurMogelijk": false,
     "registratieInstantie": "Ordre des Experts-Comptables",
     "activiteitType": "Libérale (Réglementée)",
@@ -1187,15 +2429,38 @@
     "kostenEuro": 1500,
     "tijdlijnMaanden": "3-6",
     "links": [
-      { "titel": "Ordre des Experts-Comptables", "url": "https://www.experts-comptables.fr/" }
+      {
+        "titel": "Ordre des Experts-Comptables",
+        "url": "https://www.experts-comptables.fr/"
+      }
     ],
-    "keywords": ["boekhouder", "belasting", "cijfers", "bedrijf"]
+    "keywords": [
+      "boekhouder",
+      "belasting",
+      "cijfers",
+      "bedrijf"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "Ordre des Experts-Comptables",
+          "rol": "verplichte inschrijving op het tableau (voorwaarde om het beroep/de titel te voeren)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "zelfstandig-boekhouder",
     "naamNl": "Zelfstandig Boekhouder (Beperkt)",
     "naamFr": "Comptable Indépendant (Let op!)",
-    "sectoren": ["administratif-juridique", "dienstverlening"],
+    "sectoren": [
+      "administratif-juridique",
+      "dienstverlening"
+    ],
     "categorie": "Financieel",
     "omschrijving": "WAARSCHUWING: In Frankrijk mag je als zelfstandige GEEN boekhouding voeren voor anderen tenzij je Expert-Comptable bent. Alleen 'saisie' (invoer) of loondienst is toegestaan.",
     "diplomaVereist": true,
@@ -1203,7 +2468,9 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Je mag je NIET vestigen als 'Comptable' voor klanten. Je kunt wel werken als 'Aide administrative' of in loondienst.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro"],
+    "verzekeringen": [
+      "RC Pro"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "URSSAF (als administratieve hulp)",
     "activiteitType": "Libérale",
@@ -1213,15 +2480,37 @@
     "kostenEuro": 100,
     "tijdlijnMaanden": "1",
     "links": [
-      { "titel": "Uitleg Monopolie Experts-Comptables", "url": "https://www.compta-facile.com/exercice-illegal-expertise-comptable/" }
+      {
+        "titel": "Uitleg Monopolie Experts-Comptables",
+        "url": "https://www.compta-facile.com/exercice-illegal-expertise-comptable/"
+      }
     ],
-    "keywords": ["administratie", "facturen", "assistent"]
+    "keywords": [
+      "administratie",
+      "facturen",
+      "assistent"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "notaris",
     "naamNl": "Notaris",
     "naamFr": "Notaire",
-    "sectoren": ["administratif-juridique", "immobilier"],
+    "sectoren": [
+      "administratif-juridique",
+      "immobilier"
+    ],
     "categorie": "Juridisch",
     "omschrijving": "Openbaar ambtenaar (Officier Public) voor vastgoedtransacties, huwelijkscontracten en erfrecht.",
     "diplomaVereist": true,
@@ -1229,7 +2518,9 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Benoeming door de Minister van Justitie (Garde des Sceaux). Aankoop van een 'étude' (kantoor) is vaak nodig.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["Garantie Collective du Notariat"],
+    "verzekeringen": [
+      "Garantie Collective du Notariat"
+    ],
     "autoentrepreneurMogelijk": false,
     "registratieInstantie": "Chambre des Notaires",
     "activiteitType": "Libérale (Officier Public)",
@@ -1239,15 +2530,38 @@
     "kostenEuro": 50000,
     "tijdlijnMaanden": "12-24",
     "links": [
-      { "titel": "Notaires de France", "url": "https://www.notaires.fr/" }
+      {
+        "titel": "Notaires de France",
+        "url": "https://www.notaires.fr/"
+      }
     ],
-    "keywords": ["huis kopen", "contract", "erfenis", "akte"]
+    "keywords": [
+      "huis kopen",
+      "contract",
+      "erfenis",
+      "akte"
+    ],
+    "loket": {
+      "inschrijving": "Notaris is openbaar ambtsdrager: benoeming door de Minister van Justitie (nomination). De studie zelf wordt daarnaast via het Guichet unique ingeschreven.",
+      "type": "bijzonder",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "Chambre des Notaires / Ministère de la Justice",
+          "rol": "benoeming en tuchtrechtelijk toezicht (officier public)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "verzekeringsagent",
     "naamNl": "Verzekeringsagent / Broker",
     "naamFr": "Courtier / Agent général d'assurance",
-    "sectoren": ["financieel", "dienstverlening"],
+    "sectoren": [
+      "financieel",
+      "dienstverlening"
+    ],
     "categorie": "Financieel",
     "omschrijving": "Verkoop en advies van verzekeringen (auto, huis, zorg, bedrijf).",
     "diplomaVereist": true,
@@ -1255,7 +2569,10 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Verplichte registratie in het ORIAS-register.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Courtage", "Garantie Financière"],
+    "verzekeringen": [
+      "RC Pro Courtage",
+      "Garantie Financière"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "ORIAS",
     "activiteitType": "Commerciale",
@@ -1265,15 +2582,39 @@
     "kostenEuro": 500,
     "tijdlijnMaanden": "2",
     "links": [
-      { "titel": "ORIAS (Register)", "url": "https://www.orias.fr/" }
+      {
+        "titel": "ORIAS (Register)",
+        "url": "https://www.orias.fr/"
+      }
     ],
-    "keywords": ["polis", "assurantie", "verzekeren", "broker"]
+    "keywords": [
+      "polis",
+      "assurantie",
+      "verzekeren",
+      "broker"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "ORIAS",
+          "rol": "verplichte registratie als verzekeringstussenpersoon"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "journalist",
     "naamNl": "Journalist",
     "naamFr": "Journaliste",
-    "sectoren": ["dienstverlening", "creatief", "onderwijs-cultuur"],
+    "sectoren": [
+      "dienstverlening",
+      "creatief",
+      "onderwijs-cultuur"
+    ],
     "categorie": "Media",
     "omschrijving": "Schrijven van artikelen, reportages of nieuws.",
     "diplomaVereist": false,
@@ -1290,15 +2631,41 @@
     "kostenEuro": 0,
     "tijdlijnMaanden": "0",
     "links": [
-      { "titel": "CCIJP (Perskaart)", "url": "https://www.ccijp.net/" }
+      {
+        "titel": "CCIJP (Perskaart)",
+        "url": "https://www.ccijp.net/"
+      }
     ],
-    "keywords": ["schrijven", "pers", "media", "redacteur"]
+    "keywords": [
+      "schrijven",
+      "pers",
+      "media",
+      "redacteur"
+    ],
+    "loket": {
+      "inschrijving": "In loondienst: geen eigen inschrijving (via werkgever). Als zelfstandige: Guichet unique (INPI) — formalites.entreprises.gouv.fr.",
+      "type": "gemengd",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CCIJP",
+          "rol": "afgifte van de carte de presse (perskaart)"
+        },
+        {
+          "instantie": "URSSAF",
+          "rol": "sociale premies bij zelfstandige (pigiste-)uitoefening"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "bedrijfsjurist",
     "naamNl": "Bedrijfsjurist",
     "naamFr": "Juriste d'entreprise",
-    "sectoren": ["administratif-juridique"],
+    "sectoren": [
+      "administratif-juridique"
+    ],
     "categorie": "Juridisch",
     "omschrijving": "Juridisch advies intern bij een bedrijf. Mag GEEN cliënten vertegenwoordigen in de rechtbank (dat mag alleen de Advocaat).",
     "diplomaVereist": true,
@@ -1315,15 +2682,32 @@
     "kostenEuro": 0,
     "tijdlijnMaanden": "0",
     "links": [
-      { "titel": "AFJE (Vereniging Bedrijfsjuristen)", "url": "https://www.afje.org/" }
+      {
+        "titel": "AFJE (Vereniging Bedrijfsjuristen)",
+        "url": "https://www.afje.org/"
+      }
     ],
-    "keywords": ["legal", "contracten", "bedrijf", "wetgeving"]
+    "keywords": [
+      "legal",
+      "contracten",
+      "bedrijf",
+      "wetgeving"
+    ],
+    "loket": {
+      "inschrijving": "Geen ondernemingsinschrijving: dit is een functie in loondienst; inschrijving verloopt via de werkgever.",
+      "type": "geen",
+      "bevoegdeInstanties": []
+    },
+    "laatstGecontroleerd": "",
+    "bron": ""
   },
   {
     "id": "hr-manager",
     "naamNl": "HR Manager / P&O",
     "naamFr": "Responsable Ressources Humaines (RRH)",
-    "sectoren": ["administratif-juridique"],
+    "sectoren": [
+      "administratif-juridique"
+    ],
     "categorie": "HR",
     "omschrijving": "Personeelszaken, werving en selectie, contractbeheer in Franse context (Code du Travail).",
     "diplomaVereist": true,
@@ -1340,13 +2724,34 @@
     "kostenEuro": 0,
     "tijdlijnMaanden": "0",
     "links": [],
-    "keywords": ["personeel", "werving", "contract", "salaris"]
+    "keywords": [
+      "personeel",
+      "werving",
+      "contract",
+      "salaris"
+    ],
+    "loket": {
+      "inschrijving": "In loondienst: geen eigen inschrijving (via werkgever). Als zelfstandige: Guichet unique (INPI) — formalites.entreprises.gouv.fr.",
+      "type": "gemengd",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "sportinstructeur",
     "naamNl": "Sportinstructeur / Trainer",
     "naamFr": "Éducateur Sportif",
-    "sectoren": ["onderwijs-culture", "dienstverlening", "toerisme"],
+    "sectoren": [
+      "onderwijs-culture",
+      "dienstverlening",
+      "toerisme"
+    ],
     "categorie": "Sport",
     "omschrijving": "Geven van sportlessen (fitness, zwemmen, tennis, surfen). In Frankrijk extreem streng gereglementeerd!",
     "diplomaVereist": true,
@@ -1354,7 +2759,9 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Aanvragen 'Carte Professionnelle d'Éducateur Sportif' bij de SDJES (Drajes). Zonder kaart is lesgeven strafbaar.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Sport"],
+    "verzekeringen": [
+      "RC Pro Sport"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "URSSAF + SDJES (Declaratie)",
     "activiteitType": "Libérale (Réglementée)",
@@ -1364,15 +2771,44 @@
     "kostenEuro": 200,
     "tijdlijnMaanden": "2-3",
     "links": [
-      { "titel": "EAPS Portal (Aangifte Sport)", "url": "https://eaps.sports.gouv.fr/" }
+      {
+        "titel": "EAPS Portal (Aangifte Sport)",
+        "url": "https://eaps.sports.gouv.fr/"
+      }
     ],
-    "keywords": ["sport", "trainer", "coach", "fitness", "surf"]
+    "keywords": [
+      "sport",
+      "trainer",
+      "coach",
+      "fitness",
+      "surf"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        },
+        {
+          "instantie": "SDJES/DRAJES",
+          "rol": "verplichte declaratie als éducateur sportif + carte professionnelle"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "yogadocent",
     "naamNl": "Yogadocent",
     "naamFr": "Professeur de Yoga",
-    "sectoren": ["dienstverlening", "onderwijs-culture", "zorg"],
+    "sectoren": [
+      "dienstverlening",
+      "onderwijs-culture",
+      "zorg"
+    ],
     "categorie": "Welzijn",
     "omschrijving": "Geven van yogalessen. Valt in Frankrijk vaak onder 'Cultureel' en niet onder 'Sport' (dus minder streng), tenzij fysiek intensief.",
     "diplomaVereist": false,
@@ -1380,7 +2816,9 @@
     "erkenning": "automatisch",
     "erkenningProcedure": "Vrije vestiging als 'Enseignant de disciplines culturelles' of 'Bien-être'.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Bien-être"],
+    "verzekeringen": [
+      "RC Pro Bien-être"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "URSSAF",
     "activiteitType": "Libérale",
@@ -1390,13 +2828,33 @@
     "kostenEuro": 0,
     "tijdlijnMaanden": "0",
     "links": [],
-    "keywords": ["yoga", "pilates", "welzijn", "ontspanning"]
+    "keywords": [
+      "yoga",
+      "pilates",
+      "welzijn",
+      "ontspanning"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "makelaar-kaart",
     "naamNl": "Makelaar (Kantooreigenaar / Carte T)",
     "naamFr": "Agent Immobilier (Titulaire Carte T)",
-    "sectoren": ["immobilier", "dienstverlening"],
+    "sectoren": [
+      "immobilier",
+      "dienstverlening"
+    ],
     "categorie": "Vastgoed",
     "omschrijving": "Eigenaar van een makelaarskantoor. Mag transacties sluiten en gelden beheren (derdenrekening).",
     "diplomaVereist": true,
@@ -1404,7 +2862,10 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Aanvraag Carte T bij de CCI (Kamer van Koophandel). Geldigheid 3 jaar.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["Garantie Financière", "RCP Agent Immobilier"],
+    "verzekeringen": [
+      "Garantie Financière",
+      "RCP Agent Immobilier"
+    ],
     "autoentrepreneurMogelijk": false,
     "registratieInstantie": "CCI",
     "activiteitType": "Commerciale",
@@ -1414,15 +2875,39 @@
     "kostenEuro": 2000,
     "tijdlijnMaanden": "3",
     "links": [
-      { "titel": "CCI - Carte Professionnelle", "url": "https://www.entreprises.cci-paris-idf.fr/" }
+      {
+        "titel": "CCI - Carte Professionnelle",
+        "url": "https://www.entreprises.cci-paris-idf.fr/"
+      }
     ],
-    "keywords": ["huis", "verkoop", "kantoor", "carte t"]
+    "keywords": [
+      "huis",
+      "verkoop",
+      "kantoor",
+      "carte t"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CCI (Chambre de Commerce et d'Industrie)",
+          "rol": "begeleiding en registratie van de commerciële activiteit (geen verplichte kwalificatietoets)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F32994"
   },
   {
     "id": "diagnostiqueur",
     "naamNl": "Vastgoedkeurder / Diagnostiqueur",
     "naamFr": "Diagnostiqueur Immobilier",
-    "sectoren": ["immobilier", "bouw", "techniek"],
+    "sectoren": [
+      "immobilier",
+      "bouw",
+      "techniek"
+    ],
     "categorie": "Vastgoed",
     "omschrijving": "Uitvoeren van verplichte keuringen bij verkoop (Asbest, Lood, Energie/DPE, Termieten).",
     "diplomaVereist": true,
@@ -1430,7 +2915,9 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Certificaten behalen en elke 5-7 jaar hernieuwen. Inschrijving URSSAF/CCI.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RCP Diagnostiqueur (Zeer specifiek en verplicht)"],
+    "verzekeringen": [
+      "RCP Diagnostiqueur (Zeer specifiek en verplicht)"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "URSSAF of CCI",
     "activiteitType": "Libérale / Commerciale",
@@ -1440,15 +2927,42 @@
     "kostenEuro": 5000,
     "tijdlijnMaanden": "2-4",
     "links": [
-      { "titel": "Overzicht Diagnoses (Service-Public)", "url": "https://www.service-public.fr/particuliers/vosdroits/F10798" }
+      {
+        "titel": "Overzicht Diagnoses (Service-Public)",
+        "url": "https://www.service-public.fr/particuliers/vosdroits/F10798"
+      }
     ],
-    "keywords": ["keuring", "energielabel", "dpe", "asbest"]
+    "keywords": [
+      "keuring",
+      "energielabel",
+      "dpe",
+      "asbest"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CCI (Chambre de Commerce et d'Industrie)",
+          "rol": "begeleiding en registratie van de commerciële activiteit (geen verplichte kwalificatietoets)"
+        },
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "leraar-basisschool",
     "naamNl": "Leraar Basisonderwijs (Contractuel)",
     "naamFr": "Professeur des écoles (Contractuel)",
-    "sectoren": ["onderwijs-culture", "dienstverlening"],
+    "sectoren": [
+      "onderwijs-culture",
+      "dienstverlening"
+    ],
     "categorie": "Onderwijs",
     "omschrijving": "Lesgeven op een Franse basisschool (maternelle of élémentaire). Als buitenlander vaak op contractbasis.",
     "diplomaVereist": true,
@@ -1466,15 +2980,38 @@
     "kostenEuro": 0,
     "tijdlijnMaanden": "2-6",
     "links": [
-      { "titel": "Devenir Enseignant", "url": "https://www.devenirenseignant.gouv.fr/" }
+      {
+        "titel": "Devenir Enseignant",
+        "url": "https://www.devenirenseignant.gouv.fr/"
+      }
     ],
-    "keywords": ["juf", "meester", "school", "klas"]
+    "keywords": [
+      "juf",
+      "meester",
+      "school",
+      "klas"
+    ],
+    "loket": {
+      "inschrijving": "Geen ondernemingsinschrijving: ambtenaar, aanstelling via een concours van de Éducation Nationale.",
+      "type": "geen",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "Ministère de l'Éducation Nationale",
+          "rol": "werkgever; aanstelling als ambtenaar via concours"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "",
+    "bron": ""
   },
   {
     "id": "verhuizer",
     "naamNl": "Verhuizer",
     "naamFr": "Déménageur",
-    "sectoren": ["transport-logistique", "dienstverlening"],
+    "sectoren": [
+      "transport-logistique",
+      "dienstverlening"
+    ],
     "categorie": "Transport",
     "omschrijving": "Professioneel verhuizen van inboedels. Fysiek zwaar werk.",
     "diplomaVereist": true,
@@ -1482,7 +3019,10 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving in het 'Registre des Transports' (DREAL).",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Déménagement", "Goederentransportverzekering"],
+    "verzekeringen": [
+      "RC Pro Déménagement",
+      "Goederentransportverzekering"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "RCS (Registre du Commerce) + DREAL",
     "activiteitType": "Commerciale",
@@ -1492,15 +3032,43 @@
     "kostenEuro": 2500,
     "tijdlijnMaanden": "3",
     "links": [
-      { "titel": "DREAL (Transportregister)", "url": "https://www.ecologie.gouv.fr/services-deconcentres-du-ministere" }
+      {
+        "titel": "DREAL (Transportregister)",
+        "url": "https://www.ecologie.gouv.fr/services-deconcentres-du-ministere"
+      }
     ],
-    "keywords": ["verhuizing", "transport", "vrachtwagen", "dozen"]
+    "keywords": [
+      "verhuizing",
+      "transport",
+      "vrachtwagen",
+      "dozen"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "Greffe du Tribunal de Commerce",
+          "rol": "inschrijving in het RSAC (handelsagent) of RCS (vennootschap) — nu ingediend via het Guichet unique"
+        },
+        {
+          "instantie": "DREAL",
+          "rol": "vergunning voor goederenvervoer over de weg (capacité de transport)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "marketing-manager",
     "naamNl": "Marketing Manager / Consultant",
     "naamFr": "Responsable Marketing / Consultant",
-    "sectoren": ["dienstverlening", "informatique", "commerce"],
+    "sectoren": [
+      "dienstverlening",
+      "informatique",
+      "commerce"
+    ],
     "categorie": "Business",
     "omschrijving": "Advies over marktstrategie, branding en communicatie.",
     "diplomaVereist": false,
@@ -1508,7 +3076,9 @@
     "erkenning": "automatisch",
     "erkenningProcedure": "Vrije vestiging als consultant (Auto-entrepreneur of EURL/SASU).",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro"],
+    "verzekeringen": [
+      "RC Pro"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "URSSAF",
     "activiteitType": "Libérale",
@@ -1518,13 +3088,33 @@
     "kostenEuro": 100,
     "tijdlijnMaanden": "0",
     "links": [],
-    "keywords": ["reclame", "advies", "strategie", "online"]
+    "keywords": [
+      "reclame",
+      "advies",
+      "strategie",
+      "online"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "commercieel-medewerker",
     "naamNl": "Vertegenwoordiger / Sales",
     "naamFr": "Commercial / Attaché commercial",
-    "sectoren": ["commerce", "dienstverlening"],
+    "sectoren": [
+      "commerce",
+      "dienstverlening"
+    ],
     "categorie": "Handel",
     "omschrijving": "Verkoop van producten of diensten B2B of B2C.",
     "diplomaVereist": false,
@@ -1542,13 +3132,33 @@
     "kostenEuro": 0,
     "tijdlijnMaanden": "0",
     "links": [],
-    "keywords": ["verkoop", "sales", "vertegenwoordiger", "klanten"]
+    "keywords": [
+      "verkoop",
+      "sales",
+      "vertegenwoordiger",
+      "klanten"
+    ],
+    "loket": {
+      "inschrijving": "In loondienst: geen eigen inschrijving (via werkgever). Als zelfstandige: Guichet unique (INPI) — formalites.entreprises.gouv.fr.",
+      "type": "gemengd",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "elektromonteur-industrie",
     "naamNl": "Elektromonteur Industrie",
     "naamFr": "Électromécanicien",
-    "sectoren": ["industrie", "techniek"],
+    "sectoren": [
+      "industrie",
+      "techniek"
+    ],
     "categorie": "Industrie",
     "omschrijving": "Onderhoud en reparatie van industriële machines en motoren.",
     "diplomaVereist": true,
@@ -1566,13 +3176,34 @@
     "kostenEuro": 0,
     "tijdlijnMaanden": "0",
     "links": [],
-    "keywords": ["fabriek", "onderhoud", "storing", "techniek"]
+    "keywords": [
+      "fabriek",
+      "onderhoud",
+      "storing",
+      "techniek"
+    ],
+    "loket": {
+      "inschrijving": "In loondienst: geen eigen inschrijving (via werkgever). Als zelfstandige: Guichet unique (INPI) — formalites.entreprises.gouv.fr.",
+      "type": "gemengd",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "lasser",
     "naamNl": "Lasser",
     "naamFr": "Soudeur",
-    "sectoren": ["industrie", "bouw", "techniek"],
+    "sectoren": [
+      "industrie",
+      "bouw",
+      "techniek"
+    ],
     "categorie": "Industrie",
     "omschrijving": "Verbinden van metalen onderdelen. Veel vraag in de industrie en scheepsbouw.",
     "diplomaVereist": true,
@@ -1580,7 +3211,10 @@
     "erkenning": "automatisch",
     "erkenningProcedure": "Vaak via Interim of vast contract. Zelfstandig kan via CMA.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro", "Décennale (indien in de bouw)"],
+    "verzekeringen": [
+      "RC Pro",
+      "Décennale (indien in de bouw)"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "CMA",
     "activiteitType": "Artisanale",
@@ -1590,286 +3224,33 @@
     "kostenEuro": 1000,
     "tijdlijnMaanden": "0",
     "links": [],
-    "keywords": ["metaal", "lassen", "mig", "tig"]
+    "keywords": [
+      "metaal",
+      "lassen",
+      "mig",
+      "tig"
+    ],
+    "loket": {
+      "inschrijving": "In loondienst: geen eigen inschrijving (via werkgever). Als zelfstandige: Guichet unique (INPI) — formalites.entreprises.gouv.fr.",
+      "type": "gemengd",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "restauranthouder",
     "naamNl": "Restauranthouder (Eigenaar)",
     "naamFr": "Restaurateur / Exploitant",
-    "sectoren": ["horeca", "commerce"],
-    "categorie": "Horeca",
-    "omschrijving": "Eigenaar van een restaurant. Verantwoordelijk voor vergunningen, hygiëne en personeel.",
-    "diplomaVereist": false,
-    "diplomaDetails": "Geen vakdiploma vereist voor de eigenaar (wel voor de kok!). Wel verplichte cursussen.",
-    "erkenning": "procedure",
-    "erkenningProcedure": "1. Permis d'Exploitation (cursus 2,5 dag). 2. Hygiënecursus (HACCP) verplicht voor minstens 1 personeelslid. 3. Licence IV of III (Alcoholvergunning) aanvragen bij gemeente.",
-    "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro", "Verzekering Bedrijfspand (Multirisque)", "Perte d'exploitation (aanbevolen)"],
-    "autoentrepreneurMogelijk": false,
-    "registratieInstantie": "CCI (Kamer van Koophandel) of CMA (indien veel zelfgemaakt/afhaal)",
-    "activiteitType": "Commerciale / Artisanale",
-    "gereglementeerd": true,
-    "taalniveau": "B2",
-    "gemiddeldInkomen": 45000,
-    "kostenEuro": 15000,
-    "tijdlijnMaanden": "3-6",
-    "links": [
-      { "titel": "Service-Public: Restaurant openen", "url": "https://www.service-public.fr/professionnels-entreprises/vosdroits/F31684" }
+    "sectoren": [
+      "horeca",
+      "commerce"
     ],
-    "keywords": ["restaurant", "horeca", "vergunning", "licence iv", "bistro"]
-  },
-  {
-    "id": "winkelier",
-    "naamNl": "Winkelier / Detailhandel",
-    "naamFr": "Commerçant (Boutique)",
-    "sectoren": ["commerce"],
-    "categorie": "Handel",
-    "omschrijving": "Eigenaar van een fysieke winkel (kleding, delicatessen, souvenirs).",
-    "diplomaVereist": false,
-    "diplomaDetails": "Geen diploma vereist (behalve voor specifieke waren zoals optiek, apotheek of tabak).",
-    "erkenning": "automatisch",
-    "erkenningProcedure": "Inschrijving bij de CCI (Registre du Commerce). Pand moet voldoen aan ERP-normen (brandveiligheid en toegankelijkheid mindervaliden).",
-    "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro", "Multirisque Commerce (pand + voorraad)"],
-    "autoentrepreneurMogelijk": true,
-    "registratieInstantie": "CCI",
-    "activiteitType": "Commerciale",
-    "gereglementeerd": false,
-    "taalniveau": "B1",
-    "gemiddeldInkomen": 30000,
-    "kostenEuro": 10000,
-    "tijdlijnMaanden": "2-4",
-    "links": [
-      { "titel": "CCI - Starten met een winkel", "url": "https://www.cci.fr/" }
-    ],
-    "keywords": ["winkel", "shop", "detailhandel", "boutique"]
-  },
-  {
-    "id": "marktkoopman",
-    "naamNl": "Marktkoopman (Ambulante handel)",
-    "naamFr": "Commerçant Ambulant (Marchés)",
-    "sectoren": ["commerce", "horeca"],
-    "categorie": "Handel",
-    "omschrijving": "Verkoop van food of non-food op markten en braderieën.",
-    "diplomaVereist": false,
-    "diplomaDetails": "Geen diploma. Wel hygiënetraining bij verkoop voeding.",
-    "erkenning": "procedure",
-    "erkenningProcedure": "Aanvraag 'Carte de commerçant ambulant' verplicht als je buiten je woongemeente verkoopt (via CCI/CMA). Kosten ca. €30.",
-    "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Ambulant", "Autoverzekering zakelijk"],
-    "autoentrepreneurMogelijk": true,
-    "registratieInstantie": "CCI (wederverkoop) of CMA (eigen fabricaat)",
-    "activiteitType": "Commerciale / Artisanale",
-    "gereglementeerd": true,
-    "taalniveau": "B1",
-    "gemiddeldInkomen": 22000,
-    "kostenEuro": 500,
-    "tijdlijnMaanden": "1-2",
-    "links": [
-      { "titel": "Kaart Ambulante Handel aanvragen", "url": "https://www.service-public.fr/professionnels-entreprises/vosdroits/F21856" }
-    ],
-    "keywords": ["markt", "verkoop", "kraam", "ambulant"]
-  },
-  {
-    "id": "webshop",
-    "naamNl": "Webshop Eigenaar (E-commerce)",
-    "naamFr": "E-commerçant / Vente en ligne",
-    "sectoren": ["commerce", "it"],
-    "categorie": "Handel",
-    "omschrijving": "Online verkoop van producten. Let op: Franse consumentenwetgeving (o.a. herroepingsrecht) is strikt.",
-    "diplomaVereist": false,
-    "erkenning": "automatisch",
-    "erkenningProcedure": "Inschrijving CCI (Kamer van Koophandel). Verplichte vermeldingen (Mentions Légales) op de site.",
-    "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Vente à distance"],
-    "autoentrepreneurMogelijk": true,
-    "registratieInstantie": "CCI",
-    "activiteitType": "Commerciale",
-    "gereglementeerd": false,
-    "taalniveau": "B2",
-    "gemiddeldInkomen": 25000,
-    "kostenEuro": 200,
-    "tijdlijnMaanden": "0-1",
-    "links": [
-      { "titel": "Regels E-commerce Frankrijk", "url": "https://www.economie.gouv.fr/entreprises/creation-site-e-commerce" }
-    ],
-    "keywords": ["webwinkel", "online", "dropshipping", "verkoop"]
-  },
-  {
-    "id": "handelsagent",
-    "naamNl": "Handelsagent / Import-Export",
-    "naamFr": "Agent Commercial",
-    "sectoren": ["commerce", "dienstverlening"],
-    "categorie": "Handel",
-    "omschrijving": "Bemiddelen bij verkoop voor andere bedrijven (vaak NL bedrijven die in FR willen verkopen).",
-    "diplomaVereist": false,
-    "erkenning": "procedure",
-    "erkenningProcedure": "Inschrijving in het speciaal register RSAC bij de Greffe du Tribunal de Commerce.",
-    "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro"],
-    "autoentrepreneurMogelijk": true,
-    "registratieInstantie": "Greffe (RSAC)",
-    "activiteitType": "Commerciale (Agent)",
-    "gereglementeerd": true,
-    "taalniveau": "C1",
-    "gemiddeldInkomen": 40000,
-    "kostenEuro": 100,
-    "tijdlijnMaanden": "1",
-    "links": [
-      { "titel": "RSAC Inschrijving", "url": "https://www.infogreffe.fr/" }
-    ],
-    "keywords": ["sales", "import", "export", "vertegenwoordiger"]
-  },
-  {
-    "id": "foodtruck",
-    "naamNl": "Foodtruck Eigenaar",
-    "naamFr": "Exploitant Food Truck",
-    "sectoren": ["horeca", "commerce"],
-    "categorie": "Horeca",
-    "omschrijving": "Mobiele verkoop van bereide gerechten.",
-    "diplomaVereist": false,
-    "diplomaDetails": "Geen koksdiploma vereist, wel HACCP-training verplicht.",
-    "erkenning": "procedure",
-    "erkenningProcedure": "1. Carte de commerçant ambulant. 2. Standplaatsvergunning gemeente. 3. HACCP certificaat. 4. RM (CMA) of RCS (CCI) inschrijving.",
-    "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro", "Autoverzekering zakelijk", "Rechtsbijstand"],
-    "autoentrepreneurMogelijk": true,
-    "registratieInstantie": "CMA (meestal) of CCI",
-    "activiteitType": "Artisanale / Commerciale",
-    "gereglementeerd": true,
-    "taalniveau": "B1",
-    "gemiddeldInkomen": 28000,
-    "kostenEuro": 20000,
-    "tijdlijnMaanden": "3-4",
-    "links": [],
-    "keywords": ["snack", "mobiel", "koken", "markt"]
-  },
-  {
-    "id": "kunstenaar",
-    "naamNl": "Kunstenaar (Schilder/Beeldhouwer)",
-    "naamFr": "Artiste Auteur (Peintre/Sculpteur)",
-    "sectoren": ["creatief", "artisanat"],
-    "categorie": "Kunst",
-    "omschrijving": "Creatie van originele kunstwerken. Fiscaal zeer specifiek regime (niet altijd Auto-entrepreneur!).",
-    "diplomaVereist": false,
-    "diplomaDetails": "Geen diploma, wel bewijs van artistieke activiteit nodig.",
-    "erkenning": "procedure",
-    "erkenningProcedure": "Inschrijving bij de 'Sécurité Sociale des Artistes' (voorheen Maison des Artistes). Inkomsten aangeven via URSSAF Limousin.",
-    "verzekeringVerplicht": false,
-    "verzekeringen": ["RC Pro (aanbevolen voor atelier)"],
-    "autoentrepreneurMogelijk": false,
-    "registratieInstantie": "URSSAF Limousin (Artistes-Auteurs)",
-    "activiteitType": "Artistique",
-    "gereglementeerd": false,
-    "taalniveau": "A2",
-    "gemiddeldInkomen": 20000,
-    "kostenEuro": 0,
-    "tijdlijnMaanden": "1",
-    "links": [
-      { "titel": "Sécurité Sociale des Artistes", "url": "https://www.secu-artistes-auteurs.fr/" }
-    ],
-    "keywords": ["kunst", "schilder", "atelier", "creatief"]
-  },
-  {
-    "id": "grafisch-kunstenaar",
-    "naamNl": "Grafisch Kunstenaar / Illustrator",
-    "naamFr": "Graphiste Auteur / Illustrateur",
-    "sectoren": ["creatief", "dienstverlening"],
-    "categorie": "Kunst",
-    "omschrijving": "Ontwerpen van origineel beeldwerk (geen pure marketing-dtp). Valt onder auteursrecht.",
-    "diplomaVereist": false,
-    "erkenning": "automatisch",
-    "erkenningProcedure": "Valt onder 'Artiste Auteur' regime als je auteursrechten verkoopt. Anders 'Prestation de service' (Auto-entrepreneur).",
-    "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro"],
-    "autoentrepreneurMogelijk": true,
-    "registratieInstantie": "URSSAF Limousin of URSSAF (Auto-entrepreneur)",
-    "activiteitType": "Artistique / Libérale",
-    "gereglementeerd": false,
-    "taalniveau": "B2",
-    "gemiddeldInkomen": 28000,
-    "links": [],
-    "keywords": ["tekenen", "design", "illustratie", "boek"]
-  },
-  {
-    "id": "naturopaat",
-    "naamNl": "Naturopaat / Gezondheidscoach",
-    "naamFr": "Naturopathe",
-    "sectoren": ["zorg", "dienstverlening"],
-    "categorie": "Welzijn",
-    "omschrijving": "Advies over levensstijl en natuurlijke gezondheid. Let op: GEEN medisch beroep!",
-    "diplomaVereist": false,
-    "diplomaDetails": "Geen staatsdiploma. Certificaat van privéschool (bijv. FENA erkend) wordt aangeraden voor vertrouwen.",
-    "erkenning": "automatisch",
-    "erkenningProcedure": "Vrije vestiging bij URSSAF. Strikt verboden om termen als 'genezen', 'diagnose' of 'patiënt' te gebruiken (strafbaar als illegale uitoefening geneeskunde).",
-    "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Bien-être (Specifiek voor niet-medische beroepen)"],
-    "autoentrepreneurMogelijk": true,
-    "registratieInstantie": "URSSAF",
-    "activiteitType": "Libérale (Non réglementée)",
-    "gereglementeerd": false,
-    "taalniveau": "B2",
-    "gemiddeldInkomen": 25000,
-    "kostenEuro": 200,
-    "tijdlijnMaanden": "0",
-    "links": [
-      { "titel": "OMNES (Beroepsvereniging)", "url": "https://www.omnes.fr/" }
-    ],
-    "keywords": ["alternatief", "gezondheid", "kruiden", "coach"]
-  },
-  {
-    "id": "sophroloog",
-    "naamNl": "Sophroloog",
-    "naamFr": "Sophrologue",
-    "sectoren": ["zorg", "dienstverlening"],
-    "categorie": "Welzijn",
-    "omschrijving": "Ontspanningstherapie en mentale begeleiding. Populair in Frankrijk.",
-    "diplomaVereist": false,
-    "diplomaDetails": "RNCP-titel bestaat (niveau 5), maar is niet wettelijk verplicht om te starten.",
-    "erkenning": "automatisch",
-    "erkenningProcedure": "Inschrijving URSSAF als 'Profession libérale non réglementée'.",
-    "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro"],
-    "autoentrepreneurMogelijk": true,
-    "registratieInstantie": "URSSAF",
-    "activiteitType": "Libérale",
-    "gereglementeerd": false,
-    "taalniveau": "C1",
-    "gemiddeldInkomen": 24000,
-    "links": [
-      { "titel": "Chambre Syndicale de la Sophrologie", "url": "https://www.chambre-syndicale-sophrologie.fr/" }
-    ],
-    "keywords": ["stress", "ontspanning", "ademhaling", "therapie"]
-  },
-  {
-    "id": "masseur-welzijn",
-    "naamNl": "Masseur (Wellness/Ontspanning)",
-    "naamFr": "Praticien en massage bien-être",
-    "sectoren": ["zorg", "dienstverlening", "uiterlijke-verzorging"],
-    "categorie": "Welzijn",
-    "omschrijving": "Ontspanningsmassages (niet-therapeutisch). Let op: het woord 'Massage' was vroeger beschermd voor kinesisten, nu gedoogd mits 'bien-être' vermeld wordt.",
-    "diplomaVereist": false,
-    "diplomaDetails": "Certificaten aanbevolen (FFMBE erkend).",
-    "erkenning": "automatisch",
-    "erkenningProcedure": "Inschrijving URSSAF (Libéral) of CMA (als het hoofdactiviteit is en 'ambachtelijk').",
-    "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Bien-être"],
-    "autoentrepreneurMogelijk": true,
-    "registratieInstantie": "URSSAF of CMA",
-    "activiteitType": "Libérale / Artisanale",
-    "gereglementeerd": false,
-    "taalniveau": "B1",
-    "gemiddeldInkomen": 22000,
-    "links": [
-      { "titel": "France Massage (FFMBE)", "url": "https://www.ffmbe.fr/" }
-    ],
-    "keywords": ["massage", "spa", "wellness", "ontspanning"]
-  },
-  {
-    "id": "restauranthouder",
-    "naamNl": "Restauranthouder (Eigenaar)",
-    "naamFr": "Restaurateur / Exploitant",
-    "sectoren": ["horeca", "commerce"],
     "categorie": "Horeca",
     "omschrijving": "Eigenaar van een restaurant. Verantwoordelijk voor vergunningen, hygiëne en personeel. Let op: verschilt van Chef-kok.",
     "diplomaVereist": false,
@@ -1877,7 +3258,11 @@
     "erkenning": "procedure",
     "erkenningProcedure": "1. Permis d'Exploitation (cursus 2,5 dag). 2. Hygiënecursus (HACCP) verplicht voor minstens 1 personeelslid. 3. Licence IV of III (Alcoholvergunning) aanvragen bij gemeente.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro", "Verzekering Bedrijfspand (Multirisque)", "Perte d'exploitation (aanbevolen)"],
+    "verzekeringen": [
+      "RC Pro",
+      "Verzekering Bedrijfspand (Multirisque)",
+      "Perte d'exploitation (aanbevolen)"
+    ],
     "autoentrepreneurMogelijk": false,
     "registratieInstantie": "CCI (Kamer van Koophandel) of CMA (indien veel zelfgemaakt/afhaal)",
     "activiteitType": "Commerciale / Artisanale",
@@ -1887,15 +3272,44 @@
     "kostenEuro": 15000,
     "tijdlijnMaanden": "3-6",
     "links": [
-      { "titel": "Service-Public: Restaurant openen", "url": "https://www.service-public.fr/professionnels-entreprises/vosdroits/F31684" }
+      {
+        "titel": "Service-Public: Restaurant openen",
+        "url": "https://www.service-public.fr/professionnels-entreprises/vosdroits/F31684"
+      }
     ],
-    "keywords": ["restaurant", "horeca", "vergunning", "licence iv", "bistro", "eigenaar"]
+    "keywords": [
+      "restaurant",
+      "horeca",
+      "vergunning",
+      "licence iv",
+      "bistro",
+      "eigenaar"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        },
+        {
+          "instantie": "CCI (Chambre de Commerce et d'Industrie)",
+          "rol": "begeleiding en registratie van de commerciële activiteit (geen verplichte kwalificatietoets)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F22387"
   },
   {
     "id": "winkelier",
     "naamNl": "Winkelier / Detailhandel",
     "naamFr": "Commerçant (Boutique)",
-    "sectoren": ["commerce", "dienstverlening"],
+    "sectoren": [
+      "commerce",
+      "dienstverlening"
+    ],
     "categorie": "Handel",
     "omschrijving": "Eigenaar van een fysieke winkel (kleding, delicatessen, souvenirs, concept store).",
     "diplomaVereist": false,
@@ -1903,7 +3317,10 @@
     "erkenning": "automatisch",
     "erkenningProcedure": "Inschrijving bij de CCI (Registre du Commerce). Pand moet voldoen aan ERP-normen (brandveiligheid en toegankelijkheid mindervaliden).",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro", "Multirisque Commerce (pand + voorraad)"],
+    "verzekeringen": [
+      "RC Pro",
+      "Multirisque Commerce (pand + voorraad)"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "CCI",
     "activiteitType": "Commerciale",
@@ -1913,15 +3330,39 @@
     "kostenEuro": 10000,
     "tijdlijnMaanden": "2-4",
     "links": [
-      { "titel": "CCI - Starten met een winkel", "url": "https://www.cci.fr/" }
+      {
+        "titel": "CCI - Starten met een winkel",
+        "url": "https://www.cci.fr/"
+      }
     ],
-    "keywords": ["winkel", "shop", "detailhandel", "boutique", "verkoop"]
+    "keywords": [
+      "winkel",
+      "shop",
+      "detailhandel",
+      "boutique",
+      "verkoop"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CCI (Chambre de Commerce et d'Industrie)",
+          "rol": "begeleiding en registratie van de commerciële activiteit (geen verplichte kwalificatietoets)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "marktkoopman",
     "naamNl": "Marktkoopman (Ambulante handel)",
     "naamFr": "Commerçant Ambulant (Marchés)",
-    "sectoren": ["commerce", "horeca"],
+    "sectoren": [
+      "commerce",
+      "horeca"
+    ],
     "categorie": "Handel",
     "omschrijving": "Verkoop van food of non-food op markten en braderieën. Zeer populair in toeristische regio's.",
     "diplomaVereist": false,
@@ -1929,7 +3370,10 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Aanvraag 'Carte de commerçant ambulant' verplicht als je buiten je woongemeente verkoopt (via CCI/CMA). Kosten ca. €30.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Ambulant", "Autoverzekering zakelijk"],
+    "verzekeringen": [
+      "RC Pro Ambulant",
+      "Autoverzekering zakelijk"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "CCI (wederverkoop) of CMA (eigen fabricaat)",
     "activiteitType": "Commerciale / Artisanale",
@@ -1939,15 +3383,43 @@
     "kostenEuro": 500,
     "tijdlijnMaanden": "1-2",
     "links": [
-      { "titel": "Kaart Ambulante Handel aanvragen", "url": "https://www.service-public.fr/professionnels-entreprises/vosdroits/F21856" }
+      {
+        "titel": "Kaart Ambulante Handel aanvragen",
+        "url": "https://www.service-public.fr/professionnels-entreprises/vosdroits/F21856"
+      }
     ],
-    "keywords": ["markt", "verkoop", "kraam", "ambulant", "braderie"]
+    "keywords": [
+      "markt",
+      "verkoop",
+      "kraam",
+      "ambulant",
+      "braderie"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        },
+        {
+          "instantie": "CCI (Chambre de Commerce et d'Industrie)",
+          "rol": "begeleiding en registratie van de commerciële activiteit (geen verplichte kwalificatietoets)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F21856"
   },
   {
     "id": "webshop",
     "naamNl": "Webshop Eigenaar (E-commerce)",
     "naamFr": "E-commerçant / Vente en ligne",
-    "sectoren": ["commerce", "it"],
+    "sectoren": [
+      "commerce",
+      "it"
+    ],
     "categorie": "Handel",
     "omschrijving": "Online verkoop van producten. Let op: Franse consumentenwetgeving (o.a. herroepingsrecht, CGV) is strikt.",
     "diplomaVereist": false,
@@ -1955,7 +3427,10 @@
     "erkenning": "automatisch",
     "erkenningProcedure": "Inschrijving CCI (Kamer van Koophandel). Verplichte vermeldingen (Mentions Légales) op de site zijn cruciaal om boetes te voorkomen.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Vente à distance", "Cyberrisico (optioneel)"],
+    "verzekeringen": [
+      "RC Pro Vente à distance",
+      "Cyberrisico (optioneel)"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "CCI",
     "activiteitType": "Commerciale",
@@ -1965,15 +3440,39 @@
     "kostenEuro": 200,
     "tijdlijnMaanden": "0-1",
     "links": [
-      { "titel": "Regels E-commerce Frankrijk", "url": "https://www.economie.gouv.fr/entreprises/creation-site-e-commerce" }
+      {
+        "titel": "Regels E-commerce Frankrijk",
+        "url": "https://www.economie.gouv.fr/entreprises/creation-site-e-commerce"
+      }
     ],
-    "keywords": ["webwinkel", "online", "dropshipping", "verkoop", "internet"]
+    "keywords": [
+      "webwinkel",
+      "online",
+      "dropshipping",
+      "verkoop",
+      "internet"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CCI (Chambre de Commerce et d'Industrie)",
+          "rol": "begeleiding en registratie van de commerciële activiteit (geen verplichte kwalificatietoets)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "handelsagent",
     "naamNl": "Handelsagent / Import-Export",
     "naamFr": "Agent Commercial",
-    "sectoren": ["commerce", "dienstverlening"],
+    "sectoren": [
+      "commerce",
+      "dienstverlening"
+    ],
     "categorie": "Handel",
     "omschrijving": "Bemiddelen bij verkoop voor andere bedrijven (vaak NL bedrijven die in FR willen verkopen). Je bent geen werknemer, maar zelfstandige.",
     "diplomaVereist": false,
@@ -1981,7 +3480,9 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving in het speciaal register RSAC bij de Greffe du Tribunal de Commerce is verplicht.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro"],
+    "verzekeringen": [
+      "RC Pro"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "Greffe (RSAC)",
     "activiteitType": "Commerciale (Agent)",
@@ -1991,15 +3492,39 @@
     "kostenEuro": 100,
     "tijdlijnMaanden": "1",
     "links": [
-      { "titel": "RSAC Inschrijving", "url": "https://www.infogreffe.fr/" }
+      {
+        "titel": "RSAC Inschrijving",
+        "url": "https://www.infogreffe.fr/"
+      }
     ],
-    "keywords": ["sales", "import", "export", "vertegenwoordiger", "agent"]
+    "keywords": [
+      "sales",
+      "import",
+      "export",
+      "vertegenwoordiger",
+      "agent"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "Greffe du Tribunal de Commerce",
+          "rol": "inschrijving in het RSAC (handelsagent) of RCS (vennootschap) — nu ingediend via het Guichet unique"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "foodtruck",
     "naamNl": "Foodtruck Eigenaar",
     "naamFr": "Exploitant Food Truck",
-    "sectoren": ["horeca", "commerce"],
+    "sectoren": [
+      "horeca",
+      "commerce"
+    ],
     "categorie": "Horeca",
     "omschrijving": "Mobiele verkoop van bereide gerechten (Pizza, Burgers, Fries).",
     "diplomaVereist": false,
@@ -2007,7 +3532,11 @@
     "erkenning": "procedure",
     "erkenningProcedure": "1. Carte de commerçant ambulant. 2. Standplaatsvergunning gemeente (Emplacement). 3. HACCP certificaat. 4. RM (CMA) of RCS (CCI) inschrijving.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro", "Autoverzekering zakelijk", "Rechtsbijstand"],
+    "verzekeringen": [
+      "RC Pro",
+      "Autoverzekering zakelijk",
+      "Rechtsbijstand"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "CMA (meestal) of CCI",
     "activiteitType": "Artisanale / Commerciale",
@@ -2017,13 +3546,38 @@
     "kostenEuro": 20000,
     "tijdlijnMaanden": "3-4",
     "links": [],
-    "keywords": ["snack", "mobiel", "koken", "markt", "pizza"]
+    "keywords": [
+      "snack",
+      "mobiel",
+      "koken",
+      "markt",
+      "pizza"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        },
+        {
+          "instantie": "CCI (Chambre de Commerce et d'Industrie)",
+          "rol": "begeleiding en registratie van de commerciële activiteit (geen verplichte kwalificatietoets)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F21856"
   },
   {
     "id": "kunstenaar",
     "naamNl": "Kunstenaar (Schilder/Beeldhouwer)",
     "naamFr": "Artiste Auteur (Peintre/Sculpteur)",
-    "sectoren": ["creatief", "artisanat"],
+    "sectoren": [
+      "creatief",
+      "artisanat"
+    ],
     "categorie": "Kunst",
     "omschrijving": "Creatie van originele kunstwerken (schilderijen, beelden, unieke objecten). Fiscaal zeer specifiek regime.",
     "diplomaVereist": false,
@@ -2031,7 +3585,10 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving bij de 'Sécurité Sociale des Artistes' (voorheen Maison des Artistes) via het Guichet Unique (INPI). Inkomsten aangeven via URSSAF Limousin.",
     "verzekeringVerplicht": false,
-    "verzekeringen": ["RC Pro (aanbevolen voor atelier)", "Verzekering kunstwerken"],
+    "verzekeringen": [
+      "RC Pro (aanbevolen voor atelier)",
+      "Verzekering kunstwerken"
+    ],
     "autoentrepreneurMogelijk": false,
     "registratieInstantie": "URSSAF Limousin (Regime Artistes-Auteurs)",
     "activiteitType": "Artistique",
@@ -2041,22 +3598,49 @@
     "kostenEuro": 0,
     "tijdlijnMaanden": "1",
     "links": [
-      { "titel": "Sécurité Sociale des Artistes", "url": "https://www.secu-artistes-auteurs.fr/" }
+      {
+        "titel": "Sécurité Sociale des Artistes",
+        "url": "https://www.secu-artistes-auteurs.fr/"
+      }
     ],
-    "keywords": ["kunst", "schilder", "atelier", "creatief", "mda"]
+    "keywords": [
+      "kunst",
+      "schilder",
+      "atelier",
+      "creatief",
+      "mda"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "Sécurité sociale des artistes-auteurs (URSSAF Limousin)",
+          "rol": "aansluiting en inning van premies voor kunstenaars/auteurs"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "grafisch-kunstenaar",
     "naamNl": "Illustrator / Grafisch Kunstenaar",
     "naamFr": "Graphiste Auteur / Illustrateur",
-    "sectoren": ["creatief", "dienstverlening", "it"],
+    "sectoren": [
+      "creatief",
+      "dienstverlening",
+      "it"
+    ],
     "categorie": "Kunst",
     "omschrijving": "Ontwerpen van origineel beeldwerk waarop auteursrecht rust (geen pure productie/dtp).",
     "diplomaVereist": false,
     "erkenning": "automatisch",
     "erkenningProcedure": "Als je auteursrechten verkoopt: Artiste Auteur (voordeliger sociale lasten). Als je uren/diensten verkoopt: Auto-entrepreneur (Libéral).",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro"],
+    "verzekeringen": [
+      "RC Pro"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "URSSAF Limousin (Auteur) of URSSAF (Auto-entrepreneur)",
     "activiteitType": "Artistique / Libérale",
@@ -2066,13 +3650,196 @@
     "kostenEuro": 0,
     "tijdlijnMaanden": "1",
     "links": [],
-    "keywords": ["tekenen", "design", "illustratie", "boek", "logo"]
+    "keywords": [
+      "tekenen",
+      "design",
+      "illustratie",
+      "boek",
+      "logo"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "Sécurité sociale des artistes-auteurs (URSSAF Limousin)",
+          "rol": "aansluiting en inning van premies voor kunstenaars/auteurs"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
+  },
+  {
+    "id": "naturopaat",
+    "naamNl": "Naturopaat / Gezondheidscoach",
+    "naamFr": "Naturopathe",
+    "sectoren": [
+      "zorg",
+      "dienstverlening"
+    ],
+    "categorie": "Welzijn",
+    "omschrijving": "Advies over levensstijl en natuurlijke gezondheid. Let op: GEEN medisch beroep! Je mag geen diagnose stellen of 'genezen' beloven.",
+    "diplomaVereist": false,
+    "diplomaDetails": "Geen staatsdiploma. Certificaat van privéschool (bijv. FENA erkend) wordt sterk aangeraden voor geloofwaardigheid en verzekering.",
+    "erkenning": "automatisch",
+    "erkenningProcedure": "Vrije vestiging bij URSSAF als 'Profession Libérale'. Strikt verboden om medische termen te gebruiken (strafbaar als illegale uitoefening geneeskunde).",
+    "verzekeringVerplicht": true,
+    "verzekeringen": [
+      "RC Pro Bien-être (Specifiek voor niet-medische beroepen)",
+      "Rechtsbijstand"
+    ],
+    "autoentrepreneurMogelijk": true,
+    "registratieInstantie": "URSSAF",
+    "activiteitType": "Libérale (Non réglementée)",
+    "gereglementeerd": false,
+    "taalniveau": "B2",
+    "gemiddeldInkomen": 25000,
+    "kostenEuro": 200,
+    "tijdlijnMaanden": "0",
+    "links": [
+      {
+        "titel": "OMNES (Beroepsvereniging Naturopaten)",
+        "url": "https://www.omnes.fr/"
+      }
+    ],
+    "keywords": [
+      "alternatief",
+      "gezondheid",
+      "kruiden",
+      "coach",
+      "holistisch"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
+  },
+  {
+    "id": "sophroloog",
+    "naamNl": "Sophroloog",
+    "naamFr": "Sophrologue",
+    "sectoren": [
+      "zorg",
+      "dienstverlening"
+    ],
+    "categorie": "Welzijn",
+    "omschrijving": "Ontspanningstherapie en mentale begeleiding via ademhaling en visualisatie. Zeer erkend en populair in Frankrijk.",
+    "diplomaVereist": false,
+    "diplomaDetails": "Er bestaat een RNCP-titel (niveau 5), maar deze is niet wettelijk verplicht om te starten.",
+    "erkenning": "automatisch",
+    "erkenningProcedure": "Inschrijving URSSAF als 'Profession libérale non réglementée'.",
+    "verzekeringVerplicht": true,
+    "verzekeringen": [
+      "RC Pro Sophrologie"
+    ],
+    "autoentrepreneurMogelijk": true,
+    "registratieInstantie": "URSSAF",
+    "activiteitType": "Libérale",
+    "gereglementeerd": false,
+    "taalniveau": "C1",
+    "gemiddeldInkomen": 24000,
+    "kostenEuro": 100,
+    "tijdlijnMaanden": "0",
+    "links": [
+      {
+        "titel": "Chambre Syndicale de la Sophrologie",
+        "url": "https://www.chambre-syndicale-sophrologie.fr/"
+      }
+    ],
+    "keywords": [
+      "stress",
+      "ontspanning",
+      "ademhaling",
+      "therapie",
+      "burn-out"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
+  },
+  {
+    "id": "masseur-welzijn",
+    "naamNl": "Masseur (Wellness/Ontspanning)",
+    "naamFr": "Praticien en massage bien-être",
+    "sectoren": [
+      "zorg",
+      "dienstverlening",
+      "uiterlijke-verzorging"
+    ],
+    "categorie": "Welzijn",
+    "omschrijving": "Ontspanningsmassages (niet-therapeutisch). Let op: het woord 'Massage' was vroeger beschermd voor kinesisten, nu gedoogd mits 'bien-être' vermeld wordt.",
+    "diplomaVereist": false,
+    "diplomaDetails": "Geen staatseis. Certificaten van erkende scholen (FFMBE) zijn nodig voor verzekering.",
+    "erkenning": "automatisch",
+    "erkenningProcedure": "Inschrijving URSSAF (Libéral) of CMA (als het ambachtelijk is). Vermijd termen als 'therapeutisch' of 'revalidatie'.",
+    "verzekeringVerplicht": true,
+    "verzekeringen": [
+      "RC Pro Bien-être"
+    ],
+    "autoentrepreneurMogelijk": true,
+    "registratieInstantie": "URSSAF of CMA",
+    "activiteitType": "Libérale / Artisanale",
+    "gereglementeerd": false,
+    "taalniveau": "B1",
+    "gemiddeldInkomen": 22000,
+    "kostenEuro": 300,
+    "tijdlijnMaanden": "1",
+    "links": [
+      {
+        "titel": "France Massage (FFMBE)",
+        "url": "https://www.ffmbe.fr/"
+      }
+    ],
+    "keywords": [
+      "massage",
+      "spa",
+      "wellness",
+      "ontspanning",
+      "salon"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        },
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "keramist",
     "naamNl": "Keramist / Pottenbakker",
     "naamFr": "Céramiste / Potier",
-    "sectoren": ["creatief", "artisanat"],
+    "sectoren": [
+      "creatief",
+      "artisanat"
+    ],
     "categorie": "Ambacht (Métiers d'Art)",
     "omschrijving": "Vervaardigen van aardewerk en keramiek. Valt onder 'Métiers d'Art'.",
     "diplomaVereist": false,
@@ -2080,7 +3847,10 @@
     "erkenning": "procedure",
     "erkenningProcedure": "Inschrijving bij de Chambre de Métiers (CMA). Kan fiscale status 'Artiste Libéral' of 'Artisan' hebben afhankelijk van productie.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro", "Verzekering oven/atelier"],
+    "verzekeringen": [
+      "RC Pro",
+      "Verzekering oven/atelier"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "CMA",
     "activiteitType": "Artisanale (Métier d'Art)",
@@ -2090,15 +3860,38 @@
     "kostenEuro": 5000,
     "tijdlijnMaanden": "2",
     "links": [
-      { "titel": "Institut National des Métiers d'Art", "url": "https://www.institut-metiersdart.org/" }
+      {
+        "titel": "Institut National des Métiers d'Art",
+        "url": "https://www.institut-metiersdart.org/"
+      }
     ],
-    "keywords": ["klei", "kunst", "ambacht", "potten"]
+    "keywords": [
+      "klei",
+      "kunst",
+      "ambacht",
+      "potten"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "CMA (Chambre de Métiers et de l'Artisanat)",
+          "rol": "registratie van de ambachtelijke activiteit en toetsing van de verplichte beroepskwalificatie waar die geldt"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "schrijver",
     "naamNl": "Schrijver / Auteur",
     "naamFr": "Écrivain / Auteur",
-    "sectoren": ["creatief", "onderwijs"],
+    "sectoren": [
+      "creatief",
+      "onderwijs"
+    ],
     "categorie": "Kunst",
     "omschrijving": "Schrijven van boeken, scripts of literaire teksten.",
     "diplomaVereist": false,
@@ -2114,93 +3907,38 @@
     "kostenEuro": 0,
     "tijdlijnMaanden": "0",
     "links": [
-      { "titel": "Société des Gens de Lettres", "url": "https://www.sgdl.org/" }
+      {
+        "titel": "Société des Gens de Lettres",
+        "url": "https://www.sgdl.org/"
+      }
     ],
-    "keywords": ["boek", "roman", "tekst", "copy"]
-  },
-  {
-    "id": "naturopaat",
-    "naamNl": "Naturopaat / Gezondheidscoach",
-    "naamFr": "Naturopathe",
-    "sectoren": ["zorg", "dienstverlening"],
-    "categorie": "Welzijn",
-    "omschrijving": "Advies over levensstijl en natuurlijke gezondheid. Let op: GEEN medisch beroep! Je mag geen diagnose stellen of 'genezen' beloven.",
-    "diplomaVereist": false,
-    "diplomaDetails": "Geen staatsdiploma. Certificaat van privéschool (bijv. FENA erkend) wordt sterk aangeraden voor geloofwaardigheid en verzekering.",
-    "erkenning": "automatisch",
-    "erkenningProcedure": "Vrije vestiging bij URSSAF als 'Profession Libérale'. Strikt verboden om medische termen te gebruiken (strafbaar als illegale uitoefening geneeskunde).",
-    "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Bien-être (Specifiek voor niet-medische beroepen)", "Rechtsbijstand"],
-    "autoentrepreneurMogelijk": true,
-    "registratieInstantie": "URSSAF",
-    "activiteitType": "Libérale (Non réglementée)",
-    "gereglementeerd": false,
-    "taalniveau": "B2",
-    "gemiddeldInkomen": 25000,
-    "kostenEuro": 200,
-    "tijdlijnMaanden": "0",
-    "links": [
-      { "titel": "OMNES (Beroepsvereniging Naturopaten)", "url": "https://www.omnes.fr/" }
+    "keywords": [
+      "boek",
+      "roman",
+      "tekst",
+      "copy"
     ],
-    "keywords": ["alternatief", "gezondheid", "kruiden", "coach", "holistisch"]
-  },
-  {
-    "id": "sophroloog",
-    "naamNl": "Sophroloog",
-    "naamFr": "Sophrologue",
-    "sectoren": ["zorg", "dienstverlening"],
-    "categorie": "Welzijn",
-    "omschrijving": "Ontspanningstherapie en mentale begeleiding via ademhaling en visualisatie. Zeer erkend en populair in Frankrijk.",
-    "diplomaVereist": false,
-    "diplomaDetails": "Er bestaat een RNCP-titel (niveau 5), maar deze is niet wettelijk verplicht om te starten.",
-    "erkenning": "automatisch",
-    "erkenningProcedure": "Inschrijving URSSAF als 'Profession libérale non réglementée'.",
-    "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Sophrologie"],
-    "autoentrepreneurMogelijk": true,
-    "registratieInstantie": "URSSAF",
-    "activiteitType": "Libérale",
-    "gereglementeerd": false,
-    "taalniveau": "C1",
-    "gemiddeldInkomen": 24000,
-    "kostenEuro": 100,
-    "tijdlijnMaanden": "0",
-    "links": [
-      { "titel": "Chambre Syndicale de la Sophrologie", "url": "https://www.chambre-syndicale-sophrologie.fr/" }
-    ],
-    "keywords": ["stress", "ontspanning", "ademhaling", "therapie", "burn-out"]
-  },
-  {
-    "id": "masseur-welzijn",
-    "naamNl": "Masseur (Wellness/Ontspanning)",
-    "naamFr": "Praticien en massage bien-être",
-    "sectoren": ["zorg", "dienstverlening", "uiterlijke-verzorging"],
-    "categorie": "Welzijn",
-    "omschrijving": "Ontspanningsmassages (niet-therapeutisch). Let op: het woord 'Massage' was vroeger beschermd voor kinesisten, nu gedoogd mits 'bien-être' vermeld wordt.",
-    "diplomaVereist": false,
-    "diplomaDetails": "Geen staatseis. Certificaten van erkende scholen (FFMBE) zijn nodig voor verzekering.",
-    "erkenning": "automatisch",
-    "erkenningProcedure": "Inschrijving URSSAF (Libéral) of CMA (als het ambachtelijk is). Vermijd termen als 'therapeutisch' of 'revalidatie'.",
-    "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Bien-être"],
-    "autoentrepreneurMogelijk": true,
-    "registratieInstantie": "URSSAF of CMA",
-    "activiteitType": "Libérale / Artisanale",
-    "gereglementeerd": false,
-    "taalniveau": "B1",
-    "gemiddeldInkomen": 22000,
-    "kostenEuro": 300,
-    "tijdlijnMaanden": "1",
-    "links": [
-      { "titel": "France Massage (FFMBE)", "url": "https://www.ffmbe.fr/" }
-    ],
-    "keywords": ["massage", "spa", "wellness", "ontspanning", "salon"]
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "Sécurité sociale des artistes-auteurs (URSSAF Limousin)",
+          "rol": "aansluiting en inning van premies voor kunstenaars/auteurs"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "reflexoloog",
     "naamNl": "Reflexoloog",
     "naamFr": "Réflexologue",
-    "sectoren": ["zorg", "dienstverlening"],
+    "sectoren": [
+      "zorg",
+      "dienstverlening"
+    ],
     "categorie": "Welzijn",
     "omschrijving": "Drukpuntmassage (voet/hand) ter ontspanning. Valt onder niet-conventionele geneeswijzen (PNCAVT).",
     "diplomaVereist": false,
@@ -2208,7 +3946,9 @@
     "erkenning": "automatisch",
     "erkenningProcedure": "Vrije vestiging URSSAF. Let op: geen medische claims maken.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Réflexologie"],
+    "verzekeringen": [
+      "RC Pro Réflexologie"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "URSSAF",
     "activiteitType": "Libérale",
@@ -2218,15 +3958,38 @@
     "kostenEuro": 100,
     "tijdlijnMaanden": "0",
     "links": [
-      { "titel": "Fédération Française des Réflexologues", "url": "https://reflexologues.fr/" }
+      {
+        "titel": "Fédération Française des Réflexologues",
+        "url": "https://reflexologues.fr/"
+      }
     ],
-    "keywords": ["voet", "massage", "alternatief", "drukpunt"]
+    "keywords": [
+      "voet",
+      "massage",
+      "alternatief",
+      "drukpunt"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   },
   {
     "id": "hypnotherapeut",
     "naamNl": "Hypnotherapeut (Niet-medisch)",
     "naamFr": "Hypnothérapeute / Hypnologue",
-    "sectoren": ["zorg", "dienstverlening"],
+    "sectoren": [
+      "zorg",
+      "dienstverlening"
+    ],
     "categorie": "Welzijn",
     "omschrijving": "Gebruik van hypnose voor persoonlijke ontwikkeling, stoppen met roken, etc.",
     "diplomaVereist": false,
@@ -2234,7 +3997,9 @@
     "erkenning": "automatisch",
     "erkenningProcedure": "Inschrijving URSSAF. Duidelijk onderscheid maken met medische zorg.",
     "verzekeringVerplicht": true,
-    "verzekeringen": ["RC Pro Hypnose"],
+    "verzekeringen": [
+      "RC Pro Hypnose"
+    ],
     "autoentrepreneurMogelijk": true,
     "registratieInstantie": "URSSAF",
     "activiteitType": "Libérale",
@@ -2244,9 +4009,28 @@
     "kostenEuro": 200,
     "tijdlijnMaanden": "0",
     "links": [
-      { "titel": "Syndicat National des Hypnothérapeutes", "url": "https://snh-hypnose.fr/" }
+      {
+        "titel": "Syndicat National des Hypnothérapeutes",
+        "url": "https://snh-hypnose.fr/"
+      }
     ],
-    "keywords": ["hypnose", "trance", "roken", "afvallen"]
+    "keywords": [
+      "hypnose",
+      "trance",
+      "roken",
+      "afvallen"
+    ],
+    "loket": {
+      "inschrijving": "Guichet unique (INPI) — formalites.entreprises.gouv.fr",
+      "type": "guichet-unique",
+      "bevoegdeInstanties": [
+        {
+          "instantie": "URSSAF",
+          "rol": "inning van sociale premies; aanspreekpunt voor vrije beroepen (déclaration de début d'activité)"
+        }
+      ]
+    },
+    "laatstGecontroleerd": "2026-07-22",
+    "bron": "https://entreprendre.service-public.fr/vosdroits/F24023"
   }
 ]
-
