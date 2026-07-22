@@ -1,20 +1,35 @@
 "use client";
 
 import { Beroep } from "../lib/types";
-import { 
-  ExternalLink, 
-  CheckCircle2, 
-  AlertTriangle, 
-  Euro, 
-  Clock, 
-  ShieldCheck, 
+import {
+  ExternalLink,
+  CheckCircle2,
+  AlertTriangle,
+  Euro,
+  Clock,
+  ShieldCheck,
   BookOpen,
   Printer,
-  Info 
+  Info,
+  Landmark,
+  ArrowRight,
+  CalendarCheck
 } from "lucide-react";
 
 interface Props {
   beroep: Beroep;
+}
+
+// Datum (ISO) → Nederlandse weergave, bijv. "22 juli 2026"
+function formatDatum(iso?: string): string {
+  if (!iso) return "";
+  const maanden = [
+    "januari", "februari", "maart", "april", "mei", "juni",
+    "juli", "augustus", "september", "oktober", "november", "december"
+  ];
+  const [y, m, d] = iso.split("-").map(Number);
+  if (!y || !m || !d) return iso;
+  return `${d} ${maanden[m - 1]} ${y}`;
 }
 
 // De interne Tooltip component (zweeft nu boven alles dankzij z-50)
@@ -108,6 +123,62 @@ export default function BeroepResult({ beroep }: Props) {
         )}
       </div>
 
+      {/* 1B. LOKET: Inschrijving (Guichet unique) + bevoegde instantie(s) — twee lagen */}
+      {beroep.loket && (
+        <div className="p-6 lg:p-8 border-b border-gray-100 bg-[#800000]/5 print:bg-white">
+            <div className="flex items-center gap-2 mb-5 text-[#800000]">
+                <Landmark className="w-6 h-6" />
+                <h3 className="font-bold text-xl flex items-center">
+                    Waar schrijf je je in?
+                    <InfoTooltip text="Sinds 1 januari 2023 lopen alle ondernemingsformaliteiten (oprichting, wijziging, stopzetting) verplicht via het Guichet unique van de INPI. De oude CFE's bestaan niet meer als inschrijvingskanaal." />
+                </h3>
+            </div>
+
+            {/* Laag 1: Inschrijving */}
+            <div className="bg-white rounded-lg border border-[#800000]/20 p-4 mb-4">
+                <span className="block text-xs font-bold uppercase tracking-wide text-[#800000] mb-1">
+                    1. Inschrijving
+                </span>
+                <p className="text-gray-800" style={{ lineHeight: "1.8em" }}>
+                    {beroep.loket.inschrijving}
+                </p>
+                {beroep.loket.type !== "geen" && (
+                    <a
+                        href="https://formalites.entreprises.gouv.fr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 mt-2 text-sm font-medium text-[#800000] hover:underline print:hidden"
+                    >
+                        formalites.entreprises.gouv.fr
+                        <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                )}
+            </div>
+
+            {/* Laag 2: Bevoegde instantie(s) ná inschrijving */}
+            {beroep.loket.bevoegdeInstanties && beroep.loket.bevoegdeInstanties.length > 0 && (
+                <div>
+                    <span className="block text-xs font-bold uppercase tracking-wide text-gray-500 mb-2">
+                        2. Bevoegde instantie(s) ná inschrijving
+                    </span>
+                    <ul className="space-y-2">
+                        {beroep.loket.bevoegdeInstanties.map((inst, i) => (
+                            <li
+                                key={i}
+                                className="flex items-start gap-2 bg-white rounded-lg border border-gray-200 p-3"
+                            >
+                                <ArrowRight className="w-4 h-4 text-[#800000] mt-1 flex-shrink-0" />
+                                <span className="text-sm text-gray-700" style={{ lineHeight: "1.8em" }}>
+                                    <strong className="text-gray-900">{inst.instantie}:</strong> {inst.rol}
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+        </div>
+      )}
+
       {/* 2. DETAIL GRID */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-px bg-gray-200 print:block print:bg-white">
         
@@ -163,16 +234,6 @@ export default function BeroepResult({ beroep }: Props) {
                     </span>
                 </li>
                 
-                {beroep.registratieInstantie && (
-                    <li className="flex justify-between items-center py-1 border-b border-gray-50">
-                        <span className="font-medium flex items-center">
-                            Inschrijven bij:
-                            <InfoTooltip text="Dit is het 'Guichet' waar je je bedrijf of beroep aanmeldt." />
-                        </span>
-                        <span className="font-bold text-gray-900 text-right">{beroep.registratieInstantie}</span>
-                    </li>
-                )}
-
                 {beroep.gemiddeldInkomen && (
                     <li className="flex justify-between items-center py-1 border-b border-gray-50">
                         <span className="font-medium">Gem. Inkomen (bruto/jaar):</span>
@@ -277,7 +338,33 @@ export default function BeroepResult({ beroep }: Props) {
         </div>
 
       </div>
-      
+
+      {/* 3. BRONVERMELDING & CONTROLEDATUM */}
+      <div className="px-6 lg:px-8 py-4 border-t border-gray-100 bg-gray-50 rounded-b-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-sm print:bg-white">
+          <span className="flex items-center gap-1.5 text-gray-500">
+              <CalendarCheck className="w-4 h-4 flex-shrink-0" />
+              {beroep.laatstGecontroleerd ? (
+                  <>Laatst gecontroleerd:&nbsp;<strong className="text-gray-700">{formatDatum(beroep.laatstGecontroleerd)}</strong></>
+              ) : (
+                  <>Laatst gecontroleerd:&nbsp;<span className="italic">nog niet geverifieerd</span></>
+              )}
+          </span>
+          {beroep.bron ? (
+              <a
+                  href={beroep.bron}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 font-medium text-[#800000] hover:underline"
+              >
+                  <ExternalLink className="w-4 h-4" /> Officiële bron
+              </a>
+          ) : (
+              <span className="inline-flex items-center gap-1.5 text-gray-400 italic">
+                  <Info className="w-4 h-4" /> Bron in verificatie
+              </span>
+          )}
+      </div>
+
       {/* Footer voor print */}
       <div className="hidden print:block p-6 text-center text-xs text-gray-400 border-t">
         Gegenereerd via Werk in Frankrijk Beroepenchecker - Infofrankrijk.com
